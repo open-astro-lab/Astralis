@@ -2,6 +2,14 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { loadPassport, totalCompleted, levelFor } from "../lib/passport";
 
+const CATEGORIES = [
+  "objectsExplored",
+  "asteroidInvestigations",
+  "exoplanetInvestigations",
+  "stellarInvestigations",
+  "physicsChallenges",
+];
+
 export default function Passport() {
   const { t } = useTranslation();
   const [passport, setPassport] = useState(loadPassport());
@@ -30,8 +38,20 @@ export default function Passport() {
         </div>
       </div>
 
-      {total === 0 && (
+      {total === 0 ? (
         <p className="text-muted mt-8">{t("passport.empty")}</p>
+      ) : (
+        <div className="mt-8 grid sm:grid-cols-2 gap-3">
+          {CATEGORIES.map((cat) => (
+            <div
+              key={cat}
+              className="rounded-xl border border-white/10 bg-panel p-4 flex items-center justify-between"
+            >
+              <span className="text-muted text-sm">{t(`passport.breakdown.${cat}`)}</span>
+              <span className="font-mono text-nebulaSoft">{passport[cat]?.length || 0}</span>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

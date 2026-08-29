@@ -6,7 +6,6 @@ export default function NavBar({ view, setView }) {
 
   const items = [
     { key: "home", label: t("nav.home") },
-    { key: "physics_lab", label: t("nav.physics_lab") },
     { key: "passport", label: t("nav.passport") },
   ];
 
@@ -20,7 +19,7 @@ export default function NavBar({ view, setView }) {
           Astralis
         </button>
 
-        <nav className="hidden sm:flex gap-1">
+        <nav className="flex gap-1">
           {items.map((item) => (
             <button
               key={item.key}
@@ -51,23 +50,6 @@ export default function NavBar({ view, setView }) {
           ))}
         </select>
       </div>
-
-      {/* Mobile nav */}
-      <nav className="flex sm:hidden gap-1 px-4 pb-3 overflow-x-auto">
-        {items.map((item) => (
-          <button
-            key={item.key}
-            onClick={() => setView(item.key)}
-            className={`px-3.5 py-1.5 rounded-full text-sm whitespace-nowrap transition ${
-              view === item.key
-                ? "bg-panelLight text-text"
-                : "text-muted hover:text-text"
-            }`}
-          >
-            {item.label}
-          </button>
-        ))}
-      </nav>
     </header>
   );
 }

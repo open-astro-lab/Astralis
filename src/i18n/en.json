@@ -9,7 +9,6 @@
   },
   "nav": {
     "home": "Home",
-    "physics_lab": "Astrophysics Lab",
     "passport": "My Passport"
   },
   "home": {
@@ -17,6 +16,14 @@
     "subheading": "No jargon. No assumptions. Just real astronomy, explored hands-on.",
     "start_button": "Start exploring",
     "modules_heading": "Choose where to begin"
+  },
+  "modules": {
+    "universe_explorer": "Universe Explorer",
+    "sky_explorer": "Sky Explorer",
+    "asteroid_hunter": "Asteroid Hunter",
+    "exoplanet_hunter": "Exoplanet Hunter",
+    "stellar_detective": "Stellar Detective",
+    "physics_lab": "Astrophysics Lab"
   },
   "physics_lab": {
     "title": "Astrophysics Lab",
@@ -35,6 +42,114 @@
       "sanity_check": "Real value for Earth: ≈ 11.2 km/s"
     }
   },
+  "universe_explorer": {
+    "title": "Universe Explorer",
+    "subtitle": "The universe is mostly empty space — filled with a few kinds of extraordinary things.",
+    "scale_heading": "How big, really?",
+    "scale_instruction": "Drag the slider to zoom out — from a planet to the edge of what we can observe.",
+    "objects": {
+      "galaxies": {
+        "name": "Galaxies",
+        "description": "A galaxy is a vast, gravity-bound collection of billions of stars, gas, dust, and dark matter. Our own galaxy, the Milky Way, is a barred spiral holding an estimated 100–400 billion stars — and it's just one of roughly two trillion galaxies in the observable universe."
+      },
+      "nebulae": {
+        "name": "Nebulae",
+        "description": "A nebula is a cloud of gas and dust in space. Some, like the Orion Nebula, are stellar nurseries where gravity slowly pulls material together to form new stars. Others are the glowing remains left behind after a star dies."
+      },
+      "black_holes": {
+        "name": "Black Holes",
+        "description": "A black hole is a region where gravity is so strong that nothing — not even light — can escape once it crosses the event horizon. They form when massive stars collapse. Supermassive versions, millions of times the Sun's mass, sit at the centers of most galaxies, including our own (Sagittarius A*)."
+      },
+      "stars": {
+        "name": "Stars",
+        "description": "A star is a massive ball of plasma held together by its own gravity, generating light and heat by fusing hydrogen into helium at its core. Our Sun is a fairly average star — one of hundreds of billions in the Milky Way alone."
+      }
+    },
+    "scale_steps": {
+      "earth": { "label": "Earth", "value": "12,742 km across", "blurb": "Your home planet — and the baseline for everything that follows." },
+      "sun": { "label": "The Sun", "value": "≈1.39 million km across", "blurb": "About 109 Earths could line up across the Sun's diameter." },
+      "solar_system": { "label": "The Solar System", "value": "≈60 AU across (to Neptune's orbit)", "blurb": "1 AU (Astronomical Unit) is the Earth–Sun distance: about 150 million km." },
+      "nearest_star": { "label": "To the nearest star system", "value": "≈4.24 light-years", "blurb": "Even at the speed of light, it would take over 4 years to reach Alpha Centauri." },
+      "milky_way": { "label": "The Milky Way", "value": "≈100,000 light-years across", "blurb": "Our entire galaxy — and we're just one star among hundreds of billions in it." },
+      "observable_universe": { "label": "The Observable Universe", "value": "≈93 billion light-years across", "blurb": "The furthest we can possibly see, limited by the age of the universe and the speed of light." }
+    }
+  },
+  "sky_explorer": {
+    "title": "Sky Explorer",
+    "subtitle": "What's actually happening above you tonight.",
+    "moon": {
+      "heading": "Tonight's Moon",
+      "phase_label": "Phase",
+      "illumination_label": "Illuminated",
+      "explainer": "The Moon doesn't produce its own light — we see it because it reflects sunlight. As it orbits Earth roughly every 29.5 days, the portion we see lit up changes, giving us the cycle of phases.",
+      "phases": {
+        "new_moon": "New Moon",
+        "waxing_crescent": "Waxing Crescent",
+        "first_quarter": "First Quarter",
+        "waxing_gibbous": "Waxing Gibbous",
+        "full_moon": "Full Moon",
+        "waning_gibbous": "Waning Gibbous",
+        "last_quarter": "Last Quarter",
+        "waning_crescent": "Waning Crescent"
+      }
+    },
+    "planets": {
+      "heading": "Planets you can actually see",
+      "text": "Venus, Mars, Jupiter, and Saturn are often bright enough to see without any telescope. A simple way to tell a planet from a star: planets usually shine with a steady light, while stars twinkle — because starlight travels much further and gets disturbed more by our atmosphere."
+    },
+    "constellations": {
+      "heading": "A few constellations to start with",
+      "ursa_major": { "name": "Ursa Major (the Great Bear)", "text": "Contains the \"Big Dipper,\" one of the most recognizable star patterns in the northern sky. Its two end stars point almost directly at Polaris, the North Star." },
+      "orion": { "name": "Orion (the Hunter)", "text": "Easiest to spot by its three-star belt in a straight line. Visible from most of the world, making it one of the best constellations for beginners." },
+      "cassiopeia": { "name": "Cassiopeia", "text": "Forms a clear \"W\" or \"M\" shape depending on the season, and sits roughly opposite the Big Dipper across Polaris." }
+    }
+  },
+  "exoplanet_hunter": {
+    "title": "Exoplanet Hunter",
+    "subtitle": "Find a planet by watching starlight dim — this is the transit method, and it's how most known exoplanets were discovered.",
+    "instruction": "One of these three light curves shows a planet passing in front of its star. Which one?",
+    "curve_label": "Curve {{n}}",
+    "check_button": "Check my answer",
+    "correct": "Correct — that dip is a transit.",
+    "incorrect": "Not quite. Look for a brief, symmetric dip in brightness, then look again.",
+    "explanation": "When a planet passes in front of its star from our point of view, it blocks a tiny fraction of the star's light, causing a small, temporary, repeating dip in brightness. This is the transit method — it's how missions like Kepler and TESS have found thousands of exoplanets.",
+    "size_challenge": {
+      "heading": "Now estimate the planet's size",
+      "instruction": "The depth of the dip relates directly to the planet's size compared to its star: depth = (planet radius / star radius)². Adjust the dip depth below and see the size ratio update.",
+      "depth_label": "Dip depth",
+      "ratio_label": "Planet radius ÷ star radius"
+    }
+  },
+  "asteroid_hunter": {
+    "title": "Asteroid Hunter",
+    "subtitle": "Spot the object that moved — this is how astronomers really find asteroids.",
+    "instruction": "These two star fields were captured a short time apart. Stars stay fixed — but one object moved. Click it in Frame 2.",
+    "frame1_label": "Frame 1",
+    "frame2_label": "Frame 2 — click the object that moved",
+    "correct": "Found it. That's how a moving object gives itself away against a fixed background of stars.",
+    "incorrect": "Not that one — look for the dot that's in a different position between the two frames.",
+    "explanation": "Real astronomers use this exact technique, called \"blink comparison\": they compare images of the same patch of sky taken minutes or hours apart. Stars are so far away they appear fixed, but a nearby asteroid visibly shifts position — that's the giveaway.",
+    "simulated_label": "Simulated for learning purposes — not a real sky image"
+  },
+  "stellar_detective": {
+    "title": "Stellar Detective",
+    "subtitle": "A star's color is a direct readout of its surface temperature.",
+    "temperature_label": "Surface temperature",
+    "question": "Based on this temperature, what spectral class is this star?",
+    "check_button": "Check my answer",
+    "correct": "Correct.",
+    "incorrect": "Not quite — check the temperature ranges below and try again.",
+    "explainer": "Astronomers classify stars into spectral types — O, B, A, F, G, K, M, from hottest to coolest — based on temperature, which also determines color. Hotter stars glow blue-white; cooler stars glow orange-red. Our Sun is a G-type star, at around 5,778 K.",
+    "classes": {
+      "O": "O — over 30,000 K, blue",
+      "B": "B — 10,000–30,000 K, blue-white",
+      "A": "A — 7,500–10,000 K, white",
+      "F": "F — 6,000–7,500 K, yellow-white",
+      "G": "G — 5,200–6,000 K, yellow (our Sun)",
+      "K": "K — 3,700–5,200 K, orange",
+      "M": "M — under 3,700 K, red"
+    }
+  },
   "passport": {
     "title": "My Astronomy Passport",
     "empty": "Nothing explored yet — your first completed challenge will show up here.",
@@ -42,7 +157,14 @@
     "level_explorer": "Explorer",
     "level_investigator": "Investigator",
     "level_scientist": "Scientist",
-    "challenges_completed": "Challenges completed"
+    "challenges_completed": "Challenges completed",
+    "breakdown": {
+      "objectsExplored": "Objects explored",
+      "asteroidInvestigations": "Asteroid investigations",
+      "exoplanetInvestigations": "Exoplanet investigations",
+      "stellarInvestigations": "Stellar investigations",
+      "physicsChallenges": "Physics challenges"
+    }
   },
   "sources": {
     "title": "Sources & Accuracy",
