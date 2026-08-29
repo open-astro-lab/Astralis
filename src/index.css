@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-image: radial-gradient(circle at 20% 10%, rgba(124,108,240,0.10), transparent 40%),
+                       radial-gradient(circle at 85% 30%, rgba(242,197,114,0.06), transparent 35%);
+    background-attachment: fixed;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

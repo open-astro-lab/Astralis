@@ -1,0 +1,51 @@
+{
+  "app": {
+    "name": "Astralis",
+    "tagline": "Astronomy, made yours to explore."
+  },
+  "language_picker": {
+    "title": "Choose your language",
+    "subtitle": "You can change this anytime."
+  },
+  "nav": {
+    "home": "Home",
+    "physics_lab": "Astrophysics Lab",
+    "passport": "My Passport"
+  },
+  "home": {
+    "heading": "The universe, one question at a time.",
+    "subheading": "No jargon. No assumptions. Just real astronomy, explored hands-on.",
+    "start_button": "Start exploring",
+    "modules_heading": "Choose where to begin"
+  },
+  "physics_lab": {
+    "title": "Astrophysics Lab",
+    "subtitle": "Real formulas. Real numbers. Try it before you're told the answer.",
+    "escape_velocity": {
+      "title": "Escape Velocity",
+      "prompt": "How fast would something need to travel to permanently escape a planet's gravity?",
+      "mass_label": "Mass (× 10²⁴ kg)",
+      "radius_label": "Radius (km)",
+      "result_label": "Escape velocity",
+      "reveal_button": "Reveal the formula",
+      "formula_explainer": "This comes from balancing kinetic energy against gravitational potential energy. G is the gravitational constant, M is the planet's mass, and R is its radius from the center.",
+      "try_earth": "Try Earth",
+      "try_moon": "Try the Moon",
+      "try_jupiter": "Try Jupiter",
+      "sanity_check": "Real value for Earth: ≈ 11.2 km/s"
+    }
+  },
+  "passport": {
+    "title": "My Astronomy Passport",
+    "empty": "Nothing explored yet — your first completed challenge will show up here.",
+    "level_curious": "Curious",
+    "level_explorer": "Explorer",
+    "level_investigator": "Investigator",
+    "level_scientist": "Scientist",
+    "challenges_completed": "Challenges completed"
+  },
+  "sources": {
+    "title": "Sources & Accuracy",
+    "note": "All real astronomical values used in Astralis are drawn from published, public data. Anything simulated for learning purposes is clearly labeled as such."
+  }
+}
