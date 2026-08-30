@@ -46,6 +46,7 @@ export default function UniverseExplorer() {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [opened, setOpened] = useState({});
+  const [expanded, setExpanded] = useState({});
   const [scaleIndex, setScaleIndex] = useState(0);
 
   function openObject(key) {
@@ -53,6 +54,7 @@ export default function UniverseExplorer() {
       complete("objectsExplored", `universe_${key}`);
       setOpened((prev) => ({ ...prev, [key]: true }));
     }
+    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
   }
 
   const currentScale = SCALE_KEYS[scaleIndex];
@@ -74,6 +76,15 @@ export default function UniverseExplorer() {
             <p className="text-muted text-sm mt-2 leading-relaxed">
               {t(`universe_explorer.objects.${key}.description`)}
             </p>
+            {expanded[key] ? (
+              <p className="text-nebulaSoft text-sm mt-3 leading-relaxed border-t border-white/10 pt-3">
+                {t(`universe_explorer.objects.${key}.detail`)}
+              </p>
+            ) : (
+              <p className="text-nebulaSoft text-xs mt-3">
+                {t("universe_explorer.tap_for_detail")} →
+              </p>
+            )}
           </button>
         ))}
       </div>

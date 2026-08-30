@@ -350,51 +350,63 @@
     "objects": {
       "galaxies": {
         "name": "Galaxies",
-        "description": "A galaxy is a vast, gravity-bound collection of billions of stars, gas, dust, and dark matter. Our own galaxy, the Milky Way, is a barred spiral holding an estimated 100–400 billion stars — and it's just one of roughly two trillion galaxies in the observable universe."
+        "description": "A galaxy is a vast, gravity-bound collection of billions of stars, gas, dust, and dark matter. Our own galaxy, the Milky Way, is a barred spiral holding an estimated 100–400 billion stars — and it's just one of roughly two trillion galaxies in the observable universe.",
+        "detail": "Galaxies themselves cluster together under gravity, forming groups and vast superclusters. The Milky Way belongs to a modest cluster called the Local Group, alongside Andromeda and about 80 smaller galaxies."
       },
       "nebulae": {
         "name": "Nebulae",
-        "description": "A nebula is a cloud of gas and dust in space. Some, like the Orion Nebula, are stellar nurseries where gravity slowly pulls material together to form new stars. Others are the glowing remains left behind after a star dies."
+        "description": "A nebula is a cloud of gas and dust in space. Some, like the Orion Nebula, are stellar nurseries where gravity slowly pulls material together to form new stars. Others are the glowing remains left behind after a star dies.",
+        "detail": "The famous 'Pillars of Creation' in the Eagle Nebula are columns of gas and dust several light-years tall, where new stars are actively being born inside dense knots of material."
       },
       "black_holes": {
         "name": "Black Holes",
-        "description": "A black hole is a region where gravity is so strong that nothing — not even light — can escape once it crosses the event horizon. They form when massive stars collapse. Supermassive versions, millions of times the Sun's mass, sit at the centers of most galaxies, including our own (Sagittarius A*)."
+        "description": "A black hole is a region where gravity is so strong that nothing — not even light — can escape once it crosses the event horizon. They form when massive stars collapse. Supermassive versions, millions of times the Sun's mass, sit at the centers of most galaxies, including our own (Sagittarius A*).",
+        "detail": "Black holes can't be observed directly — astronomers detect them by watching how nearby matter behaves, such as stars orbiting an invisible point, or gas heating up and glowing as it spirals in."
       },
       "stars": {
         "name": "Stars",
-        "description": "A star is a massive ball of plasma held together by its own gravity, generating light and heat by fusing hydrogen into helium at its core. Our Sun is a fairly average star — one of hundreds of billions in the Milky Way alone."
+        "description": "A star is a massive ball of plasma held together by its own gravity, generating light and heat by fusing hydrogen into helium at its core. Our Sun is a fairly average star — one of hundreds of billions in the Milky Way alone.",
+        "detail": "A star spends most of its life in a stable phase called the 'main sequence,' fusing hydrogen into helium. The more massive a star is, the hotter it burns — and the shorter its life is."
       },
       "supernovae": {
         "name": "Supernovae",
-        "description": "A supernova is the explosive death of a massive star, briefly outshining its entire host galaxy. These explosions forge and scatter heavy elements — like the iron in your blood and the calcium in your bones — throughout the universe."
+        "description": "A supernova is the explosive death of a massive star, briefly outshining its entire host galaxy. These explosions forge and scatter heavy elements — like the iron in your blood and the calcium in your bones — throughout the universe.",
+        "detail": "There are two main types: massive stars collapsing under their own gravity, and white dwarfs in binary systems that reach a critical mass and detonate. The second type is so consistent in brightness that astronomers use it to measure cosmic distances."
       },
       "star_clusters": {
         "name": "Star Clusters",
-        "description": "Stars often form and travel in groups. Open clusters, like the Pleiades, are young and loosely bound, with a few hundred stars. Globular clusters are far older and denser, tightly packing tens of thousands to millions of stars into a compact sphere."
+        "description": "Stars often form and travel in groups. Open clusters, like the Pleiades, are young and loosely bound, with a few hundred stars. Globular clusters are far older and denser, tightly packing tens of thousands to millions of stars into a compact sphere.",
+        "detail": "Because all the stars in a cluster formed from the same cloud at roughly the same time, clusters are natural laboratories for studying how stars of different masses age differently."
       },
       "cmb": {
         "name": "Cosmic Microwave Background",
-        "description": "Faint radiation left over from about 380,000 years after the Big Bang, when the universe first became transparent to light. Discovered by accident in 1965, it fills all of space at a nearly uniform temperature of about 2.7 K."
+        "description": "Faint radiation left over from about 380,000 years after the Big Bang, when the universe first became transparent to light. Discovered by accident in 1965, it fills all of space at a nearly uniform temperature of about 2.7 K.",
+        "detail": "Tiny temperature variations in the CMB — differences of only about 1 part in 100,000 — mark the seeds of all future structure: regions slightly denser than average eventually grew into today's galaxies."
       },
       "dark_matter": {
         "name": "Dark Matter & Dark Energy",
-        "description": "Roughly 95% of the universe isn't made of the atoms we know. Dark matter, inferred from its gravitational pull on galaxies, makes up about 27%. Dark energy, which drives the universe's accelerating expansion, makes up roughly 68%. Both remain among astronomy's biggest open questions."
+        "description": "Roughly 95% of the universe isn't made of the atoms we know. Dark matter, inferred from its gravitational pull on galaxies, makes up about 27%. Dark energy, which drives the universe's accelerating expansion, makes up roughly 68%. Both remain among astronomy's biggest open questions.",
+        "detail": "Dark matter was first inferred in the 1930s when galaxy clusters appeared to move too fast to stay bound by only their visible mass. Dark energy was only discovered in 1998, from distant supernovae showing the universe's expansion is speeding up."
       },
       "solar_system": {
         "name": "The Solar System",
-        "description": "Our home system formed about 4.6 billion years ago from a collapsing cloud of gas and dust. It holds the Sun, 8 planets, over 200 moons, the asteroid belt between Mars and Jupiter, and the icy Kuiper Belt beyond Neptune."
+        "description": "Our home system formed about 4.6 billion years ago from a collapsing cloud of gas and dust. It holds the Sun, 8 planets, over 200 moons, the asteroid belt between Mars and Jupiter, and the icy Kuiper Belt beyond Neptune.",
+        "detail": "The four inner planets are small and rocky; the four outer are much larger gas or ice giants. This split happened because the inner solar system was too hot for ice to survive during formation."
       },
       "comets": {
         "name": "Comets",
-        "description": "Comets are icy leftovers from the outer solar system's formation. As they near the Sun, ice on their surface vaporizes, creating a glowing coma and a tail that always points away from the Sun. Halley's Comet, the most famous, returns roughly every 76 years."
+        "description": "Comets are icy leftovers from the outer solar system's formation. As they near the Sun, ice on their surface vaporizes, creating a glowing coma and a tail that always points away from the Sun. Halley's Comet, the most famous, returns roughly every 76 years.",
+        "detail": "Most comets come from two reservoirs: the Kuiper Belt just beyond Neptune, source of shorter-period comets like Halley's, and the far more distant Oort Cloud, thought to send in comets that take thousands of years to return."
       },
       "habitable_zone": {
         "name": "The Habitable Zone",
-        "description": "Often called the 'Goldilocks zone,' this is the range of distances from a star where a planet could be warm enough for liquid water but not so hot that it boils away. Earth sits comfortably inside the Sun's habitable zone."
+        "description": "Often called the 'Goldilocks zone,' this is the range of distances from a star where a planet could be warm enough for liquid water but not so hot that it boils away. Earth sits comfortably inside the Sun's habitable zone.",
+        "detail": "The habitable zone isn't a guarantee of life — a planet also needs the right atmosphere and geology. A planet can have liquid water outside the zone too, if internal heating keeps water liquid beneath a frozen surface, as on some icy moons."
       },
       "andromeda": {
         "name": "The Andromeda Galaxy",
-        "description": "The nearest large galaxy to our own, about 2.5 million light-years away, and visible to the naked eye as a faint smudge on a dark night. It's a spiral galaxy like the Milky Way, and the two are on a slow collision course, expected to merge in roughly 4.5 billion years."
+        "description": "The nearest large galaxy to our own, about 2.5 million light-years away, and visible to the naked eye as a faint smudge on a dark night. It's a spiral galaxy like the Milky Way, and the two are on a slow collision course, expected to merge in roughly 4.5 billion years.",
+        "detail": "Despite being visible to the naked eye, Andromeda's light left it about 2.5 million years ago. It's actually larger in the sky than the full Moon, but too faint and spread out to notice without long-exposure photography."
       }
     },
     "scale_steps": {
@@ -444,7 +456,8 @@
         "opt3": "The location of the nearest black hole",
         "explain": "The CMB is leftover radiation from a specific early moment in the universe's history, giving us a direct snapshot of conditions back then."
       }
-    }
+    },
+    "tap_for_detail": "Tap for more detail"
   },
   "sky_explorer": {
     "title": "Sky Explorer",
@@ -524,6 +537,47 @@
         "opt3": "It's orbiting faster",
         "explain": "Since dip depth = (planet radius / star radius)², a deeper dip directly means a proportionally larger planet relative to its star."
       }
+    },
+    "activities": {
+      "transit": "Transit Method",
+      "radial_velocity": "Radial Velocity",
+      "habitable_zone": "Habitable Zone Calculator"
+    },
+    "radial_velocity": {
+      "instruction": "A planet's gravity tugs its star back and forth slightly as it orbits. This causes the star's own light to shift periodically — astronomers detect this 'wobble' instead of seeing the planet directly. Which curve below shows a real periodic wobble?",
+      "curve_label": "Curve {{n}}",
+      "check_button": "Check my answer",
+      "correct": "Correct — that's a real periodic wobble.",
+      "incorrect": "Not quite. A real wobble repeats in a smooth, regular pattern — look again.",
+      "explanation": "This is the radial velocity method: as a planet orbits, its gravity pulls its star into a small orbit of its own, shifting the star's light periodically toward and away from us. It was used to find the first exoplanet ever confirmed around a Sun-like star, in 1995.",
+      "round_label": "Round {{round}} of {{total}}",
+      "quiz": {
+        "q1": {
+          "prompt": "What does the radial velocity method actually detect?",
+          "opt1": "Periodic shifts in the star's own light caused by the planet's gravity",
+          "opt2": "A direct photograph of the planet",
+          "opt3": "The planet's own emitted light",
+          "explain": "This method never sees the planet directly — it detects the star's light shifting periodically as the star wobbles under the planet's gravitational pull."
+        }
+      }
+    },
+    "habitable_zone": {
+      "heading": "Habitable Zone Calculator",
+      "instruction": "The habitable zone is the range of distances from a star where a planet could have liquid water. A simple estimate: habitable distance (AU) ≈ √(star's luminosity ÷ Sun's luminosity).",
+      "luminosity_label": "Star's luminosity (× Sun's luminosity)",
+      "result_label": "Estimated habitable distance",
+      "planet_distance_label": "This planet's actual orbital distance (AU)",
+      "verdict_in_zone": "Roughly within the habitable zone — worth further investigation.",
+      "verdict_out_zone": "Likely outside the habitable zone at this simple estimate.",
+      "quiz": {
+        "q1": {
+          "prompt": "A star has 4× the Sun's luminosity. Roughly how far out does its habitable zone sit?",
+          "opt1": "About 2 AU",
+          "opt2": "About 4 AU",
+          "opt3": "About 1 AU",
+          "explain": "Habitable distance ≈ √(L/L☉) = √4 = 2 AU — a more luminous star pushes its habitable zone farther out."
+        }
+      }
     }
   },
   "asteroid_hunter": {
@@ -545,6 +599,52 @@
         "opt2": "Asteroids are brighter than stars",
         "opt3": "Stars are too small to photograph",
         "explain": "Because asteroids are relatively close, their position against the fixed background of much more distant stars visibly shifts over time — this is the basis of the blink comparison method."
+      }
+    },
+    "activities": {
+      "blink": "Blink Comparison",
+      "classify": "Orbit Classifier",
+      "rotation": "Rotation Curve Reader"
+    },
+    "classify": {
+      "instruction": "Real asteroids are grouped by their distance from the Sun. Given the distance below, classify this asteroid.",
+      "distance_label": "Average distance from the Sun (AU)",
+      "check_button": "Check my answer",
+      "correct": "Correct.",
+      "incorrect": "Not quite — check the ranges below and try again.",
+      "explainer": "Near-Earth Objects (NEOs) come within about 1.3 AU of the Sun and are tracked closely for impact risk. Most asteroids orbit in the Main Belt between Mars and Jupiter (roughly 2.1–3.3 AU). Jupiter Trojans share Jupiter's orbit (about 5.2 AU), clustered 60° ahead of or behind the planet.",
+      "options": {
+        "neo": "Near-Earth Object (NEO)",
+        "main_belt": "Main Belt Asteroid",
+        "trojan": "Jupiter Trojan"
+      },
+      "round_label": "Round {{round}} of {{total}}",
+      "quiz": {
+        "q1": {
+          "prompt": "Most known asteroids in our solar system orbit in which region?",
+          "opt1": "The Main Belt, between Mars and Jupiter",
+          "opt2": "Right next to the Sun",
+          "opt3": "Beyond Neptune",
+          "explain": "The Main Belt between Mars and Jupiter (roughly 2.1–3.3 AU) holds the vast majority of known asteroids in the solar system."
+        }
+      }
+    },
+    "rotation": {
+      "instruction": "Asteroids are irregularly shaped, so as they spin, the sunlight they reflect toward us rises and falls. Read this brightness curve and estimate the rotation period.",
+      "chart_label": "Brightness over time",
+      "check_button": "Check my answer",
+      "correct": "Correct — that's the repeating pattern's period.",
+      "incorrect": "Not quite — look for how long it takes the pattern to repeat one full cycle, then try again.",
+      "explainer": "This technique, called lightcurve photometry, is one of the main real ways astronomers measure how fast an asteroid spins — and irregular shapes are exactly why the brightness isn't constant.",
+      "round_label": "Round {{round}} of {{total}}",
+      "quiz": {
+        "q1": {
+          "prompt": "Why does an asteroid's brightness typically rise and fall twice per full rotation?",
+          "opt1": "Because it's irregularly shaped, showing a longer and a shorter face to us once each per spin",
+          "opt2": "Because it passes behind the Sun twice",
+          "opt3": "Because it changes color as it spins",
+          "explain": "Most asteroids are not spherical — as an elongated shape rotates, it presents more or less reflective surface area to us twice per full spin, creating two brightness peaks and two dips."
+        }
       }
     }
   },
