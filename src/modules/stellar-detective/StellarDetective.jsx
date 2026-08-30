@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { completeActivity } from "../../lib/passport";
+import { usePassport } from "../../context/PassportContext.jsx";
+import Quiz from "../../components/Quiz.jsx";
 
 const CLASS_ORDER = ["O", "B", "A", "F", "G", "K", "M"];
 
@@ -52,9 +53,11 @@ function temperatureToRGB(kelvin) {
 
 export default function StellarDetective() {
   const { t } = useTranslation();
+  const { complete } = usePassport();
   const [temperature, setTemperature] = useState(5778);
   const [selectedClass, setSelectedClass] = useState(null);
   const [checked, setChecked] = useState(false);
+  const [correctRounds, setCorrectRounds] = useState(0);
 
   const color = useMemo(() => temperatureToRGB(temperature), [temperature]);
   const correctClass = classifyTemperature(temperature);
@@ -62,9 +65,13 @@ export default function StellarDetective() {
   function handleCheck() {
     setChecked(true);
     if (selectedClass === correctClass) {
-      completeActivity("stellarInvestigations", `classify_${Math.round(temperature / 1000)}k`);
+      complete("stellarInvestigations", `classify_${Math.round(temperature / 1000)}k`);
+      setCorrectRounds((n) => n + 1);
     }
   }
+
+  const roundsTarget = 5;
+  const readyForQuiz = correctRounds >= roundsTarget;
 
   function handleTemperatureChange(v) {
     setTemperature(v);
@@ -73,7 +80,13 @@ export default function StellarDetective() {
   }
 
   return (
+    <div className="space-y-6">
     <div className="rounded-2xl border border-white/10 bg-panel p-6 md:p-8">
+      <div className="flex justify-end mb-2">
+        <span className="font-mono text-xs text-nebulaSoft">
+          {t("stellar_detective.round_label", { done: Math.min(correctRounds, roundsTarget), total: roundsTarget })}
+        </span>
+      </div>
       <div className="grid sm:grid-cols-[auto_1fr] gap-8 items-center">
         <div
           className="w-28 h-28 rounded-full mx-auto shadow-glow"
@@ -149,6 +162,23 @@ export default function StellarDetective() {
           {t("stellar_detective.explainer")}
         </p>
       </div>
+    </div>
+
+    {readyForQuiz && (
+      <Quiz
+        questions={[
+          {
+            id: "sd_q1",
+            promptKey: "stellar_detective.quiz.q1.prompt",
+            optionKeys: ["stellar_detective.quiz.q1.opt1", "stellar_detective.quiz.q1.opt2", "stellar_detective.quiz.q1.opt3"],
+            correctIndex: 2,
+            explainKey: "stellar_detective.quiz.q1.explain",
+          },
+        ]}
+        category="stellarInvestigations"
+        activityId="stellar_detective_quiz"
+      />
+    )}
     </div>
   );
 }

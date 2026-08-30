@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { completeActivity } from "../../lib/passport";
+import { usePassport } from "../../context/PassportContext.jsx";
+import Quiz from "../../components/Quiz.jsx";
 
 const SYNODIC_MONTH_DAYS = 29.53058867;
 // Reference new moon: 2000-01-06 18:14 UTC — a standard epoch used for phase calculations.
@@ -43,15 +44,18 @@ const CONSTELLATIONS = ["ursa_major", "orion", "cassiopeia"];
 
 export default function SkyExplorer() {
   const { t } = useTranslation();
+  const { complete } = usePassport();
   const [openedConstellations, setOpenedConstellations] = useState({});
   const moon = useMemo(() => getMoonPhase(), []);
 
   function openConstellation(key) {
     if (!openedConstellations[key]) {
-      completeActivity("objectsExplored", `constellation_${key}`);
+      complete("objectsExplored", `constellation_${key}`);
       setOpenedConstellations((prev) => ({ ...prev, [key]: true }));
     }
   }
+
+  const allConstellationsOpened = CONSTELLATIONS.every((k) => openedConstellations[k]);
 
   return (
     <div className="space-y-8">
@@ -112,6 +116,29 @@ export default function SkyExplorer() {
           ))}
         </div>
       </div>
+
+      {allConstellationsOpened && (
+        <Quiz
+          questions={[
+            {
+              id: "se_q1",
+              promptKey: "sky_explorer.quiz.q1.prompt",
+              optionKeys: ["sky_explorer.quiz.q1.opt1", "sky_explorer.quiz.q1.opt2", "sky_explorer.quiz.q1.opt3"],
+              correctIndex: 0,
+              explainKey: "sky_explorer.quiz.q1.explain",
+            },
+            {
+              id: "se_q2",
+              promptKey: "sky_explorer.quiz.q2.prompt",
+              optionKeys: ["sky_explorer.quiz.q2.opt1", "sky_explorer.quiz.q2.opt2", "sky_explorer.quiz.q2.opt3"],
+              correctIndex: 1,
+              explainKey: "sky_explorer.quiz.q2.explain",
+            },
+          ]}
+          category="objectsExplored"
+          activityId="sky_explorer_quiz"
+        />
+      )}
     </div>
   );
 }

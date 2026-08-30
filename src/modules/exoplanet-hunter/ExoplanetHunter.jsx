@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { completeActivity } from "../../lib/passport";
+import { usePassport } from "../../context/PassportContext.jsx";
+import Quiz from "../../components/Quiz.jsx";
 
 // Deterministic pseudo-random generator so the three curves are stable across renders.
 function seededRandom(seed) {
@@ -58,6 +59,7 @@ function LightCurveSVG({ points, highlighted }) {
 
 export default function ExoplanetHunter() {
   const { t } = useTranslation();
+  const { complete } = usePassport();
   const [selected, setSelected] = useState(null);
   const [checked, setChecked] = useState(false);
   const [dipDepth, setDipDepth] = useState(0.02);
@@ -76,7 +78,7 @@ export default function ExoplanetHunter() {
   function handleCheck() {
     setChecked(true);
     if (selected === correctIndex) {
-      completeActivity("exoplanetInvestigations", "transit_identification");
+      complete("exoplanetInvestigations", "transit_identification");
     }
   }
 
@@ -166,6 +168,22 @@ export default function ExoplanetHunter() {
             <div className="font-mono text-3xl text-starlight mt-1">
               {radiusRatio.toFixed(3)}
             </div>
+          </div>
+
+          <div className="mt-6">
+            <Quiz
+              questions={[
+                {
+                  id: "eh_q1",
+                  promptKey: "exoplanet_hunter.quiz.q1.prompt",
+                  optionKeys: ["exoplanet_hunter.quiz.q1.opt1", "exoplanet_hunter.quiz.q1.opt2", "exoplanet_hunter.quiz.q1.opt3"],
+                  correctIndex: 1,
+                  explainKey: "exoplanet_hunter.quiz.q1.explain",
+                },
+              ]}
+              category="exoplanetInvestigations"
+              activityId="exoplanet_hunter_quiz"
+            />
           </div>
         </div>
       )}

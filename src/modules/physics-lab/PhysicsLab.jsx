@@ -1,0 +1,164 @@
+import FormulaChallenge from "./FormulaChallenge.jsx";
+
+const G = 6.6743e-11;
+
+export default function PhysicsLab() {
+  return (
+    <div className="space-y-10">
+      {/* 1. Escape velocity */}
+      <FormulaChallenge
+        id="escape_velocity"
+        titleKey="physics_lab.escape_velocity.title"
+        promptKey="physics_lab.escape_velocity.prompt"
+        resultLabelKey="physics_lab.escape_velocity.result_label"
+        sanityCheckKey="physics_lab.escape_velocity.sanity_check"
+        formulaText="v = √(2GM / R)"
+        formulaExplainerKey="physics_lab.escape_velocity.formula_explainer"
+        resultUnit="km/s"
+        inputs={[
+          { key: "massE24", labelKey: "physics_lab.escape_velocity.mass_label", min: 0.01, max: 2000, step: 0.01, unit: "× 10²⁴ kg", initial: 5.972 },
+          { key: "radiusKm", labelKey: "physics_lab.escape_velocity.radius_label", min: 100, max: 80000, step: 10, unit: "km", initial: 6371 },
+        ]}
+        compute={({ massE24, radiusKm }) => {
+          const massKg = massE24 * 1e24;
+          const radiusM = radiusKm * 1000;
+          return Math.sqrt((2 * G * massKg) / radiusM) / 1000;
+        }}
+        quizQuestions={[
+          {
+            id: "ev_q1",
+            promptKey: "physics_lab.escape_velocity.quiz.q1.prompt",
+            optionKeys: [
+              "physics_lab.escape_velocity.quiz.q1.opt1",
+              "physics_lab.escape_velocity.quiz.q1.opt2",
+              "physics_lab.escape_velocity.quiz.q1.opt3",
+            ],
+            correctIndex: 1,
+            explainKey: "physics_lab.escape_velocity.quiz.q1.explain",
+          },
+        ]}
+      />
+
+      {/* 2. Orbital velocity */}
+      <FormulaChallenge
+        id="orbital_velocity"
+        titleKey="physics_lab.orbital_velocity.title"
+        promptKey="physics_lab.orbital_velocity.prompt"
+        resultLabelKey="physics_lab.orbital_velocity.result_label"
+        sanityCheckKey="physics_lab.orbital_velocity.sanity_check"
+        formulaText="v = √(GM / r)"
+        formulaExplainerKey="physics_lab.orbital_velocity.formula_explainer"
+        resultUnit="km/s"
+        inputs={[
+          { key: "massE24", labelKey: "physics_lab.orbital_velocity.mass_label", min: 0.01, max: 2000, step: 0.01, unit: "× 10²⁴ kg", initial: 5.972 },
+          { key: "orbitKm", labelKey: "physics_lab.orbital_velocity.orbit_label", min: 6500, max: 100000, step: 10, unit: "km", initial: 6771 },
+        ]}
+        compute={({ massE24, orbitKm }) => {
+          const massKg = massE24 * 1e24;
+          const rM = orbitKm * 1000;
+          return Math.sqrt((G * massKg) / rM) / 1000;
+        }}
+        quizQuestions={[
+          {
+            id: "ov_q1",
+            promptKey: "physics_lab.orbital_velocity.quiz.q1.prompt",
+            optionKeys: [
+              "physics_lab.orbital_velocity.quiz.q1.opt1",
+              "physics_lab.orbital_velocity.quiz.q1.opt2",
+              "physics_lab.orbital_velocity.quiz.q1.opt3",
+            ],
+            correctIndex: 0,
+            explainKey: "physics_lab.orbital_velocity.quiz.q1.explain",
+          },
+        ]}
+      />
+
+      {/* 3. Kepler's Third Law */}
+      <FormulaChallenge
+        id="keplers_third_law"
+        titleKey="physics_lab.kepler.title"
+        promptKey="physics_lab.kepler.prompt"
+        resultLabelKey="physics_lab.kepler.result_label"
+        sanityCheckKey="physics_lab.kepler.sanity_check"
+        formulaText="T² ∝ a³  (T in years, a in AU, around the Sun)"
+        formulaExplainerKey="physics_lab.kepler.formula_explainer"
+        resultUnit="years"
+        inputs={[
+          { key: "auDistance", labelKey: "physics_lab.kepler.distance_label", min: 0.1, max: 40, step: 0.1, unit: "AU", initial: 1 },
+        ]}
+        compute={({ auDistance }) => Math.sqrt(Math.pow(auDistance, 3))}
+        quizQuestions={[
+          {
+            id: "kepler_q1",
+            promptKey: "physics_lab.kepler.quiz.q1.prompt",
+            optionKeys: [
+              "physics_lab.kepler.quiz.q1.opt1",
+              "physics_lab.kepler.quiz.q1.opt2",
+              "physics_lab.kepler.quiz.q1.opt3",
+            ],
+            correctIndex: 2,
+            explainKey: "physics_lab.kepler.quiz.q1.explain",
+          },
+        ]}
+      />
+
+      {/* 4. Inverse-square law */}
+      <FormulaChallenge
+        id="inverse_square_law"
+        titleKey="physics_lab.inverse_square.title"
+        promptKey="physics_lab.inverse_square.prompt"
+        resultLabelKey="physics_lab.inverse_square.result_label"
+        sanityCheckKey="physics_lab.inverse_square.sanity_check"
+        formulaText="b = L / (4πd²)"
+        formulaExplainerKey="physics_lab.inverse_square.formula_explainer"
+        resultUnit="× baseline brightness"
+        inputs={[
+          { key: "distanceRatio", labelKey: "physics_lab.inverse_square.distance_label", min: 0.5, max: 10, step: 0.1, unit: "× original distance", initial: 1 },
+        ]}
+        compute={({ distanceRatio }) => 1 / (distanceRatio * distanceRatio)}
+        quizQuestions={[
+          {
+            id: "isl_q1",
+            promptKey: "physics_lab.inverse_square.quiz.q1.prompt",
+            optionKeys: [
+              "physics_lab.inverse_square.quiz.q1.opt1",
+              "physics_lab.inverse_square.quiz.q1.opt2",
+              "physics_lab.inverse_square.quiz.q1.opt3",
+            ],
+            correctIndex: 1,
+            explainKey: "physics_lab.inverse_square.quiz.q1.explain",
+          },
+        ]}
+      />
+
+      {/* 5. Wien's Law */}
+      <FormulaChallenge
+        id="wiens_law"
+        titleKey="physics_lab.wien.title"
+        promptKey="physics_lab.wien.prompt"
+        resultLabelKey="physics_lab.wien.result_label"
+        sanityCheckKey="physics_lab.wien.sanity_check"
+        formulaText="λ_max = b / T   (b ≈ 2,897,771 nm·K)"
+        formulaExplainerKey="physics_lab.wien.formula_explainer"
+        resultUnit="nm"
+        inputs={[
+          { key: "tempK", labelKey: "physics_lab.wien.temp_label", min: 500, max: 40000, step: 10, unit: "K", initial: 5778 },
+        ]}
+        compute={({ tempK }) => 2897771 / tempK}
+        quizQuestions={[
+          {
+            id: "wien_q1",
+            promptKey: "physics_lab.wien.quiz.q1.prompt",
+            optionKeys: [
+              "physics_lab.wien.quiz.q1.opt1",
+              "physics_lab.wien.quiz.q1.opt2",
+              "physics_lab.wien.quiz.q1.opt3",
+            ],
+            correctIndex: 0,
+            explainKey: "physics_lab.wien.quiz.q1.explain",
+          },
+        ]}
+      />
+    </div>
+  );
+}

@@ -39,7 +39,86 @@
       "try_earth": "Try Earth",
       "try_moon": "Try the Moon",
       "try_jupiter": "Try Jupiter",
-      "sanity_check": "Real value for Earth: ≈ 11.2 km/s"
+      "sanity_check": "Real value for Earth: ≈ 11.2 km/s",
+      "quiz": {
+        "q1": {
+          "prompt": "If a planet has the same mass as Earth but twice its radius, what happens to its escape velocity?",
+          "opt1": "It doubles",
+          "opt2": "It decreases",
+          "opt3": "It stays exactly the same",
+          "explain": "Escape velocity is inversely proportional to the square root of radius, so a bigger planet of the same mass has a lower escape velocity — gravity is spread over a larger surface."
+        }
+      }
+    },
+    "reveal_button": "Reveal the formula",
+    "orbital_velocity": {
+      "title": "Orbital Velocity",
+      "prompt": "How fast does something need to move sideways to stay in a stable circular orbit, without falling in or flying away?",
+      "mass_label": "Central body mass (× 10²⁴ kg)",
+      "orbit_label": "Orbital radius (km)",
+      "result_label": "Orbital velocity",
+      "formula_explainer": "This balances the centripetal force needed for circular motion against gravity's pull. It depends on mass and radius similarly to escape velocity — in fact orbital velocity always equals escape velocity divided by √2.",
+      "sanity_check": "Real value for the ISS (~400 km altitude): ≈ 7.7 km/s",
+      "quiz": {
+        "q1": {
+          "prompt": "How does orbital velocity compare to escape velocity at the same distance?",
+          "opt1": "It's escape velocity divided by √2",
+          "opt2": "It's the same as escape velocity",
+          "opt3": "It's escape velocity multiplied by 2",
+          "explain": "Escape velocity is exactly √2 times orbital velocity at any given radius — this falls directly out of comparing the two formulas."
+        }
+      }
+    },
+    "kepler": {
+      "title": "Kepler's Third Law",
+      "prompt": "How does a planet's distance from the Sun relate to how long its year is?",
+      "distance_label": "Distance from the Sun (AU)",
+      "result_label": "Orbital period",
+      "formula_explainer": "Discovered by Johannes Kepler in 1619: the square of a planet's orbital period equals the cube of its distance, when period is in years and distance is in AU around the Sun.",
+      "sanity_check": "Real value for Mars (1.52 AU): ≈ 1.88 years",
+      "quiz": {
+        "q1": {
+          "prompt": "A planet orbits the Sun at 4 AU. Roughly how long is its year?",
+          "opt1": "2 years",
+          "opt2": "4 years",
+          "opt3": "8 years",
+          "explain": "T² = a³, so T² = 4³ = 64, and T = √64 = 8 years."
+        }
+      }
+    },
+    "inverse_square": {
+      "title": "Inverse-Square Law of Light",
+      "prompt": "How much dimmer does a star look if you're twice as far away from it?",
+      "distance_label": "Distance (× original)",
+      "result_label": "Relative brightness",
+      "formula_explainer": "A star's brightness falls off with the square of distance — double the distance, and you get only a quarter of the light, because the same light spreads over 4 times the area.",
+      "sanity_check": "At 2× the distance, brightness drops to 25% of the original.",
+      "quiz": {
+        "q1": {
+          "prompt": "If you triple your distance from a star, how much dimmer does it appear?",
+          "opt1": "3 times dimmer",
+          "opt2": "9 times dimmer",
+          "opt3": "6 times dimmer",
+          "explain": "Brightness falls with the square of distance, so 3× the distance means 3² = 9 times dimmer."
+        }
+      }
+    },
+    "wien": {
+      "title": "Wien's Law",
+      "prompt": "What color does an object glow, based purely on its temperature?",
+      "temp_label": "Temperature (K)",
+      "result_label": "Peak wavelength",
+      "formula_explainer": "Wien's Law says the wavelength at which an object radiates most strongly is inversely proportional to its temperature. Hotter objects peak at shorter (bluer) wavelengths; cooler objects peak at longer (redder) ones.",
+      "sanity_check": "The Sun (~5,778 K) peaks at about 501 nm — in the visible blue-green part of the spectrum.",
+      "quiz": {
+        "q1": {
+          "prompt": "As an object gets hotter, what happens to its peak wavelength?",
+          "opt1": "It gets shorter (bluer)",
+          "opt2": "It gets longer (redder)",
+          "opt3": "It stays the same",
+          "explain": "Wien's Law is an inverse relationship — higher temperature means shorter peak wavelength, which is why very hot stars look blue-white."
+        }
+      }
     }
   },
   "universe_explorer": {
@@ -63,15 +142,71 @@
       "stars": {
         "name": "Stars",
         "description": "A star is a massive ball of plasma held together by its own gravity, generating light and heat by fusing hydrogen into helium at its core. Our Sun is a fairly average star — one of hundreds of billions in the Milky Way alone."
+      },
+      "supernovae": {
+        "name": "Supernovae",
+        "description": "A supernova is the explosive death of a massive star, briefly outshining its entire host galaxy. These explosions forge and scatter heavy elements — like the iron in your blood and the calcium in your bones — throughout the universe."
+      },
+      "star_clusters": {
+        "name": "Star Clusters",
+        "description": "Stars often form and travel in groups. Open clusters, like the Pleiades, are young and loosely bound, with a few hundred stars. Globular clusters are far older and denser, tightly packing tens of thousands to millions of stars into a compact sphere."
+      },
+      "cmb": {
+        "name": "Cosmic Microwave Background",
+        "description": "Faint radiation left over from about 380,000 years after the Big Bang, when the universe first became transparent to light. Discovered by accident in 1965, it fills all of space at a nearly uniform temperature of about 2.7 K."
+      },
+      "dark_matter": {
+        "name": "Dark Matter & Dark Energy",
+        "description": "Roughly 95% of the universe isn't made of the atoms we know. Dark matter, inferred from its gravitational pull on galaxies, makes up about 27%. Dark energy, which drives the universe's accelerating expansion, makes up roughly 68%. Both remain among astronomy's biggest open questions."
       }
     },
     "scale_steps": {
-      "earth": { "label": "Earth", "value": "12,742 km across", "blurb": "Your home planet — and the baseline for everything that follows." },
-      "sun": { "label": "The Sun", "value": "≈1.39 million km across", "blurb": "About 109 Earths could line up across the Sun's diameter." },
-      "solar_system": { "label": "The Solar System", "value": "≈60 AU across (to Neptune's orbit)", "blurb": "1 AU (Astronomical Unit) is the Earth–Sun distance: about 150 million km." },
-      "nearest_star": { "label": "To the nearest star system", "value": "≈4.24 light-years", "blurb": "Even at the speed of light, it would take over 4 years to reach Alpha Centauri." },
-      "milky_way": { "label": "The Milky Way", "value": "≈100,000 light-years across", "blurb": "Our entire galaxy — and we're just one star among hundreds of billions in it." },
-      "observable_universe": { "label": "The Observable Universe", "value": "≈93 billion light-years across", "blurb": "The furthest we can possibly see, limited by the age of the universe and the speed of light." }
+      "earth": {
+        "label": "Earth",
+        "value": "12,742 km across",
+        "blurb": "Your home planet — and the baseline for everything that follows."
+      },
+      "sun": {
+        "label": "The Sun",
+        "value": "≈1.39 million km across",
+        "blurb": "About 109 Earths could line up across the Sun's diameter."
+      },
+      "solar_system": {
+        "label": "The Solar System",
+        "value": "≈60 AU across (to Neptune's orbit)",
+        "blurb": "1 AU (Astronomical Unit) is the Earth–Sun distance: about 150 million km."
+      },
+      "nearest_star": {
+        "label": "To the nearest star system",
+        "value": "≈4.24 light-years",
+        "blurb": "Even at the speed of light, it would take over 4 years to reach Alpha Centauri."
+      },
+      "milky_way": {
+        "label": "The Milky Way",
+        "value": "≈100,000 light-years across",
+        "blurb": "Our entire galaxy — and we're just one star among hundreds of billions in it."
+      },
+      "observable_universe": {
+        "label": "The Observable Universe",
+        "value": "≈93 billion light-years across",
+        "blurb": "The furthest we can possibly see, limited by the age of the universe and the speed of light."
+      }
+    },
+    "quiz": {
+      "q1": {
+        "prompt": "Which of these forges the heavy elements found throughout the universe, including in living things?",
+        "opt1": "Nebulae",
+        "opt2": "Supernovae",
+        "opt3": "Star clusters",
+        "explain": "Supernova explosions create and scatter heavy elements across space — many atoms in your own body were forged this way."
+      },
+      "q2": {
+        "prompt": "What does the Cosmic Microwave Background tell us about?",
+        "opt1": "The current temperature of the Sun",
+        "opt2": "The universe when it was about 380,000 years old",
+        "opt3": "The location of the nearest black hole",
+        "explain": "The CMB is leftover radiation from a specific early moment in the universe's history, giving us a direct snapshot of conditions back then."
+      }
     }
   },
   "sky_explorer": {
@@ -99,9 +234,34 @@
     },
     "constellations": {
       "heading": "A few constellations to start with",
-      "ursa_major": { "name": "Ursa Major (the Great Bear)", "text": "Contains the \"Big Dipper,\" one of the most recognizable star patterns in the northern sky. Its two end stars point almost directly at Polaris, the North Star." },
-      "orion": { "name": "Orion (the Hunter)", "text": "Easiest to spot by its three-star belt in a straight line. Visible from most of the world, making it one of the best constellations for beginners." },
-      "cassiopeia": { "name": "Cassiopeia", "text": "Forms a clear \"W\" or \"M\" shape depending on the season, and sits roughly opposite the Big Dipper across Polaris." }
+      "ursa_major": {
+        "name": "Ursa Major (the Great Bear)",
+        "text": "Contains the \"Big Dipper,\" one of the most recognizable star patterns in the northern sky. Its two end stars point almost directly at Polaris, the North Star."
+      },
+      "orion": {
+        "name": "Orion (the Hunter)",
+        "text": "Easiest to spot by its three-star belt in a straight line. Visible from most of the world, making it one of the best constellations for beginners."
+      },
+      "cassiopeia": {
+        "name": "Cassiopeia",
+        "text": "Forms a clear \"W\" or \"M\" shape depending on the season, and sits roughly opposite the Big Dipper across Polaris."
+      }
+    },
+    "quiz": {
+      "q1": {
+        "prompt": "Why does the Moon go through phases?",
+        "opt1": "Because we see different amounts of its sunlit half as it orbits Earth",
+        "opt2": "Because Earth's shadow covers it every night",
+        "opt3": "Because the Moon changes shape",
+        "explain": "The Moon's phases come from our changing view of the half that's lit by the Sun — the Moon itself doesn't change shape."
+      },
+      "q2": {
+        "prompt": "What's a simple way to tell a planet from a star in the night sky?",
+        "opt1": "Planets are always bigger looking",
+        "opt2": "Planets shine steadily; stars twinkle",
+        "opt3": "Stars are only visible in winter",
+        "explain": "Starlight twinkles because it travels much farther and gets disturbed more by our atmosphere; planets usually shine with a steadier light."
+      }
     }
   },
   "exoplanet_hunter": {
@@ -118,6 +278,15 @@
       "instruction": "The depth of the dip relates directly to the planet's size compared to its star: depth = (planet radius / star radius)². Adjust the dip depth below and see the size ratio update.",
       "depth_label": "Dip depth",
       "ratio_label": "Planet radius ÷ star radius"
+    },
+    "quiz": {
+      "q1": {
+        "prompt": "If a light curve shows a deeper dip, what does that suggest about the planet?",
+        "opt1": "It's farther from its star",
+        "opt2": "It's larger relative to its star",
+        "opt3": "It's orbiting faster",
+        "explain": "Since dip depth = (planet radius / star radius)², a deeper dip directly means a proportionally larger planet relative to its star."
+      }
     }
   },
   "asteroid_hunter": {
@@ -129,7 +298,18 @@
     "correct": "Found it. That's how a moving object gives itself away against a fixed background of stars.",
     "incorrect": "Not that one — look for the dot that's in a different position between the two frames.",
     "explanation": "Real astronomers use this exact technique, called \"blink comparison\": they compare images of the same patch of sky taken minutes or hours apart. Stars are so far away they appear fixed, but a nearby asteroid visibly shifts position — that's the giveaway.",
-    "simulated_label": "Simulated for learning purposes — not a real sky image"
+    "simulated_label": "Simulated for learning purposes — not a real sky image",
+    "round_label": "Round {{round}} of {{total}}",
+    "next_round": "Next round",
+    "quiz": {
+      "q1": {
+        "prompt": "Why does an asteroid appear to move between two images of the same sky patch, while stars don't?",
+        "opt1": "Asteroids are much closer to Earth than stars are",
+        "opt2": "Asteroids are brighter than stars",
+        "opt3": "Stars are too small to photograph",
+        "explain": "Because asteroids are relatively close, their position against the fixed background of much more distant stars visibly shifts over time — this is the basis of the blink comparison method."
+      }
+    }
   },
   "stellar_detective": {
     "title": "Stellar Detective",
@@ -148,6 +328,16 @@
       "G": "G — 5,200–6,000 K, yellow (our Sun)",
       "K": "K — 3,700–5,200 K, orange",
       "M": "M — under 3,700 K, red"
+    },
+    "round_label": "{{done}} / {{total}} correct classifications",
+    "quiz": {
+      "q1": {
+        "prompt": "Which spectral class is our Sun?",
+        "opt1": "A",
+        "opt2": "M",
+        "opt3": "G",
+        "explain": "The Sun is a G-type star, with a surface temperature of about 5,778 K — putting it right in the yellow part of the spectrum."
+      }
     }
   },
   "passport": {
@@ -169,5 +359,17 @@
   "sources": {
     "title": "Sources & Accuracy",
     "note": "All real astronomical values used in Astralis are drawn from published, public data. Anything simulated for learning purposes is clearly labeled as such."
+  },
+  "auth": {
+    "sign_in": "Sign in with Google",
+    "sign_out": "Sign out",
+    "guest_warning": "You're browsing as a guest — progress won't be saved across devices."
+  },
+  "quiz": {
+    "heading": "Quick check",
+    "submit": "Check my answers",
+    "passed": "Nice work — this concept is marked complete in your Passport.",
+    "retry": "Try again",
+    "failed": "Not quite yet — review the explanations below and try again."
   }
 }
