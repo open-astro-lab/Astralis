@@ -47,6 +47,41 @@
           "opt2": "It decreases",
           "opt3": "It stays exactly the same",
           "explain": "Escape velocity is inversely proportional to the square root of radius, so a bigger planet of the same mass has a lower escape velocity — gravity is spread over a larger surface."
+        },
+        "q2": {
+          "prompt": "What does the escape velocity formula NOT depend on?",
+          "opt1": "The planet's mass",
+          "opt2": "The planet's radius",
+          "opt3": "The direction you launch in",
+          "explain": "v = √(2GM/R) depends only on mass and radius — not on launch direction, since it's a scalar minimum speed."
+        },
+        "q3": {
+          "prompt": "Why is Jupiter's escape velocity so much higher than Earth's?",
+          "opt1": "Jupiter is much more massive",
+          "opt2": "Jupiter is closer to the Sun",
+          "opt3": "Jupiter spins faster",
+          "explain": "Jupiter's huge mass (about 318 Earths) dominates the formula, giving it a far higher escape velocity (~59.5 km/s) despite also having a much larger radius."
+        },
+        "q4": {
+          "prompt": "If you could double a planet's mass while keeping its radius the same, what happens to escape velocity?",
+          "opt1": "It multiplies by √2",
+          "opt2": "It doubles",
+          "opt3": "It stays the same",
+          "explain": "Since v ∝ √M, doubling mass multiplies escape velocity by √2 (about 1.41×), not by 2."
+        },
+        "q5": {
+          "prompt": "Does escape velocity depend on the mass of the object trying to escape (like a rocket)?",
+          "opt1": "Yes, heavier rockets need higher escape velocity",
+          "opt2": "No, it's the same for any object regardless of its own mass",
+          "opt3": "Only for objects heavier than 1000 kg",
+          "explain": "Escape velocity comes from energy balance where the escaping object's mass cancels out of the equation — it's the same for a pebble or a spacecraft."
+        },
+        "q6": {
+          "prompt": "The Moon's escape velocity is about 2.4 km/s, much lower than Earth's 11.2 km/s. Why?",
+          "opt1": "The Moon has far less mass and a smaller radius than Earth",
+          "opt2": "The Moon has no atmosphere",
+          "opt3": "The Moon is farther from the Sun",
+          "explain": "The Moon's much smaller mass (about 1.2% of Earth's) reduces GM far more than its smaller radius increases escape velocity, giving a much lower net value."
         }
       }
     },
@@ -66,6 +101,41 @@
           "opt2": "It's the same as escape velocity",
           "opt3": "It's escape velocity multiplied by 2",
           "explain": "Escape velocity is exactly √2 times orbital velocity at any given radius — this falls directly out of comparing the two formulas."
+        },
+        "q2": {
+          "prompt": "The International Space Station orbits at about 400 km altitude. Why doesn't it fall to Earth?",
+          "opt1": "It's moving sideways fast enough that its fall matches Earth's curvature",
+          "opt2": "There's no gravity at that altitude",
+          "opt3": "Its engines constantly push it upward",
+          "explain": "Orbit is really continuous falling — the ISS moves sideways at ~7.7 km/s, fast enough that as it falls, the ground curves away at the same rate."
+        },
+        "q3": {
+          "prompt": "If a satellite orbits closer to Earth, what happens to its required orbital velocity?",
+          "opt1": "It increases",
+          "opt2": "It decreases",
+          "opt3": "It stays the same",
+          "explain": "Since v = √(GM/r), a smaller orbital radius r means a larger orbital velocity is needed to maintain the orbit."
+        },
+        "q4": {
+          "prompt": "Geostationary satellites orbit much higher (~35,786 km) than the ISS. Is their orbital velocity higher or lower?",
+          "opt1": "Lower",
+          "opt2": "Higher",
+          "opt3": "Exactly the same",
+          "explain": "At a much larger radius, orbital velocity is lower — geostationary satellites move at about 3.1 km/s, versus the ISS's 7.7 km/s."
+        },
+        "q5": {
+          "prompt": "What provides the centripetal force that keeps a satellite in orbit?",
+          "opt1": "Gravity from the body it orbits",
+          "opt2": "Its own engines firing continuously",
+          "opt3": "Solar wind pressure",
+          "explain": "Gravity itself supplies exactly the centripetal force needed for circular motion at the correct orbital velocity — no continuous thrust is required."
+        },
+        "q6": {
+          "prompt": "Orbital velocity around the Sun at Earth's distance is about 29.8 km/s. What does this represent?",
+          "opt1": "How fast Earth spins on its axis",
+          "opt2": "How fast Earth travels around the Sun",
+          "opt3": "The Moon's speed around Earth",
+          "explain": "29.8 km/s is Earth's orbital velocity around the Sun — the speed needed to maintain a stable orbit at 1 AU."
         }
       }
     },
@@ -83,6 +153,41 @@
           "opt2": "4 years",
           "opt3": "8 years",
           "explain": "T² = a³, so T² = 4³ = 64, and T = √64 = 8 years."
+        },
+        "q2": {
+          "prompt": "Which planet has a longer year: one closer to the Sun, or one farther away?",
+          "opt1": "The one farther away",
+          "opt2": "The one closer in",
+          "opt3": "Distance doesn't affect year length",
+          "explain": "T² ∝ a³ means greater distance always means a longer orbital period — farther planets take longer to complete one orbit."
+        },
+        "q3": {
+          "prompt": "Mercury orbits at about 0.39 AU. Roughly how long is its year?",
+          "opt1": "About 0.24 years (~88 days)",
+          "opt2": "About 1 year",
+          "opt3": "About 2 years",
+          "explain": "T² = 0.39³ ≈ 0.059, so T ≈ √0.059 ≈ 0.24 years — matching Mercury's real 88-day year closely."
+        },
+        "q4": {
+          "prompt": "Kepler's Third Law in this simple form (T² = a³) works exactly for which case?",
+          "opt1": "Only objects orbiting the Sun, with T in years and a in AU",
+          "opt2": "Any two orbiting objects anywhere in the universe",
+          "opt3": "Only objects orbiting Earth",
+          "explain": "This simplified form only holds for objects orbiting the Sun with those specific units — a more general version includes both masses for other systems."
+        },
+        "q5": {
+          "prompt": "Why was Kepler's Third Law historically important?",
+          "opt1": "It gave the first mathematical relationship connecting orbital distances and times, later explained by Newton's gravity",
+          "opt2": "It proved the Sun was the center of the universe with no exceptions",
+          "opt3": "It disproved the existence of comets",
+          "explain": "Kepler's laws described planetary motion precisely from observation, and later became a cornerstone that Newton's theory of gravity successfully explained from first principles."
+        },
+        "q6": {
+          "prompt": "A hypothetical planet takes 27 years to orbit the Sun. Roughly how far out is it (in AU)?",
+          "opt1": "About 9 AU",
+          "opt2": "About 3 AU",
+          "opt3": "About 27 AU",
+          "explain": "27² = 729 = a³, so a = ∛729 = 9 AU."
         }
       }
     },
@@ -100,6 +205,41 @@
           "opt2": "9 times dimmer",
           "opt3": "6 times dimmer",
           "explain": "Brightness falls with the square of distance, so 3× the distance means 3² = 9 times dimmer."
+        },
+        "q2": {
+          "prompt": "Two identical stars are the same actual brightness, but Star A looks dimmer than Star B from Earth. What does this most likely tell you?",
+          "opt1": "Star A is farther away",
+          "opt2": "Star A is smaller",
+          "opt3": "Star A is younger",
+          "explain": "For stars of identical true brightness (luminosity), the inverse-square law means the dimmer-looking one is simply farther away — this is actually how astronomers estimate distances using 'standard candles'."
+        },
+        "q3": {
+          "prompt": "If you move to 4 times the distance from a light source, how much of the original brightness remains?",
+          "opt1": "1/4",
+          "opt2": "1/16",
+          "opt3": "1/8",
+          "explain": "Brightness falls with the square of distance: at 4× distance, brightness is 1/4² = 1/16 of the original."
+        },
+        "q4": {
+          "prompt": "Why does the inverse-square law involve an area (4πd²) in its formula?",
+          "opt1": "Light spreads out over an ever-larger sphere as it travels, and that sphere's surface area grows with distance squared",
+          "opt2": "Stars are shaped like spheres",
+          "opt3": "It's just a mathematical convenience with no physical meaning",
+          "explain": "Light radiates outward in all directions, spreading over the surface of an expanding sphere. Since a sphere's surface area is 4πd², the same total light gets diluted over an area that grows with d²."
+        },
+        "q5": {
+          "prompt": "This same inverse-square pattern also applies to which other force?",
+          "opt1": "Gravity",
+          "opt2": "Friction",
+          "opt3": "Magnetism between two bar magnets",
+          "explain": "Gravity also follows an inverse-square law (F ∝ 1/r²) — it's one of several fundamental phenomena in physics that spread outward the same geometric way."
+        },
+        "q6": {
+          "prompt": "Astronomers use the inverse-square law with 'standard candles' (stars of known true brightness) mainly to measure what?",
+          "opt1": "Distances to faraway objects",
+          "opt2": "The temperature of stars",
+          "opt3": "The chemical composition of stars",
+          "explain": "By comparing a standard candle's known true brightness to how dim it appears, astronomers can calculate distance directly from the inverse-square relationship."
         }
       }
     },
@@ -117,6 +257,87 @@
           "opt2": "It gets longer (redder)",
           "opt3": "It stays the same",
           "explain": "Wien's Law is an inverse relationship — higher temperature means shorter peak wavelength, which is why very hot stars look blue-white."
+        },
+        "q2": {
+          "prompt": "A star with a surface temperature of about 3,000 K would appear mostly what color?",
+          "opt1": "Red",
+          "opt2": "Blue",
+          "opt3": "White",
+          "explain": "Cooler stars (like red dwarfs, around 2,500–3,700 K) peak at longer, redder wavelengths according to Wien's Law."
+        },
+        "q3": {
+          "prompt": "A star with a surface temperature of about 20,000 K would appear mostly what color?",
+          "opt1": "Blue-white",
+          "opt2": "Red",
+          "opt3": "Yellow",
+          "explain": "Hot stars (B-type, 10,000–30,000 K) peak at short wavelengths, appearing blue-white — the opposite end of the spectrum from cool red stars."
+        },
+        "q4": {
+          "prompt": "Wien's Law uses the constant b ≈ 2,897,771 nm·K. What role does this constant play?",
+          "opt1": "It converts temperature directly into peak wavelength via division",
+          "opt2": "It has no real physical meaning, just a scaling number",
+          "opt3": "It only applies to the Sun specifically",
+          "explain": "Wien's displacement constant (b) is a universal physical constant — dividing it by any temperature in Kelvin gives that object's peak emission wavelength."
+        },
+        "q5": {
+          "prompt": "Does Wien's Law apply only to stars?",
+          "opt1": "No — it applies to any object that radiates as a blackbody, including planets and even human bodies",
+          "opt2": "Yes, it only works for stars",
+          "opt3": "It only works for objects hotter than the Sun",
+          "explain": "Wien's Law is a general blackbody radiation law. It's why thermal cameras can detect the infrared glow of comparatively cool objects like human bodies, which peak in infrared, not visible light."
+        },
+        "q6": {
+          "prompt": "If a star's peak wavelength shifts to be shorter over time, what has likely happened to its temperature?",
+          "opt1": "It has increased",
+          "opt2": "It has decreased",
+          "opt3": "Temperature and peak wavelength are unrelated",
+          "explain": "Wien's Law is an inverse relationship — a shift to shorter (bluer) peak wavelength means the object has gotten hotter."
+        }
+      }
+    },
+    "stefan_boltzmann": {
+      "title": "Stefan–Boltzmann Law",
+      "prompt": "How bright is a star, really, based on its size and temperature?",
+      "radius_label": "Radius (× Sun's radius)",
+      "temp_label": "Temperature (× Sun's temperature)",
+      "result_label": "Luminosity (× Sun's luminosity)",
+      "formula_explainer": "A star's total light output (luminosity) depends on both its surface area and temperature. Since L ∝ R²T⁴, temperature matters enormously — doubling temperature increases luminosity 16-fold.",
+      "sanity_check": "At Sun-like radius and temperature (1× each), luminosity should read almost exactly 1.",
+      "quiz": {
+        "q1": {
+          "prompt": "If you double a star's temperature while keeping its radius the same, how much brighter does it get?",
+          "opt1": "2 times",
+          "opt2": "8 times",
+          "opt3": "16 times",
+          "explain": "Luminosity depends on T⁴, so doubling temperature increases luminosity by 2⁴ = 16 times."
+        },
+        "q2": {
+          "prompt": "If you double a star's radius while keeping its temperature the same, how much brighter does it get?",
+          "opt1": "2 times",
+          "opt2": "4 times",
+          "opt3": "8 times",
+          "explain": "Luminosity depends on R², so doubling radius increases luminosity by 2² = 4 times."
+        },
+        "q3": {
+          "prompt": "A red giant is cooler than the Sun but far more luminous. How is this possible?",
+          "opt1": "Its enormous radius more than makes up for its lower temperature",
+          "opt2": "It's actually hotter than it looks",
+          "opt3": "Red giants don't follow the Stefan-Boltzmann law",
+          "explain": "Since luminosity depends on R², a huge radius can outweigh a lower T⁴ term — this is exactly why red giants, despite cooler surfaces, shine far brighter than the Sun."
+        },
+        "q4": {
+          "prompt": "Why does temperature (T⁴) affect luminosity so much more strongly than radius (R²)?",
+          "opt1": "Because it's raised to the 4th power instead of the 2nd, so small temperature changes compound faster",
+          "opt2": "Temperature doesn't really affect luminosity much at all",
+          "opt3": "This is only true for stars, not other objects",
+          "explain": "A 4th-power relationship grows far faster than a squared one — this is a general feature of blackbody radiation, not unique to stars."
+        },
+        "q5": {
+          "prompt": "Two stars have the same luminosity. One is much hotter. What must be true of the hotter one?",
+          "opt1": "It must have a smaller radius",
+          "opt2": "It must have a larger radius",
+          "opt3": "Nothing can be determined",
+          "explain": "Since L ∝ R²T⁴, if luminosity is equal but T is higher, R must be smaller to balance the equation — this is exactly how white dwarfs (hot, tiny) can match the luminosity of larger, cooler stars."
         }
       }
     }
@@ -158,6 +379,22 @@
       "dark_matter": {
         "name": "Dark Matter & Dark Energy",
         "description": "Roughly 95% of the universe isn't made of the atoms we know. Dark matter, inferred from its gravitational pull on galaxies, makes up about 27%. Dark energy, which drives the universe's accelerating expansion, makes up roughly 68%. Both remain among astronomy's biggest open questions."
+      },
+      "solar_system": {
+        "name": "The Solar System",
+        "description": "Our home system formed about 4.6 billion years ago from a collapsing cloud of gas and dust. It holds the Sun, 8 planets, over 200 moons, the asteroid belt between Mars and Jupiter, and the icy Kuiper Belt beyond Neptune."
+      },
+      "comets": {
+        "name": "Comets",
+        "description": "Comets are icy leftovers from the outer solar system's formation. As they near the Sun, ice on their surface vaporizes, creating a glowing coma and a tail that always points away from the Sun. Halley's Comet, the most famous, returns roughly every 76 years."
+      },
+      "habitable_zone": {
+        "name": "The Habitable Zone",
+        "description": "Often called the 'Goldilocks zone,' this is the range of distances from a star where a planet could be warm enough for liquid water but not so hot that it boils away. Earth sits comfortably inside the Sun's habitable zone."
+      },
+      "andromeda": {
+        "name": "The Andromeda Galaxy",
+        "description": "The nearest large galaxy to our own, about 2.5 million light-years away, and visible to the naked eye as a faint smudge on a dark night. It's a spiral galaxy like the Milky Way, and the two are on a slow collision course, expected to merge in roughly 4.5 billion years."
       }
     },
     "scale_steps": {
@@ -363,7 +600,12 @@
   "auth": {
     "sign_in": "Sign in with Google",
     "sign_out": "Sign out",
-    "guest_warning": "You're browsing as a guest — progress won't be saved across devices."
+    "guest_warning": "You're browsing as a guest — progress won't be saved across devices.",
+    "save_progress_heading": "Save your progress across every device",
+    "save_progress_subtitle": "Sign in once with Google, and your Astronomy Passport follows you — phone, tablet, laptop, wherever you open Astralis.",
+    "skip_button": "Skip for now",
+    "skip_caption": "Your progress won't be saved across devices.",
+    "signed_in_as": "Signed in as {{email}}"
   },
   "quiz": {
     "heading": "Quick check",

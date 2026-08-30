@@ -28,13 +28,44 @@ export default function PhysicsLab() {
           {
             id: "ev_q1",
             promptKey: "physics_lab.escape_velocity.quiz.q1.prompt",
-            optionKeys: [
-              "physics_lab.escape_velocity.quiz.q1.opt1",
-              "physics_lab.escape_velocity.quiz.q1.opt2",
-              "physics_lab.escape_velocity.quiz.q1.opt3",
-            ],
+            optionKeys: ["physics_lab.escape_velocity.quiz.q1.opt1", "physics_lab.escape_velocity.quiz.q1.opt2", "physics_lab.escape_velocity.quiz.q1.opt3"],
             correctIndex: 1,
             explainKey: "physics_lab.escape_velocity.quiz.q1.explain",
+          },
+          {
+            id: "ev_q2",
+            promptKey: "physics_lab.escape_velocity.quiz.q2.prompt",
+            optionKeys: ["physics_lab.escape_velocity.quiz.q2.opt1", "physics_lab.escape_velocity.quiz.q2.opt2", "physics_lab.escape_velocity.quiz.q2.opt3"],
+            correctIndex: 1,
+            explainKey: "physics_lab.escape_velocity.quiz.q2.explain",
+          },
+          {
+            id: "ev_q3",
+            promptKey: "physics_lab.escape_velocity.quiz.q3.prompt",
+            optionKeys: ["physics_lab.escape_velocity.quiz.q3.opt1", "physics_lab.escape_velocity.quiz.q3.opt2", "physics_lab.escape_velocity.quiz.q3.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.escape_velocity.quiz.q3.explain",
+          },
+          {
+            id: "ev_q4",
+            promptKey: "physics_lab.escape_velocity.quiz.q4.prompt",
+            optionKeys: ["physics_lab.escape_velocity.quiz.q4.opt1", "physics_lab.escape_velocity.quiz.q4.opt2", "physics_lab.escape_velocity.quiz.q4.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.escape_velocity.quiz.q4.explain",
+          },
+          {
+            id: "ev_q5",
+            promptKey: "physics_lab.escape_velocity.quiz.q5.prompt",
+            optionKeys: ["physics_lab.escape_velocity.quiz.q5.opt1", "physics_lab.escape_velocity.quiz.q5.opt2", "physics_lab.escape_velocity.quiz.q5.opt3"],
+            correctIndex: 1,
+            explainKey: "physics_lab.escape_velocity.quiz.q5.explain",
+          },
+          {
+            id: "ev_q6",
+            promptKey: "physics_lab.escape_velocity.quiz.q6.prompt",
+            optionKeys: ["physics_lab.escape_velocity.quiz.q6.opt1", "physics_lab.escape_velocity.quiz.q6.opt2", "physics_lab.escape_velocity.quiz.q6.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.escape_velocity.quiz.q6.explain",
           },
         ]}
       />
@@ -62,13 +93,44 @@ export default function PhysicsLab() {
           {
             id: "ov_q1",
             promptKey: "physics_lab.orbital_velocity.quiz.q1.prompt",
-            optionKeys: [
-              "physics_lab.orbital_velocity.quiz.q1.opt1",
-              "physics_lab.orbital_velocity.quiz.q1.opt2",
-              "physics_lab.orbital_velocity.quiz.q1.opt3",
-            ],
+            optionKeys: ["physics_lab.orbital_velocity.quiz.q1.opt1", "physics_lab.orbital_velocity.quiz.q1.opt2", "physics_lab.orbital_velocity.quiz.q1.opt3"],
             correctIndex: 0,
             explainKey: "physics_lab.orbital_velocity.quiz.q1.explain",
+          },
+          {
+            id: "ov_q2",
+            promptKey: "physics_lab.orbital_velocity.quiz.q2.prompt",
+            optionKeys: ["physics_lab.orbital_velocity.quiz.q2.opt1", "physics_lab.orbital_velocity.quiz.q2.opt2", "physics_lab.orbital_velocity.quiz.q2.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.orbital_velocity.quiz.q2.explain",
+          },
+          {
+            id: "ov_q3",
+            promptKey: "physics_lab.orbital_velocity.quiz.q3.prompt",
+            optionKeys: ["physics_lab.orbital_velocity.quiz.q3.opt1", "physics_lab.orbital_velocity.quiz.q3.opt2", "physics_lab.orbital_velocity.quiz.q3.opt3"],
+            correctIndex: 1,
+            explainKey: "physics_lab.orbital_velocity.quiz.q3.explain",
+          },
+          {
+            id: "ov_q4",
+            promptKey: "physics_lab.orbital_velocity.quiz.q4.prompt",
+            optionKeys: ["physics_lab.orbital_velocity.quiz.q4.opt1", "physics_lab.orbital_velocity.quiz.q4.opt2", "physics_lab.orbital_velocity.quiz.q4.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.orbital_velocity.quiz.q4.explain",
+          },
+          {
+            id: "ov_q5",
+            promptKey: "physics_lab.orbital_velocity.quiz.q5.prompt",
+            optionKeys: ["physics_lab.orbital_velocity.quiz.q5.opt1", "physics_lab.orbital_velocity.quiz.q5.opt2", "physics_lab.orbital_velocity.quiz.q5.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.orbital_velocity.quiz.q5.explain",
+          },
+          {
+            id: "ov_q6",
+            promptKey: "physics_lab.orbital_velocity.quiz.q6.prompt",
+            optionKeys: ["physics_lab.orbital_velocity.quiz.q6.opt1", "physics_lab.orbital_velocity.quiz.q6.opt2", "physics_lab.orbital_velocity.quiz.q6.opt3"],
+            correctIndex: 1,
+            explainKey: "physics_lab.orbital_velocity.quiz.q6.explain",
           },
         ]}
       />
@@ -91,13 +153,44 @@ export default function PhysicsLab() {
           {
             id: "kepler_q1",
             promptKey: "physics_lab.kepler.quiz.q1.prompt",
-            optionKeys: [
-              "physics_lab.kepler.quiz.q1.opt1",
-              "physics_lab.kepler.quiz.q1.opt2",
-              "physics_lab.kepler.quiz.q1.opt3",
-            ],
+            optionKeys: ["physics_lab.kepler.quiz.q1.opt1", "physics_lab.kepler.quiz.q1.opt2", "physics_lab.kepler.quiz.q1.opt3"],
             correctIndex: 2,
             explainKey: "physics_lab.kepler.quiz.q1.explain",
+          },
+          {
+            id: "kepler_q2",
+            promptKey: "physics_lab.kepler.quiz.q2.prompt",
+            optionKeys: ["physics_lab.kepler.quiz.q2.opt1", "physics_lab.kepler.quiz.q2.opt2", "physics_lab.kepler.quiz.q2.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.kepler.quiz.q2.explain",
+          },
+          {
+            id: "kepler_q3",
+            promptKey: "physics_lab.kepler.quiz.q3.prompt",
+            optionKeys: ["physics_lab.kepler.quiz.q3.opt1", "physics_lab.kepler.quiz.q3.opt2", "physics_lab.kepler.quiz.q3.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.kepler.quiz.q3.explain",
+          },
+          {
+            id: "kepler_q4",
+            promptKey: "physics_lab.kepler.quiz.q4.prompt",
+            optionKeys: ["physics_lab.kepler.quiz.q4.opt1", "physics_lab.kepler.quiz.q4.opt2", "physics_lab.kepler.quiz.q4.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.kepler.quiz.q4.explain",
+          },
+          {
+            id: "kepler_q5",
+            promptKey: "physics_lab.kepler.quiz.q5.prompt",
+            optionKeys: ["physics_lab.kepler.quiz.q5.opt1", "physics_lab.kepler.quiz.q5.opt2", "physics_lab.kepler.quiz.q5.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.kepler.quiz.q5.explain",
+          },
+          {
+            id: "kepler_q6",
+            promptKey: "physics_lab.kepler.quiz.q6.prompt",
+            optionKeys: ["physics_lab.kepler.quiz.q6.opt1", "physics_lab.kepler.quiz.q6.opt2", "physics_lab.kepler.quiz.q6.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.kepler.quiz.q6.explain",
           },
         ]}
       />
@@ -120,13 +213,44 @@ export default function PhysicsLab() {
           {
             id: "isl_q1",
             promptKey: "physics_lab.inverse_square.quiz.q1.prompt",
-            optionKeys: [
-              "physics_lab.inverse_square.quiz.q1.opt1",
-              "physics_lab.inverse_square.quiz.q1.opt2",
-              "physics_lab.inverse_square.quiz.q1.opt3",
-            ],
+            optionKeys: ["physics_lab.inverse_square.quiz.q1.opt1", "physics_lab.inverse_square.quiz.q1.opt2", "physics_lab.inverse_square.quiz.q1.opt3"],
             correctIndex: 1,
             explainKey: "physics_lab.inverse_square.quiz.q1.explain",
+          },
+          {
+            id: "isl_q2",
+            promptKey: "physics_lab.inverse_square.quiz.q2.prompt",
+            optionKeys: ["physics_lab.inverse_square.quiz.q2.opt1", "physics_lab.inverse_square.quiz.q2.opt2", "physics_lab.inverse_square.quiz.q2.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.inverse_square.quiz.q2.explain",
+          },
+          {
+            id: "isl_q3",
+            promptKey: "physics_lab.inverse_square.quiz.q3.prompt",
+            optionKeys: ["physics_lab.inverse_square.quiz.q3.opt1", "physics_lab.inverse_square.quiz.q3.opt2", "physics_lab.inverse_square.quiz.q3.opt3"],
+            correctIndex: 1,
+            explainKey: "physics_lab.inverse_square.quiz.q3.explain",
+          },
+          {
+            id: "isl_q4",
+            promptKey: "physics_lab.inverse_square.quiz.q4.prompt",
+            optionKeys: ["physics_lab.inverse_square.quiz.q4.opt1", "physics_lab.inverse_square.quiz.q4.opt2", "physics_lab.inverse_square.quiz.q4.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.inverse_square.quiz.q4.explain",
+          },
+          {
+            id: "isl_q5",
+            promptKey: "physics_lab.inverse_square.quiz.q5.prompt",
+            optionKeys: ["physics_lab.inverse_square.quiz.q5.opt1", "physics_lab.inverse_square.quiz.q5.opt2", "physics_lab.inverse_square.quiz.q5.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.inverse_square.quiz.q5.explain",
+          },
+          {
+            id: "isl_q6",
+            promptKey: "physics_lab.inverse_square.quiz.q6.prompt",
+            optionKeys: ["physics_lab.inverse_square.quiz.q6.opt1", "physics_lab.inverse_square.quiz.q6.opt2", "physics_lab.inverse_square.quiz.q6.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.inverse_square.quiz.q6.explain",
           },
         ]}
       />
@@ -149,13 +273,97 @@ export default function PhysicsLab() {
           {
             id: "wien_q1",
             promptKey: "physics_lab.wien.quiz.q1.prompt",
-            optionKeys: [
-              "physics_lab.wien.quiz.q1.opt1",
-              "physics_lab.wien.quiz.q1.opt2",
-              "physics_lab.wien.quiz.q1.opt3",
-            ],
+            optionKeys: ["physics_lab.wien.quiz.q1.opt1", "physics_lab.wien.quiz.q1.opt2", "physics_lab.wien.quiz.q1.opt3"],
             correctIndex: 0,
             explainKey: "physics_lab.wien.quiz.q1.explain",
+          },
+          {
+            id: "wien_q2",
+            promptKey: "physics_lab.wien.quiz.q2.prompt",
+            optionKeys: ["physics_lab.wien.quiz.q2.opt1", "physics_lab.wien.quiz.q2.opt2", "physics_lab.wien.quiz.q2.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.wien.quiz.q2.explain",
+          },
+          {
+            id: "wien_q3",
+            promptKey: "physics_lab.wien.quiz.q3.prompt",
+            optionKeys: ["physics_lab.wien.quiz.q3.opt1", "physics_lab.wien.quiz.q3.opt2", "physics_lab.wien.quiz.q3.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.wien.quiz.q3.explain",
+          },
+          {
+            id: "wien_q4",
+            promptKey: "physics_lab.wien.quiz.q4.prompt",
+            optionKeys: ["physics_lab.wien.quiz.q4.opt1", "physics_lab.wien.quiz.q4.opt2", "physics_lab.wien.quiz.q4.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.wien.quiz.q4.explain",
+          },
+          {
+            id: "wien_q5",
+            promptKey: "physics_lab.wien.quiz.q5.prompt",
+            optionKeys: ["physics_lab.wien.quiz.q5.opt1", "physics_lab.wien.quiz.q5.opt2", "physics_lab.wien.quiz.q5.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.wien.quiz.q5.explain",
+          },
+          {
+            id: "wien_q6",
+            promptKey: "physics_lab.wien.quiz.q6.prompt",
+            optionKeys: ["physics_lab.wien.quiz.q6.opt1", "physics_lab.wien.quiz.q6.opt2", "physics_lab.wien.quiz.q6.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.wien.quiz.q6.explain",
+          },
+        ]}
+      />
+      {/* 6. Stefan–Boltzmann Law */}
+      <FormulaChallenge
+        id="stefan_boltzmann"
+        titleKey="physics_lab.stefan_boltzmann.title"
+        promptKey="physics_lab.stefan_boltzmann.prompt"
+        resultLabelKey="physics_lab.stefan_boltzmann.result_label"
+        sanityCheckKey="physics_lab.stefan_boltzmann.sanity_check"
+        formulaText="L = 4πR²σT⁴  →  (in solar units) L = R² × T⁴"
+        formulaExplainerKey="physics_lab.stefan_boltzmann.formula_explainer"
+        resultUnit="× Sun's luminosity"
+        inputs={[
+          { key: "radiusRatio", labelKey: "physics_lab.stefan_boltzmann.radius_label", min: 0.01, max: 1000, step: 0.01, unit: "× R☉", initial: 1 },
+          { key: "tempRatio", labelKey: "physics_lab.stefan_boltzmann.temp_label", min: 0.1, max: 10, step: 0.01, unit: "× T☉", initial: 1 },
+        ]}
+        compute={({ radiusRatio, tempRatio }) => Math.pow(radiusRatio, 2) * Math.pow(tempRatio, 4)}
+        quizQuestions={[
+          {
+            id: "sb_q1",
+            promptKey: "physics_lab.stefan_boltzmann.quiz.q1.prompt",
+            optionKeys: ["physics_lab.stefan_boltzmann.quiz.q1.opt1", "physics_lab.stefan_boltzmann.quiz.q1.opt2", "physics_lab.stefan_boltzmann.quiz.q1.opt3"],
+            correctIndex: 2,
+            explainKey: "physics_lab.stefan_boltzmann.quiz.q1.explain",
+          },
+          {
+            id: "sb_q2",
+            promptKey: "physics_lab.stefan_boltzmann.quiz.q2.prompt",
+            optionKeys: ["physics_lab.stefan_boltzmann.quiz.q2.opt1", "physics_lab.stefan_boltzmann.quiz.q2.opt2", "physics_lab.stefan_boltzmann.quiz.q2.opt3"],
+            correctIndex: 1,
+            explainKey: "physics_lab.stefan_boltzmann.quiz.q2.explain",
+          },
+          {
+            id: "sb_q3",
+            promptKey: "physics_lab.stefan_boltzmann.quiz.q3.prompt",
+            optionKeys: ["physics_lab.stefan_boltzmann.quiz.q3.opt1", "physics_lab.stefan_boltzmann.quiz.q3.opt2", "physics_lab.stefan_boltzmann.quiz.q3.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.stefan_boltzmann.quiz.q3.explain",
+          },
+          {
+            id: "sb_q4",
+            promptKey: "physics_lab.stefan_boltzmann.quiz.q4.prompt",
+            optionKeys: ["physics_lab.stefan_boltzmann.quiz.q4.opt1", "physics_lab.stefan_boltzmann.quiz.q4.opt2", "physics_lab.stefan_boltzmann.quiz.q4.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.stefan_boltzmann.quiz.q4.explain",
+          },
+          {
+            id: "sb_q5",
+            promptKey: "physics_lab.stefan_boltzmann.quiz.q5.prompt",
+            optionKeys: ["physics_lab.stefan_boltzmann.quiz.q5.opt1", "physics_lab.stefan_boltzmann.quiz.q5.opt2", "physics_lab.stefan_boltzmann.quiz.q5.opt3"],
+            correctIndex: 0,
+            explainKey: "physics_lab.stefan_boltzmann.quiz.q5.explain",
           },
         ]}
       />

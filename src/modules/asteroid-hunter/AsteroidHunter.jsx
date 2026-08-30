@@ -46,7 +46,7 @@ function StarField({ stars, asteroid, onClick, showTarget }) {
   );
 }
 
-const TOTAL_ROUNDS = 8;
+const TOTAL_ROUNDS = 38;
 
 export default function AsteroidHunter() {
   const { t } = useTranslation();

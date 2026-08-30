@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import AuthPrompt from "./AuthPrompt.jsx";
 
 const MODULES = [
   { key: "universe_explorer", labelKey: "modules.universe_explorer", descKey: "universe_explorer.subtitle" },
@@ -14,6 +15,7 @@ export default function Home({ setView }) {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
+      <AuthPrompt />
       <div className="max-w-2xl">
         <h1 className="font-display text-4xl md:text-5xl leading-tight text-text">
           {t("home.heading")}

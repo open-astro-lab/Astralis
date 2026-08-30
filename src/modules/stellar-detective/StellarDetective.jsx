@@ -70,7 +70,7 @@ export default function StellarDetective() {
     }
   }
 
-  const roundsTarget = 5;
+  const roundsTarget = 35;
   const readyForQuiz = correctRounds >= roundsTarget;
 
   function handleTemperatureChange(v) {

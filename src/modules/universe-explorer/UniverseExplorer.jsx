@@ -6,6 +6,7 @@ import Quiz from "../../components/Quiz.jsx";
 const OBJECT_KEYS = [
   "galaxies", "nebulae", "black_holes", "stars",
   "supernovae", "star_clusters", "cmb", "dark_matter",
+  "solar_system", "comets", "habitable_zone", "andromeda",
 ];
 const SCALE_KEYS = ["earth", "sun", "solar_system", "nearest_star", "milky_way", "observable_universe"];
 
@@ -18,6 +19,10 @@ const GLOW_COLORS = {
   star_clusters: ["#F2C572", "#FFFFFF"],
   cmb: ["#3FD6B0", "#A79AF5"],
   dark_matter: ["#4B4F6B", "#7C6CF0"],
+  solar_system: ["#F2C572", "#3FD6B0"],
+  comets: ["#A79AF5", "#FFFFFF"],
+  habitable_zone: ["#3FD6B0", "#F2C572"],
+  andromeda: ["#7C6CF0", "#FFFFFF"],
 };
 
 function ObjectGlyph({ kind }) {
