@@ -486,15 +486,273 @@
       "heading": "A few constellations to start with",
       "ursa_major": {
         "name": "Ursa Major (the Great Bear)",
-        "text": "Contains the \"Big Dipper,\" one of the most recognizable star patterns in the northern sky. Its two end stars point almost directly at Polaris, the North Star."
+        "text": "Contains the \"Big Dipper,\" one of the most recognizable star patterns in the northern sky. Its two end stars point almost directly at Polaris, the North Star.",
+        "mythology": "Callisto, a nymph loved by Zeus, was transformed into a bear by a jealous Hera. Years later, her son Arcas nearly killed her while hunting without recognizing her — so Zeus placed them both in the sky, as Ursa Major and Ursa Minor, to prevent the tragedy.",
+        "tricks": "Find the seven bright stars forming the 'Big Dipper' — a distinctive bowl-and-handle shape marking the bear's tail and hindquarters. It's one of the most recognizable patterns in the entire northern sky.",
+        "season": "Circumpolar from most of the Northern Hemisphere, but highest and most prominent during spring evenings.",
+        "quiz": {
+          "q1": {
+            "prompt": "What well-known asterism forms part of Ursa Major?",
+            "opt1": "The Big Dipper",
+            "opt2": "The Teapot",
+            "opt3": "The Sickle",
+            "explain": "The Big Dipper's seven bright stars form the bear's tail and hindquarters, making it one of the easiest patterns to spot."
+          },
+          "q2": {
+            "prompt": "In myth, who was transformed into the bear that became Ursa Major?",
+            "opt1": "Callisto",
+            "opt2": "Europa",
+            "opt3": "Andromeda",
+            "explain": "Callisto, a nymph loved by Zeus, was turned into a bear by a jealous Hera and later placed in the sky alongside her son."
+          },
+          "q3": {
+            "prompt": "The two end stars of the Big Dipper's bowl point toward which star?",
+            "opt1": "Polaris",
+            "opt2": "Antares",
+            "opt3": "Sirius",
+            "explain": "Extending a line through the Big Dipper's two 'pointer stars' leads almost directly to Polaris, the North Star."
+          }
+        }
       },
       "orion": {
         "name": "Orion (the Hunter)",
-        "text": "Easiest to spot by its three-star belt in a straight line. Visible from most of the world, making it one of the best constellations for beginners."
+        "text": "Easiest to spot by its three-star belt in a straight line. Visible from most of the world, making it one of the best constellations for beginners.",
+        "mythology": "Orion was a great hunter in Greek mythology who boasted he could kill any animal on Earth. In punishment, a scorpion was sent to sting him — the origin of why Orion and Scorpius sit on opposite sides of the sky, never visible together.",
+        "tricks": "Look for the three bright stars in a straight, evenly-spaced line forming Orion's belt. Betelgeuse (reddish, upper-left) marks a shoulder, and Rigel (blue-white, lower-right) marks a foot.",
+        "season": "Best viewed in the Northern Hemisphere winter evenings (December–March); visible from most of the world.",
+        "quiz": {
+          "q1": {
+            "prompt": "What is the easiest way to spot Orion?",
+            "opt1": "Its three-star belt in a straight, evenly-spaced line",
+            "opt2": "A teapot-shaped pattern",
+            "opt3": "A W-shaped pattern",
+            "explain": "Orion's belt — three evenly-spaced bright stars in a row — is one of the most recognizable patterns in the night sky."
+          },
+          "q2": {
+            "prompt": "Which reddish star marks one of Orion's shoulders?",
+            "opt1": "Betelgeuse",
+            "opt2": "Rigel",
+            "opt3": "Polaris",
+            "explain": "Betelgeuse, a red supergiant, marks Orion's upper shoulder and stands out for its distinctly orange-red color."
+          },
+          "q3": {
+            "prompt": "Why are Orion and Scorpius never visible in the sky at the same time?",
+            "opt1": "In myth, the scorpion killed Orion, so the gods placed them on opposite sides of the sky",
+            "opt2": "They're actually the same constellation",
+            "opt3": "Orion only exists in the Southern Hemisphere",
+            "explain": "The two constellations sit roughly opposite each other along the sky, so as one rises the other sets — matching the myth of their eternal rivalry."
+          }
+        }
       },
       "cassiopeia": {
         "name": "Cassiopeia",
-        "text": "Forms a clear \"W\" or \"M\" shape depending on the season, and sits roughly opposite the Big Dipper across Polaris."
+        "text": "Forms a clear \"W\" or \"M\" shape depending on the season, and sits roughly opposite the Big Dipper across Polaris.",
+        "mythology": "Cassiopeia was a vain queen who boasted her beauty rivaled the sea nymphs. As punishment, Poseidon placed her in the sky, condemned to circle the celestial pole — spending half of each cycle hanging upside-down.",
+        "tricks": "Look for five bright stars forming a clear 'W' or 'M' shape, depending on the time of night and season. It sits roughly opposite the Big Dipper, across Polaris.",
+        "season": "Circumpolar from most of the Northern Hemisphere, visible year-round, highest during autumn evenings.",
+        "quiz": {
+          "q1": {
+            "prompt": "What shape do Cassiopeia's five brightest stars form?",
+            "opt1": "A 'W' or 'M' shape",
+            "opt2": "A perfect circle",
+            "opt3": "A straight line",
+            "explain": "Cassiopeia's five bright stars form a distinctive zigzag, appearing as a 'W' or 'M' depending on its orientation in the sky."
+          },
+          "q2": {
+            "prompt": "In myth, why was Cassiopeia placed in the sky as punishment?",
+            "opt1": "She boasted her beauty rivaled the sea nymphs",
+            "opt2": "She stole fire from the gods",
+            "opt3": "She refused to worship Zeus",
+            "explain": "Cassiopeia's boast angered the sea nymphs (Nereids), leading Poseidon to place her in the sky, condemned to circle the pole."
+          },
+          "q3": {
+            "prompt": "Where does Cassiopeia sit relative to the Big Dipper?",
+            "opt1": "Roughly opposite it, across Polaris",
+            "opt2": "Directly overlapping it",
+            "opt3": "Only visible from the Southern Hemisphere",
+            "explain": "Cassiopeia and the Big Dipper sit on opposite sides of Polaris, so as one swings low, the other swings high."
+          }
+        }
+      },
+      "ursa_minor": {
+        "name": "Ursa Minor (the Little Bear)",
+        "text": "Home to Polaris, the North Star, at the tip of its tail.",
+        "mythology": "In Greek myth, Ursa Minor is often linked to the story of Ursa Major: Callisto was transformed into a bear by a jealous Hera, and her son Arcas — nearly about to kill her while hunting — was also turned into a bear by Zeus and placed beside her in the sky to prevent tragedy.",
+        "tricks": "Find the Big Dipper first. The two stars at the end of its bowl (Dubhe and Merak) are called the 'pointer stars' — draw an imaginary line through them and extend it about five times that distance. That line lands almost exactly on Polaris, the tip of Ursa Minor's tail.",
+        "season": "Circumpolar from most of the Northern Hemisphere — it never sets and is visible year-round.",
+        "quiz": {
+          "q1": {
+            "prompt": "What star sits at the tip of Ursa Minor's tail?",
+            "opt1": "Polaris",
+            "opt2": "Antares",
+            "opt3": "Deneb",
+            "explain": "Polaris, the North Star, marks the tip of Ursa Minor's tail and sits almost exactly above Earth's North Pole."
+          },
+          "q2": {
+            "prompt": "How do you find Polaris using the Big Dipper?",
+            "opt1": "Follow the two 'pointer stars' at the end of the bowl and extend the line",
+            "opt2": "Count seven stars to the right of Orion's belt",
+            "opt3": "Look directly opposite the Moon",
+            "explain": "The two outer stars of the Big Dipper's bowl point almost directly at Polaris when their line is extended about five times their separation."
+          },
+          "q3": {
+            "prompt": "Why is Ursa Minor visible year-round from the Northern Hemisphere?",
+            "opt1": "It's circumpolar — close enough to the celestial pole that it never sets",
+            "opt2": "It's extremely bright compared to other constellations",
+            "opt3": "It only appears during summer",
+            "explain": "Constellations near the celestial pole, like Ursa Minor, are circumpolar from mid-to-high northern latitudes — they simply circle the pole without ever dipping below the horizon."
+          }
+        }
+      },
+      "leo": {
+        "name": "Leo (the Lion)",
+        "text": "A zodiac constellation shaped like a crouching lion, easy to spot by its backward-question-mark head.",
+        "mythology": "Leo represents the Nemean Lion, a beast with an impenetrable hide, slain by Hercules as the first of his Twelve Labors — since no weapon could pierce its skin, Hercules had to strangle it with his bare hands.",
+        "tricks": "Look for the 'Sickle,' an asterism shaped like a backward question mark that forms the lion's head and mane. The bright star Regulus sits at the bottom of the Sickle, marking the lion's heart.",
+        "season": "Best viewed in the Northern Hemisphere during spring evenings (March–May).",
+        "quiz": {
+          "q1": {
+            "prompt": "What asterism forms Leo's head and mane?",
+            "opt1": "The Sickle",
+            "opt2": "The Teapot",
+            "opt3": "The Northern Cross",
+            "explain": "The Sickle is a backward-question-mark-shaped pattern of stars forming Leo's head and mane, one of the easiest asterisms to recognize."
+          },
+          "q2": {
+            "prompt": "Which bright star marks the lion's heart, at the base of the Sickle?",
+            "opt1": "Regulus",
+            "opt2": "Antares",
+            "opt3": "Aldebaran",
+            "explain": "Regulus, one of the brightest stars in the night sky, sits at the base of the Sickle and marks Leo's heart."
+          },
+          "q3": {
+            "prompt": "In mythology, Leo represents which creature defeated by Hercules?",
+            "opt1": "The Nemean Lion",
+            "opt2": "The Minotaur",
+            "opt3": "The Hydra",
+            "explain": "The Nemean Lion had an impenetrable hide, so Hercules had to defeat it by strangulation rather than any weapon — his first of Twelve Labors."
+          }
+        }
+      },
+      "scorpius": {
+        "name": "Scorpius (the Scorpion)",
+        "text": "One of the most recognizable constellations — it genuinely looks like a scorpion, curved tail and all.",
+        "mythology": "In Greek myth, Scorpius is the scorpion sent to kill the boastful hunter Orion. The gods placed them on opposite sides of the sky so the two would never rise at the same time again.",
+        "tricks": "Find the bright red star Antares — its name means 'rival of Mars' for its similar reddish color — marking the scorpion's heart. Follow the curving line of stars from there to the stinger-shaped tail.",
+        "season": "Best viewed in the Northern Hemisphere summer (June–August), low on the southern horizon; appears much higher from the Southern Hemisphere.",
+        "quiz": {
+          "q1": {
+            "prompt": "What bright red star marks the scorpion's heart?",
+            "opt1": "Antares",
+            "opt2": "Deneb",
+            "opt3": "Regulus",
+            "explain": "Antares — whose name means 'rival of Mars' — is a red supergiant marking Scorpius's heart."
+          },
+          "q2": {
+            "prompt": "According to myth, why are Scorpius and Orion never visible in the sky at the same time?",
+            "opt1": "The gods placed them on opposite sides of the sky after the scorpion killed Orion",
+            "opt2": "They are the same constellation viewed from different seasons",
+            "opt3": "Orion is only visible from the Southern Hemisphere",
+            "explain": "In the myth, the scorpion that killed Orion was placed opposite him in the sky, so as one rises the other sets."
+          },
+          "q3": {
+            "prompt": "From which hemisphere does Scorpius appear highest and most prominent?",
+            "opt1": "The Southern Hemisphere",
+            "opt2": "The Northern Hemisphere",
+            "opt3": "It appears equally high from everywhere",
+            "explain": "Scorpius lies well south of the celestial equator, so it rides low near the horizon in the north but climbs high overhead from southern latitudes."
+          }
+        }
+      },
+      "taurus": {
+        "name": "Taurus (the Bull)",
+        "text": "Contains two famous star clusters — the Pleiades and the Hyades — marking the bull's shoulder and face.",
+        "mythology": "Taurus represents Zeus disguised as a magnificent white bull, whom he used to carry away the Phoenician princess Europa across the sea to Crete.",
+        "tricks": "Find the V-shaped Hyades cluster, forming the bull's face, with the bright orange star Aldebaran marking its eye. The Pleiades cluster sits just beyond, marking the bull's shoulder.",
+        "season": "Best viewed in the Northern Hemisphere winter evenings (November–February).",
+        "quiz": {
+          "q1": {
+            "prompt": "Which star cluster forms the V-shaped face of the bull?",
+            "opt1": "The Hyades",
+            "opt2": "The Pleiades",
+            "opt3": "The Big Dipper",
+            "explain": "The Hyades cluster forms the recognizable V-shape of Taurus's face, with Aldebaran marking the eye."
+          },
+          "q2": {
+            "prompt": "What famous star cluster sits on the bull's shoulder?",
+            "opt1": "The Pleiades",
+            "opt2": "The Hyades",
+            "opt3": "The Beehive Cluster",
+            "explain": "The Pleiades, also called the Seven Sisters, is one of the closest and most easily visible star clusters, sitting on Taurus's shoulder."
+          },
+          "q3": {
+            "prompt": "In Greek myth, Taurus represents Zeus disguised as what, carrying away Europa?",
+            "opt1": "A white bull",
+            "opt2": "A swan",
+            "opt3": "An eagle",
+            "explain": "Zeus transformed into a gentle white bull to approach and carry off the princess Europa, the origin of Taurus."
+          }
+        }
+      },
+      "cygnus": {
+        "name": "Cygnus (the Swan)",
+        "text": "Also called the Northern Cross, appearing to fly along the band of the Milky Way.",
+        "mythology": "Cygnus is linked to several myths, including Zeus transforming into a swan, and the story of Orpheus, the legendary musician, placed among the stars near his lyre after his death.",
+        "tricks": "Look for the bright star Deneb marking the tail, with the constellation forming a distinctive cross shape — the 'Northern Cross' — stretched along the glowing band of the Milky Way.",
+        "season": "Best viewed in the Northern Hemisphere summer and autumn evenings (June–November).",
+        "quiz": {
+          "q1": {
+            "prompt": "What common nickname describes Cygnus's cross-like shape?",
+            "opt1": "The Northern Cross",
+            "opt2": "The Southern Triangle",
+            "opt3": "The Great Square",
+            "explain": "Cygnus's brightest stars form a distinctive cross shape, widely nicknamed the Northern Cross."
+          },
+          "q2": {
+            "prompt": "What bright star marks the swan's tail?",
+            "opt1": "Deneb",
+            "opt2": "Regulus",
+            "opt3": "Antares",
+            "explain": "Deneb, one of the brightest stars in the sky, marks the tail of Cygnus."
+          },
+          "q3": {
+            "prompt": "Along which feature of the night sky does Cygnus appear to fly?",
+            "opt1": "The Milky Way",
+            "opt2": "The zodiac belt",
+            "opt3": "The celestial equator",
+            "explain": "Cygnus stretches along the bright band of the Milky Way, appearing to fly through our galaxy's disk as seen from Earth."
+          }
+        }
+      },
+      "sagittarius": {
+        "name": "Sagittarius (the Archer)",
+        "text": "Points toward the very center of our own Milky Way galaxy.",
+        "mythology": "Usually depicted as a centaur archer, Sagittarius is often identified with Chiron, the wise centaur who taught many Greek heroes, though other myths link it to different archer-centaurs.",
+        "tricks": "Find the 'Teapot,' an easily recognizable teapot-shaped pattern formed by its brightest stars. The 'steam' rising from its spout points directly toward the dense star clouds marking our galaxy's center.",
+        "season": "Best viewed in the Northern Hemisphere summer (June–August), low in the southern sky.",
+        "quiz": {
+          "q1": {
+            "prompt": "What easily recognizable shape do Sagittarius's brightest stars form?",
+            "opt1": "A teapot",
+            "opt2": "A cross",
+            "opt3": "A sickle",
+            "explain": "The brightest stars of Sagittarius form a distinctive teapot shape, one of the most recognizable asterisms in the sky."
+          },
+          "q2": {
+            "prompt": "What does the 'steam' from the Teapot's spout point toward?",
+            "opt1": "The center of the Milky Way galaxy",
+            "opt2": "The North Star",
+            "opt3": "The nearest black hole",
+            "explain": "Looking toward the Teapot's spout points almost directly at the galactic center, where dense star clouds and Sagittarius A* (our galaxy's supermassive black hole) lie."
+          },
+          "q3": {
+            "prompt": "Sagittarius is most often depicted as what mythological figure?",
+            "opt1": "A centaur archer",
+            "opt2": "A scorpion",
+            "opt3": "A swan",
+            "explain": "Sagittarius is traditionally shown as a centaur — half-human, half-horse — drawing a bow, often linked to the wise centaur Chiron."
+          }
+        }
       }
     },
     "quiz": {
@@ -576,7 +834,26 @@
           "opt2": "About 4 AU",
           "opt3": "About 1 AU",
           "explain": "Habitable distance ≈ √(L/L☉) = √4 = 2 AU — a more luminous star pushes its habitable zone farther out."
+        },
+        "q2": {
+          "prompt": "What is the 'runaway greenhouse effect,' and which planet suffers from it?",
+          "opt1": "Trapped heat boiling away all surface water, as happened to Venus",
+          "opt2": "A planet losing its atmosphere entirely, as happened to Mars",
+          "opt3": "A planet freezing solid, as happened to Pluto",
+          "explain": "Venus, though only slightly closer to the Sun than Earth, suffered a runaway greenhouse effect: trapped heat boiled away its oceans and left a scorching, toxic atmosphere."
+        },
+        "q3": {
+          "prompt": "Why do scientists define both a 'conservative' and an 'optimistic' habitable zone instead of just one boundary?",
+          "opt1": "Because the exact edges depend on assumptions about atmosphere and geology that aren't fully certain",
+          "opt2": "Because they can't agree on how far the Sun's habitable zone extends",
+          "opt3": "Because every planet has a different distance to its star",
+          "explain": "Where liquid water can survive depends on a planet's specific atmosphere and geology, which we usually can't observe directly — so scientists give a range rather than one precise line."
         }
+      },
+      "extra_concepts": {
+        "heading": "Two things this simple calculator doesn't capture",
+        "conservative_optimistic": "Scientists actually define a 'conservative' zone (where Earth-like conditions are most likely) and a wider 'optimistic' zone (where liquid water is possible under some conditions) — this calculator shows a simplified single estimate between the two.",
+        "runaway_greenhouse": "Too close to a star, a planet can suffer a 'runaway greenhouse effect' — like what happened to Venus — where heat gets trapped so effectively that any surface water boils away entirely, even before reaching the calculated inner edge."
       }
     }
   },

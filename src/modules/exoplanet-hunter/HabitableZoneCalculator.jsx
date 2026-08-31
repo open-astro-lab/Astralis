@@ -77,6 +77,18 @@ export default function HabitableZoneCalculator() {
             </div>
           </div>
         </div>
+
+        <div className="mt-6 rounded-xl border border-white/10 bg-void/40 p-5">
+          <h4 className="text-xs uppercase tracking-widest text-starlight/80 mb-3">
+            {t("exoplanet_hunter.habitable_zone.extra_concepts.heading")}
+          </h4>
+          <p className="text-muted text-sm leading-relaxed mb-3">
+            {t("exoplanet_hunter.habitable_zone.extra_concepts.conservative_optimistic")}
+          </p>
+          <p className="text-muted text-sm leading-relaxed">
+            {t("exoplanet_hunter.habitable_zone.extra_concepts.runaway_greenhouse")}
+          </p>
+        </div>
       </div>
 
       {interacted && (
@@ -92,6 +104,28 @@ export default function HabitableZoneCalculator() {
               ],
               correctIndex: 0,
               explainKey: "exoplanet_hunter.habitable_zone.quiz.q1.explain",
+            },
+            {
+              id: "hz_q2",
+              promptKey: "exoplanet_hunter.habitable_zone.quiz.q2.prompt",
+              optionKeys: [
+                "exoplanet_hunter.habitable_zone.quiz.q2.opt1",
+                "exoplanet_hunter.habitable_zone.quiz.q2.opt2",
+                "exoplanet_hunter.habitable_zone.quiz.q2.opt3",
+              ],
+              correctIndex: 0,
+              explainKey: "exoplanet_hunter.habitable_zone.quiz.q2.explain",
+            },
+            {
+              id: "hz_q3",
+              promptKey: "exoplanet_hunter.habitable_zone.quiz.q3.prompt",
+              optionKeys: [
+                "exoplanet_hunter.habitable_zone.quiz.q3.opt1",
+                "exoplanet_hunter.habitable_zone.quiz.q3.opt2",
+                "exoplanet_hunter.habitable_zone.quiz.q3.opt3",
+              ],
+              correctIndex: 0,
+              explainKey: "exoplanet_hunter.habitable_zone.quiz.q3.explain",
             },
           ]}
           category="exoplanetInvestigations"
