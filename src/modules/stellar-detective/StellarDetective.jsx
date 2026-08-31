@@ -167,14 +167,28 @@ export default function StellarDetective() {
     {readyForQuiz && (
       <Quiz
         questions={[
-          {
-            id: "sd_q1",
-            promptKey: "stellar_detective.quiz.q1.prompt",
-            optionKeys: ["stellar_detective.quiz.q1.opt1", "stellar_detective.quiz.q1.opt2", "stellar_detective.quiz.q1.opt3"],
-            correctIndex: 2,
-            explainKey: "stellar_detective.quiz.q1.explain",
-          },
-        ]}
+            {
+              id: "sd_q1",
+              promptKey: "stellar_detective.quiz.q1.prompt",
+              optionKeys: ["stellar_detective.quiz.q1.opt1", "stellar_detective.quiz.q1.opt2", "stellar_detective.quiz.q1.opt3"],
+              correctIndex: 2,
+              explainKey: "stellar_detective.quiz.q1.explain",
+            },
+            {
+              id: "sd_q2",
+              promptKey: "stellar_detective.quiz.q2.prompt",
+              optionKeys: ["stellar_detective.quiz.q2.opt1", "stellar_detective.quiz.q2.opt2", "stellar_detective.quiz.q2.opt3"],
+              correctIndex: 0,
+              explainKey: "stellar_detective.quiz.q2.explain",
+            },
+            {
+              id: "sd_q3",
+              promptKey: "stellar_detective.quiz.q3.prompt",
+              optionKeys: ["stellar_detective.quiz.q3.opt1", "stellar_detective.quiz.q3.opt2", "stellar_detective.quiz.q3.opt3"],
+              correctIndex: 0,
+              explainKey: "stellar_detective.quiz.q3.explain",
+            },
+          ]}
         category="stellarInvestigations"
         activityId="stellar_detective_quiz"
       />

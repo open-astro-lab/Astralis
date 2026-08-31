@@ -196,6 +196,20 @@ export default function ExoplanetHunter() {
                   correctIndex: 1,
                   explainKey: "exoplanet_hunter.quiz.q1.explain",
                 },
+                {
+                  id: "eh_q2",
+                  promptKey: "exoplanet_hunter.quiz.q2.prompt",
+                  optionKeys: ["exoplanet_hunter.quiz.q2.opt1", "exoplanet_hunter.quiz.q2.opt2", "exoplanet_hunter.quiz.q2.opt3"],
+                  correctIndex: 0,
+                  explainKey: "exoplanet_hunter.quiz.q2.explain",
+                },
+                {
+                  id: "eh_q3",
+                  promptKey: "exoplanet_hunter.quiz.q3.prompt",
+                  optionKeys: ["exoplanet_hunter.quiz.q3.opt1", "exoplanet_hunter.quiz.q3.opt2", "exoplanet_hunter.quiz.q3.opt3"],
+                  correctIndex: 0,
+                  explainKey: "exoplanet_hunter.quiz.q3.explain",
+                },
               ]}
               category="exoplanetInvestigations"
               activityId="exoplanet_hunter_quiz"

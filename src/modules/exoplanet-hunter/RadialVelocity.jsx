@@ -147,14 +147,28 @@ export default function RadialVelocity() {
       {allDone && (
         <Quiz
           questions={[
-            {
-              id: "rv_q1",
-              promptKey: "exoplanet_hunter.radial_velocity.quiz.q1.prompt",
-              optionKeys: ["exoplanet_hunter.radial_velocity.quiz.q1.opt1", "exoplanet_hunter.radial_velocity.quiz.q1.opt2", "exoplanet_hunter.radial_velocity.quiz.q1.opt3"],
-              correctIndex: 0,
-              explainKey: "exoplanet_hunter.radial_velocity.quiz.q1.explain",
-            },
-          ]}
+              {
+                id: "rv_q1",
+                promptKey: "exoplanet_hunter.radial_velocity.quiz.q1.prompt",
+                optionKeys: ["exoplanet_hunter.radial_velocity.quiz.q1.opt1", "exoplanet_hunter.radial_velocity.quiz.q1.opt2", "exoplanet_hunter.radial_velocity.quiz.q1.opt3"],
+                correctIndex: 0,
+                explainKey: "exoplanet_hunter.radial_velocity.quiz.q1.explain",
+              },
+              {
+                id: "rv_q2",
+                promptKey: "exoplanet_hunter.radial_velocity.quiz.q2.prompt",
+                optionKeys: ["exoplanet_hunter.radial_velocity.quiz.q2.opt1", "exoplanet_hunter.radial_velocity.quiz.q2.opt2", "exoplanet_hunter.radial_velocity.quiz.q2.opt3"],
+                correctIndex: 0,
+                explainKey: "exoplanet_hunter.radial_velocity.quiz.q2.explain",
+              },
+              {
+                id: "rv_q3",
+                promptKey: "exoplanet_hunter.radial_velocity.quiz.q3.prompt",
+                optionKeys: ["exoplanet_hunter.radial_velocity.quiz.q3.opt1", "exoplanet_hunter.radial_velocity.quiz.q3.opt2", "exoplanet_hunter.radial_velocity.quiz.q3.opt3"],
+                correctIndex: 0,
+                explainKey: "exoplanet_hunter.radial_velocity.quiz.q3.explain",
+              },
+            ]}
           category="exoplanetInvestigations"
           activityId="radial_velocity_quiz"
         />

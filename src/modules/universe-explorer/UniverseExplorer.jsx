@@ -124,21 +124,35 @@ export default function UniverseExplorer() {
         <div className="mt-8">
           <Quiz
             questions={[
-              {
-                id: "ue_q1",
-                promptKey: "universe_explorer.quiz.q1.prompt",
-                optionKeys: ["universe_explorer.quiz.q1.opt1", "universe_explorer.quiz.q1.opt2", "universe_explorer.quiz.q1.opt3"],
-                correctIndex: 1,
-                explainKey: "universe_explorer.quiz.q1.explain",
-              },
-              {
-                id: "ue_q2",
-                promptKey: "universe_explorer.quiz.q2.prompt",
-                optionKeys: ["universe_explorer.quiz.q2.opt1", "universe_explorer.quiz.q2.opt2", "universe_explorer.quiz.q2.opt3"],
-                correctIndex: 2,
-                explainKey: "universe_explorer.quiz.q2.explain",
-              },
-            ]}
+                          {
+              id: "ue_q1",
+              promptKey: "universe_explorer.quiz.q1.prompt",
+              optionKeys: ["universe_explorer.quiz.q1.opt1", "universe_explorer.quiz.q1.opt2", "universe_explorer.quiz.q1.opt3"],
+              correctIndex: 1,
+              explainKey: "universe_explorer.quiz.q1.explain",
+            },
+            {
+              id: "ue_q2",
+              promptKey: "universe_explorer.quiz.q2.prompt",
+              optionKeys: ["universe_explorer.quiz.q2.opt1", "universe_explorer.quiz.q2.opt2", "universe_explorer.quiz.q2.opt3"],
+              correctIndex: 2,
+              explainKey: "universe_explorer.quiz.q2.explain",
+            },
+            {
+              id: "ue_q3",
+              promptKey: "universe_explorer.quiz.q3.prompt",
+              optionKeys: ["universe_explorer.quiz.q3.opt1", "universe_explorer.quiz.q3.opt2", "universe_explorer.quiz.q3.opt3"],
+              correctIndex: 0,
+              explainKey: "universe_explorer.quiz.q3.explain",
+            },
+            {
+              id: "ue_q4",
+              promptKey: "universe_explorer.quiz.q4.prompt",
+              optionKeys: ["universe_explorer.quiz.q4.opt1", "universe_explorer.quiz.q4.opt2", "universe_explorer.quiz.q4.opt3"],
+              correctIndex: 0,
+              explainKey: "universe_explorer.quiz.q4.explain",
+            },
+          ]}
             category="objectsExplored"
             activityId="universe_explorer_quiz"
           />

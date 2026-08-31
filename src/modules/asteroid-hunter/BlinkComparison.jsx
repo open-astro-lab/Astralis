@@ -145,6 +145,20 @@ export default function AsteroidHunter() {
               correctIndex: 0,
               explainKey: "asteroid_hunter.quiz.q1.explain",
             },
+            {
+              id: "ah_q2",
+              promptKey: "asteroid_hunter.quiz.q2.prompt",
+              optionKeys: ["asteroid_hunter.quiz.q2.opt1", "asteroid_hunter.quiz.q2.opt2", "asteroid_hunter.quiz.q2.opt3"],
+              correctIndex: 0,
+              explainKey: "asteroid_hunter.quiz.q2.explain",
+            },
+            {
+              id: "ah_q3",
+              promptKey: "asteroid_hunter.quiz.q3.prompt",
+              optionKeys: ["asteroid_hunter.quiz.q3.opt1", "asteroid_hunter.quiz.q3.opt2", "asteroid_hunter.quiz.q3.opt3"],
+              correctIndex: 0,
+              explainKey: "asteroid_hunter.quiz.q3.explain",
+            },
           ]}
           category="asteroidInvestigations"
           activityId="asteroid_hunter_quiz"

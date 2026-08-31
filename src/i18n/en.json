@@ -455,6 +455,20 @@
         "opt2": "The universe when it was about 380,000 years old",
         "opt3": "The location of the nearest black hole",
         "explain": "The CMB is leftover radiation from a specific early moment in the universe's history, giving us a direct snapshot of conditions back then."
+      },
+      "q3": {
+        "prompt": "Roughly what fraction of the universe is made of the ordinary atoms we're familiar with?",
+        "opt1": "About 5%",
+        "opt2": "About 50%",
+        "opt3": "About 95%",
+        "explain": "Dark matter (~27%) and dark energy (~68%) together make up about 95% of the universe, leaving only about 5% as ordinary matter."
+      },
+      "q4": {
+        "prompt": "How many stars can globular clusters pack into a relatively compact sphere?",
+        "opt1": "Tens of thousands to millions",
+        "opt2": "Just two or three",
+        "opt3": "Around a dozen",
+        "explain": "Globular clusters are among the densest stellar environments known, tightly binding tens of thousands to millions of stars."
       }
     },
     "tap_for_detail": "Tap for more detail"
@@ -794,6 +808,20 @@
         "opt2": "It's larger relative to its star",
         "opt3": "It's orbiting faster",
         "explain": "Since dip depth = (planet radius / star radius)², a deeper dip directly means a proportionally larger planet relative to its star."
+      },
+      "q2": {
+        "prompt": "What space telescope mission discovered thousands of exoplanets using the transit method?",
+        "opt1": "Kepler",
+        "opt2": "Hubble",
+        "opt3": "Voyager",
+        "explain": "Launched in 2009, Kepler stared continuously at one patch of sky and discovered over 2,700 confirmed exoplanets, mostly via transits."
+      },
+      "q3": {
+        "prompt": "Why can the transit method only detect planets whose orbits happen to align edge-on to our view?",
+        "opt1": "Only then does the planet pass directly in front of the star from our perspective",
+        "opt2": "Edge-on orbits are more gravitationally stable",
+        "opt3": "It's simply a limitation of telescope resolution",
+        "explain": "Transits require the planet's orbital plane to line up so it crosses in front of the star as seen from Earth — many systems are tilted so this never happens, meaning surveys miss most planets around any given star."
       }
     },
     "activities": {
@@ -816,6 +844,20 @@
           "opt2": "A direct photograph of the planet",
           "opt3": "The planet's own emitted light",
           "explain": "This method never sees the planet directly — it detects the star's light shifting periodically as the star wobbles under the planet's gravitational pull."
+        },
+        "q2": {
+          "prompt": "What was 51 Pegasi b, discovered in 1995 using this method?",
+          "opt1": "The first confirmed exoplanet orbiting a Sun-like star",
+          "opt2": "The first exoplanet ever imaged directly",
+          "opt3": "The closest known exoplanet to Earth",
+          "explain": "51 Pegasi b's discovery via radial velocity earned its discoverers the 2019 Nobel Prize in Physics."
+        },
+        "q3": {
+          "prompt": "What kind of planetary orbit is hardest for the radial velocity method to detect?",
+          "opt1": "An orbit seen face-on, straight down from above",
+          "opt2": "An orbit seen edge-on",
+          "opt3": "A very close orbit",
+          "explain": "Radial velocity only detects motion toward or away from us; a face-on orbit produces almost no such motion, making it far harder to detect this way."
         }
       }
     },
@@ -876,6 +918,20 @@
         "opt2": "Asteroids are brighter than stars",
         "opt3": "Stars are too small to photograph",
         "explain": "Because asteroids are relatively close, their position against the fixed background of much more distant stars visibly shifts over time — this is the basis of the blink comparison method."
+      },
+      "q2": {
+        "prompt": "Who is generally credited with using the blink comparator technique to discover Pluto in 1930?",
+        "opt1": "Clyde Tombaugh",
+        "opt2": "Edwin Hubble",
+        "opt3": "Carl Sagan",
+        "explain": "Tombaugh used a blink comparator device to compare photographic plates and spotted Pluto by its shift against the fixed background stars."
+      },
+      "q3": {
+        "prompt": "Besides asteroids, what other kind of object can blink comparison also help detect?",
+        "opt1": "Comets and other small moving solar system bodies",
+        "opt2": "Distant galaxies",
+        "opt3": "Black holes",
+        "explain": "Any relatively nearby object that shifts position between exposures — comets, asteroids, even fast-moving satellites — can be revealed this way."
       }
     },
     "activities": {
@@ -903,6 +959,20 @@
           "opt2": "Right next to the Sun",
           "opt3": "Beyond Neptune",
           "explain": "The Main Belt between Mars and Jupiter (roughly 2.1–3.3 AU) holds the vast majority of known asteroids in the solar system."
+        },
+        "q2": {
+          "prompt": "Why are Near-Earth Objects (NEOs) tracked so closely by astronomers?",
+          "opt1": "Their orbits bring them close enough to Earth to pose a potential impact risk",
+          "opt2": "They're the brightest asteroids",
+          "opt3": "They're the oldest asteroids",
+          "explain": "NEOs' orbits cross close to Earth's, so agencies like NASA's Center for Near-Earth Object Studies track them closely to assess any long-term impact risk."
+        },
+        "q3": {
+          "prompt": "Jupiter Trojans share Jupiter's orbit. Where exactly do they cluster?",
+          "opt1": "About 60° ahead of or behind Jupiter, at gravitationally stable points",
+          "opt2": "Directly behind Jupiter, touching its atmosphere",
+          "opt3": "Scattered randomly all along Jupiter's orbit",
+          "explain": "Trojans cluster near the Lagrange points L4 and L5, roughly 60° ahead of and behind Jupiter, where the combined gravity of the Sun and Jupiter creates stable zones."
         }
       }
     },
@@ -921,6 +991,20 @@
           "opt2": "Because it passes behind the Sun twice",
           "opt3": "Because it changes color as it spins",
           "explain": "Most asteroids are not spherical — as an elongated shape rotates, it presents more or less reflective surface area to us twice per full spin, creating two brightness peaks and two dips."
+        },
+        "q2": {
+          "prompt": "What shape of asteroid produces the strongest brightness variation as it rotates?",
+          "opt1": "A highly elongated, irregular shape",
+          "opt2": "A perfect sphere",
+          "opt3": "A flat disk facing us directly",
+          "explain": "A perfectly spherical asteroid shows almost no brightness change no matter how fast it spins, since it always presents the same silhouette; elongated shapes show the biggest swings."
+        },
+        "q3": {
+          "prompt": "What limits how fast a loosely-bound 'rubble pile' asteroid can spin?",
+          "opt1": "Beyond a critical speed, centrifugal force would fling loose material off",
+          "opt2": "There's no physical limit at all",
+          "opt3": "Asteroids slow down the moment they form",
+          "explain": "This is the real 'spin barrier' — most rubble-pile asteroids don't spin faster than about once every 2.2 hours, because faster rotation would overcome their weak self-gravity and fling material off."
         }
       }
     }
@@ -951,6 +1035,20 @@
         "opt2": "M",
         "opt3": "G",
         "explain": "The Sun is a G-type star, with a surface temperature of about 5,778 K — putting it right in the yellow part of the spectrum."
+      },
+      "q2": {
+        "prompt": "White dwarfs are extremely hot but not very luminous. What must be true of their radius?",
+        "opt1": "It must be very small, since luminosity depends on radius squared as well as temperature to the 4th power",
+        "opt2": "It must be extremely large",
+        "opt3": "Radius doesn't affect this at all",
+        "explain": "Since luminosity depends on both R² and T⁴, a hot-but-dim star must have a tiny radius — white dwarfs are roughly Earth-sized despite being hotter than the Sun."
+      },
+      "q3": {
+        "prompt": "Which spectral class contains the coolest, reddest stars, including most red dwarfs?",
+        "opt1": "M",
+        "opt2": "O",
+        "opt3": "A",
+        "explain": "M-type stars, under about 3,700 K, are the coolest and reddest class — and also by far the most common type of star in the galaxy."
       }
     }
   },
