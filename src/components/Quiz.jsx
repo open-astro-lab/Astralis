@@ -85,8 +85,13 @@ export default function Quiz({ questions, category, activityId, onPassed, nextLa
           {t("quiz.submit")}
         </button>
       ) : passed ? (
-        <div>
-          <div className="text-verified text-sm font-medium">{t("quiz.passed")}</div>
+        <div className="animate-[fadeInScale_0.4s_ease-out]">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-full bg-verified/20 border border-verified flex items-center justify-center text-verified text-sm shrink-0">
+              ✓
+            </div>
+            <div className="text-verified text-sm font-medium">{t("quiz.passed")}</div>
+          </div>
           {onNext && (
             <button
               onClick={onNext}

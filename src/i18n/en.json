@@ -15,7 +15,25 @@
     "heading": "The universe, one question at a time.",
     "subheading": "No jargon. No assumptions. Just real astronomy, explored hands-on.",
     "start_button": "Start exploring",
-    "modules_heading": "Choose where to begin"
+    "modules_heading": "Choose where to begin",
+    "fact_heading": "Astronomy Fact of the Day",
+    "facts": [
+      "A day on Venus is longer than its year — Venus takes about 243 Earth days to rotate once, but only about 225 days to orbit the Sun.",
+      "Neutron stars can spin over 600 times per second — the fastest known pulsars.",
+      "Footprints left on the Moon by Apollo astronauts will likely last for millions of years, since there's no wind or water there to erode them.",
+      "A teaspoon of neutron star material would weigh about a billion tons on Earth.",
+      "Saturn is so low-density that it would float in a bathtub large enough to hold it.",
+      "Sunlight takes about 8 minutes and 20 seconds to reach Earth.",
+      "The largest known star, UY Scuti, is so vast that a commercial jet would take over 1,100 years to fly around it once.",
+      "There are more stars in the observable universe than grains of sand on every beach on Earth combined.",
+      "A year on Mercury is shorter than a day on Mercury — it orbits the Sun faster than it completes one rotation.",
+      "The Great Red Spot on Jupiter is a storm that has been raging continuously for at least 350 years.",
+      "Space is completely silent, because sound needs a medium like air to travel, and space is a near-vacuum.",
+      "The International Space Station travels at about 28,000 km/h, circling Earth roughly every 90 minutes.",
+      "Olympus Mons on Mars is the largest volcano in the solar system — nearly three times the height of Mount Everest.",
+      "In space, two pieces of the same untreated metal can bond permanently on contact — a real phenomenon called cold welding.",
+      "The asteroid belt's total mass is less than that of Earth's Moon, despite containing millions of individual objects."
+    ]
   },
   "modules": {
     "universe_explorer": "Universe Explorer",
@@ -1078,7 +1096,9 @@
       "exoplanetInvestigations": "Exoplanet investigations",
       "stellarInvestigations": "Stellar investigations",
       "physicsChallenges": "Physics challenges"
-    }
+    },
+    "next_level_progress": "{{remaining}} more to reach {{level}}",
+    "max_level_reached": "You've reached the top level — Scientist!"
   },
   "sources": {
     "title": "Sources & Accuracy",
