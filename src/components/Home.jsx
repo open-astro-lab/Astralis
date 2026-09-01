@@ -21,10 +21,6 @@ export default function Home({ setView }) {
     <div className="relative">
       <Starfield />
       <div className="relative max-w-5xl mx-auto px-6 py-16" style={{ zIndex: 1 }}>
-        <AuthPrompt />
-        <FactOfTheDay />
-        <DailyChallenge />
-
         <div className="max-w-2xl">
           <h1 className="font-display text-4xl md:text-5xl leading-tight text-text">
             {t("home.heading")}
@@ -38,7 +34,11 @@ export default function Home({ setView }) {
           </button>
         </div>
 
-        <h2 className="font-display text-sm uppercase tracking-widest text-muted mt-16 mb-4">
+        <div className="mt-12">
+          <AuthPrompt />
+        </div>
+
+        <h2 className="font-display text-sm uppercase tracking-widest text-muted mb-4">
           {t("home.modules_heading")}
         </h2>
         <div className="grid sm:grid-cols-2 gap-4">
@@ -58,6 +58,11 @@ export default function Home({ setView }) {
               <div className="text-muted text-sm mt-1">{t(mod.descKey)}</div>
             </button>
           ))}
+        </div>
+
+        <div className="mt-12 grid md:grid-cols-2 gap-4 items-start">
+          <DailyChallenge />
+          <FactOfTheDay />
         </div>
       </div>
     </div>
