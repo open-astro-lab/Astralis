@@ -7,7 +7,7 @@ import { usePassport } from "../context/PassportContext.jsx";
  * On passing (all questions answered correctly in one attempt), records
  * `${category}:${activityId}` as a completed passport activity.
  */
-export default function Quiz({ questions, category, activityId, onPassed }) {
+export default function Quiz({ questions, category, activityId, onPassed, nextLabel, onNext }) {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [answers, setAnswers] = useState({});
@@ -85,7 +85,17 @@ export default function Quiz({ questions, category, activityId, onPassed }) {
           {t("quiz.submit")}
         </button>
       ) : passed ? (
-        <div className="text-verified text-sm font-medium">{t("quiz.passed")}</div>
+        <div>
+          <div className="text-verified text-sm font-medium">{t("quiz.passed")}</div>
+          {onNext && (
+            <button
+              onClick={onNext}
+              className="mt-3 px-5 py-2.5 rounded-full bg-nebula text-void font-medium text-sm hover:bg-nebulaSoft transition"
+            >
+              {nextLabel || t("quiz.next_default")}
+            </button>
+          )}
+        </div>
       ) : (
         <div className="space-y-3">
           <div className="text-starlight text-sm font-medium">{t("quiz.failed")}</div>

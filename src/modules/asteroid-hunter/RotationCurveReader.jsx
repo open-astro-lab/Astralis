@@ -50,7 +50,7 @@ function CurveSVG({ points }) {
 const TOTAL_ROUNDS = 15;
 const PERIOD_OPTIONS_HOURS = [4, 6, 8, 12];
 
-export default function RotationCurveReader() {
+export default function RotationCurveReader({ nextLabel, onNext } = {}) {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [round, setRound] = useState(1);
@@ -173,6 +173,8 @@ export default function RotationCurveReader() {
             ]}
           category="asteroidInvestigations"
           activityId="rotation_curve_quiz"
+          nextLabel={nextLabel}
+          onNext={onNext}
         />
       )}
     </div>

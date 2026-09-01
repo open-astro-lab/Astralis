@@ -28,7 +28,7 @@ function generateDistance(seed) {
 const TOTAL_ROUNDS = 15;
 const OPTIONS = ["neo", "main_belt", "trojan"];
 
-export default function OrbitClassifier() {
+export default function OrbitClassifier({ nextLabel, onNext } = {}) {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [round, setRound] = useState(1);
@@ -148,6 +148,8 @@ export default function OrbitClassifier() {
             ]}
           category="asteroidInvestigations"
           activityId="orbit_classifier_quiz"
+          nextLabel={nextLabel}
+          onNext={onNext}
         />
       )}
     </div>

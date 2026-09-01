@@ -17,12 +17,20 @@ export function usePassport() {
 }
 
 async function fetchCloudPassport(uid) {
-  const ref = doc(db, "passports", uid);
-  const snap = await getDoc(ref);
-  if (snap.exists()) {
-    return { ...EMPTY_PASSPORT_SHAPE(), ...snap.data() };
+  try {
+    const ref = doc(db, "passports", uid);
+    const snap = await getDoc(ref);
+    if (snap.exists()) {
+      return { ...EMPTY_PASSPORT_SHAPE(), ...snap.data() };
+    }
+    return EMPTY_PASSPORT_SHAPE();
+  } catch (err) {
+    // Never fall back to leaving stale (possibly another account's) data on
+    // screen — an unreadable cloud passport must render as empty, not as
+    // whatever was there before.
+    console.error("Failed to load cloud passport:", err);
+    return EMPTY_PASSPORT_SHAPE();
   }
-  return EMPTY_PASSPORT_SHAPE();
 }
 
 async function writeCloudPassport(uid, passport) {
@@ -45,8 +53,12 @@ export function PassportProvider({ children }) {
 
       if (firebaseUser) {
         // Signed in: the account's cloud passport is the single source of truth
-        // for that account, on every device — this is what makes progress
-        // account-specific instead of device-specific.
+        // for that account, on every device. CRITICAL: clear immediately so
+        // the previous account's (or guest's) data is never shown, even
+        // briefly, while the real data for this account is still loading —
+        // that gap was exactly what caused progress to visually "leak"
+        // between accounts.
+        setPassport(EMPTY_PASSPORT_SHAPE());
         setSyncing(true);
         const cloud = await fetchCloudPassport(firebaseUser.uid);
         setPassport(cloud);

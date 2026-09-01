@@ -1,17 +1,12 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../../context/PassportContext.jsx";
 import Quiz from "../../components/Quiz.jsx";
 
 /**
- * Generic single-formula interactive challenge card.
- * props:
- *  - id: unique key for passport tracking
- *  - titleKey, promptKey, resultLabelKey, sanityCheckKey, formulaText, formulaExplainerKey
- *  - inputs: [{ key, labelKey, min, max, step, unit, initial }]
- *  - compute: (values) => number
- *  - resultUnit: string
- *  - quizQuestions: array for <Quiz />, or null to skip quiz for this card
+ * Generic single-formula interactive challenge card, with an optional
+ * "Precision Challenge" mini-game: hit a real target value by tuning the
+ * sliders, with a live proximity meter.
  */
 export default function FormulaChallenge({
   id,
@@ -25,6 +20,11 @@ export default function FormulaChallenge({
   compute,
   resultUnit,
   quizQuestions,
+  nextLabel,
+  onNext,
+  challengeLabelKey,
+  challengeTarget,
+  challengeTolerance = 0.05,
 }) {
   const { t } = useTranslation();
   const { complete } = usePassport();
@@ -32,8 +32,25 @@ export default function FormulaChallenge({
     Object.fromEntries(inputs.map((i) => [i.key, i.initial]))
   );
   const [revealed, setRevealed] = useState(false);
+  const [challengeHit, setChallengeHit] = useState(false);
 
   const result = useMemo(() => compute(values), [values]);
+
+  const hasChallenge = challengeTarget != null;
+  const relDiff = hasChallenge && Number.isFinite(result)
+    ? Math.abs(result - challengeTarget) / challengeTarget
+    : null;
+  const withinTolerance = hasChallenge && relDiff !== null && relDiff <= challengeTolerance;
+  const proximityPct = hasChallenge && relDiff !== null
+    ? Math.max(0, Math.min(100, 100 - (relDiff / (challengeTolerance * 6)) * 100))
+    : 0;
+
+  useEffect(() => {
+    if (withinTolerance && !challengeHit) {
+      setChallengeHit(true);
+      complete("physicsChallenges", `${id}_precision`);
+    }
+  }, [withinTolerance, challengeHit, complete, id]);
 
   function handleReveal() {
     setRevealed(true);
@@ -44,6 +61,32 @@ export default function FormulaChallenge({
     <div className="rounded-2xl border border-white/10 bg-panel p-6 md:p-8 shadow-glow">
       <h2 className="font-display text-2xl text-text">{t(titleKey)}</h2>
       <p className="mt-2 text-muted max-w-xl">{t(promptKey)}</p>
+
+      {hasChallenge && (
+        <div
+          className={`mt-5 rounded-xl border p-4 transition-colors ${
+            withinTolerance ? "border-verified/50 bg-verified/5" : "border-starlight/30 bg-starlight/5"
+          }`}
+        >
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div className="text-sm text-text/90">{t("physics_lab.challenge_heading")}</div>
+            {withinTolerance && (
+              <span className="text-verified text-xs font-medium">
+                {t("physics_lab.challenge_nailed")}
+              </span>
+            )}
+          </div>
+          <p className="text-muted text-xs mt-1">{t(challengeLabelKey)}</p>
+          <div className="mt-3 h-2 rounded-full bg-void/60 overflow-hidden">
+            <div
+              className={`h-full rounded-full transition-all duration-300 ${
+                withinTolerance ? "bg-verified" : "bg-starlight"
+              }`}
+              style={{ width: `${proximityPct}%` }}
+            />
+          </div>
+        </div>
+      )}
 
       <div className="mt-6 grid gap-6 md:grid-cols-[1fr_1fr] items-start">
         <div className="space-y-5">
@@ -105,6 +148,8 @@ export default function FormulaChallenge({
             questions={quizQuestions}
             category="physicsChallenges"
             activityId={`${id}_quiz`}
+            nextLabel={nextLabel}
+            onNext={onNext}
           />
         </div>
       )}

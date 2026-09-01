@@ -4,7 +4,7 @@ import { usePassport } from "../context/PassportContext.jsx";
 
 export default function NavBar({ view, setView }) {
   const { t, i18n } = useTranslation();
-  const { user, signIn, signOutUser, firebaseEnabled } = usePassport();
+  const { user, signIn, signOutUser, firebaseEnabled, syncing } = usePassport();
 
   const items = [
     { key: "home", label: t("nav.home") },
@@ -36,6 +36,11 @@ export default function NavBar({ view, setView }) {
         </nav>
 
         <div className="flex items-center gap-2 ml-auto">
+          {firebaseEnabled && syncing && (
+            <span className="text-xs text-nebulaSoft animate-pulse hidden sm:inline">
+              {t("auth.syncing")}
+            </span>
+          )}
           <select
             value={i18n.language}
             onChange={(e) => {

@@ -13,7 +13,14 @@ const ACTIVITIES = [
 export default function AsteroidHunter() {
   const { t } = useTranslation();
   const [activity, setActivity] = useState("blink");
-  const Active = ACTIVITIES.find((a) => a.key === activity).Component;
+  const idx = ACTIVITIES.findIndex((a) => a.key === activity);
+  const Active = ACTIVITIES[idx].Component;
+  const nextActivity = ACTIVITIES[idx + 1];
+
+  const nextLabel = nextActivity
+    ? t("asteroid_hunter.next_activity", { name: t(`asteroid_hunter.activities.${nextActivity.key}`) })
+    : null;
+  const onNext = nextActivity ? () => setActivity(nextActivity.key) : null;
 
   return (
     <div>
@@ -32,7 +39,7 @@ export default function AsteroidHunter() {
           </button>
         ))}
       </div>
-      <Active />
+      <Active nextLabel={nextLabel} onNext={onNext} />
     </div>
   );
 }

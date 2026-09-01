@@ -83,7 +83,8 @@
           "opt3": "The Moon is farther from the Sun",
           "explain": "The Moon's much smaller mass (about 1.2% of Earth's) reduces GM far more than its smaller radius increases escape velocity, giving a much lower net value."
         }
-      }
+      },
+      "challenge_label": "Match Mars's real escape velocity: 5.03 km/s"
     },
     "reveal_button": "Reveal the formula",
     "orbital_velocity": {
@@ -137,7 +138,8 @@
           "opt3": "The Moon's speed around Earth",
           "explain": "29.8 km/s is Earth's orbital velocity around the Sun — the speed needed to maintain a stable orbit at 1 AU."
         }
-      }
+      },
+      "challenge_label": "Match a geostationary satellite's orbital velocity: 3.07 km/s"
     },
     "kepler": {
       "title": "Kepler's Third Law",
@@ -189,7 +191,8 @@
           "opt3": "About 27 AU",
           "explain": "27² = 729 = a³, so a = ∛729 = 9 AU."
         }
-      }
+      },
+      "challenge_label": "Match Jupiter's real orbital period: 11.86 years (try 5.2 AU)"
     },
     "inverse_square": {
       "title": "Inverse-Square Law of Light",
@@ -241,7 +244,8 @@
           "opt3": "The chemical composition of stars",
           "explain": "By comparing a standard candle's known true brightness to how dim it appears, astronomers can calculate distance directly from the inverse-square relationship."
         }
-      }
+      },
+      "challenge_label": "Find the distance where brightness drops to exactly 25%"
     },
     "wien": {
       "title": "Wien's Law",
@@ -293,7 +297,8 @@
           "opt3": "Temperature and peak wavelength are unrelated",
           "explain": "Wien's Law is an inverse relationship — a shift to shorter (bluer) peak wavelength means the object has gotten hotter."
         }
-      }
+      },
+      "challenge_label": "Match Betelgeuse's approximate peak wavelength: ~828 nm (try ~3,500 K)"
     },
     "stefan_boltzmann": {
       "title": "Stefan–Boltzmann Law",
@@ -339,8 +344,13 @@
           "opt3": "Nothing can be determined",
           "explain": "Since L ∝ R²T⁴, if luminosity is equal but T is higher, R must be smaller to balance the equation — this is exactly how white dwarfs (hot, tiny) can match the luminosity of larger, cooler stars."
         }
-      }
-    }
+      },
+      "challenge_label": "Find settings where luminosity is 16× the Sun's"
+    },
+    "next_formula": "Next: {{name}}",
+    "challenge_heading": "🎯 Precision Challenge",
+    "challenge_hint": "Adjust the sliders until your result matches the target.",
+    "challenge_nailed": "🎉 Nailed it — within range!"
   },
   "universe_explorer": {
     "title": "Universe Explorer",
@@ -897,7 +907,8 @@
         "conservative_optimistic": "Scientists actually define a 'conservative' zone (where Earth-like conditions are most likely) and a wider 'optimistic' zone (where liquid water is possible under some conditions) — this calculator shows a simplified single estimate between the two.",
         "runaway_greenhouse": "Too close to a star, a planet can suffer a 'runaway greenhouse effect' — like what happened to Venus — where heat gets trapped so effectively that any surface water boils away entirely, even before reaching the calculated inner edge."
       }
-    }
+    },
+    "next_activity": "Next: {{name}}"
   },
   "asteroid_hunter": {
     "title": "Asteroid Hunter",
@@ -1007,7 +1018,8 @@
           "explain": "This is the real 'spin barrier' — most rubble-pile asteroids don't spin faster than about once every 2.2 hours, because faster rotation would overcome their weak self-gravity and fling material off."
         }
       }
-    }
+    },
+    "next_activity": "Next: {{name}}"
   },
   "stellar_detective": {
     "title": "Stellar Detective",
@@ -1080,13 +1092,15 @@
     "save_progress_subtitle": "Sign in once with Google, and your Astronomy Passport follows you — phone, tablet, laptop, wherever you open Astralis.",
     "skip_button": "Skip for now",
     "skip_caption": "Your progress won't be saved across devices.",
-    "signed_in_as": "Signed in as {{email}}"
+    "signed_in_as": "Signed in as {{email}}",
+    "syncing": "Syncing your passport..."
   },
   "quiz": {
     "heading": "Quick check",
     "submit": "Check my answers",
     "passed": "Nice work — this concept is marked complete in your Passport.",
     "retry": "Try again",
-    "failed": "Not quite yet — review the explanations below and try again."
+    "failed": "Not quite yet — review the explanations below and try again.",
+    "next_default": "Next"
   }
 }

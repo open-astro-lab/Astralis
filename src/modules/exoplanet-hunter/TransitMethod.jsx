@@ -56,7 +56,7 @@ function LightCurveSVG({ points, highlighted }) {
 
 const TOTAL_ROUNDS = 31;
 
-export default function ExoplanetHunter() {
+export default function ExoplanetHunter({ nextLabel, onNext } = {}) {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [round, setRound] = useState(1);
@@ -213,6 +213,8 @@ export default function ExoplanetHunter() {
               ]}
               category="exoplanetInvestigations"
               activityId="exoplanet_hunter_quiz"
+              nextLabel={nextLabel}
+              onNext={onNext}
             />
           </div>
         </div>

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { usePassport } from "../../context/PassportContext.jsx";
 import Quiz from "../../components/Quiz.jsx";
 
-export default function HabitableZoneCalculator() {
+export default function HabitableZoneCalculator({ nextLabel, onNext } = {}) {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [luminosity, setLuminosity] = useState(1);
@@ -130,6 +130,8 @@ export default function HabitableZoneCalculator() {
           ]}
           category="exoplanetInvestigations"
           activityId="habitable_zone_quiz"
+          nextLabel={nextLabel}
+          onNext={onNext}
         />
       )}
     </div>

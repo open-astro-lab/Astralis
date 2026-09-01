@@ -48,7 +48,7 @@ function WobbleSVG({ points, highlighted }) {
 
 const TOTAL_ROUNDS = 15;
 
-export default function RadialVelocity() {
+export default function RadialVelocity({ nextLabel, onNext } = {}) {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [round, setRound] = useState(1);
@@ -171,6 +171,8 @@ export default function RadialVelocity() {
             ]}
           category="exoplanetInvestigations"
           activityId="radial_velocity_quiz"
+          nextLabel={nextLabel}
+          onNext={onNext}
         />
       )}
     </div>

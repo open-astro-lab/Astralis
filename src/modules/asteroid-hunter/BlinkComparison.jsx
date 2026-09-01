@@ -48,7 +48,7 @@ function StarField({ stars, asteroid, onClick, showTarget }) {
 
 const TOTAL_ROUNDS = 38;
 
-export default function AsteroidHunter() {
+export default function AsteroidHunter({ nextLabel, onNext } = {}) {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [round, setRound] = useState(1);
@@ -162,6 +162,8 @@ export default function AsteroidHunter() {
           ]}
           category="asteroidInvestigations"
           activityId="asteroid_hunter_quiz"
+          nextLabel={nextLabel}
+          onNext={onNext}
         />
       )}
     </div>
