@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../context/PassportContext.jsx";
+import ConfettiBurst from "./ConfettiBurst.jsx";
 
 /**
  * questions: [{ id, promptKey, optionKeys: [...], correctIndex, explainKey }]
@@ -86,7 +87,10 @@ export default function Quiz({ questions, category, activityId, onPassed, nextLa
         </button>
       ) : passed ? (
         <div className="animate-[fadeInScale_0.4s_ease-out]">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 relative">
+            <div className="absolute left-3.5 top-3.5">
+              <ConfettiBurst seed={activityId ? activityId.length : 1} />
+            </div>
             <div className="w-7 h-7 rounded-full bg-verified/20 border border-verified flex items-center justify-center text-verified text-sm shrink-0">
               ✓
             </div>

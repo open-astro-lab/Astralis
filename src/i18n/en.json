@@ -1098,7 +1098,35 @@
       "physicsChallenges": "Physics challenges"
     },
     "next_level_progress": "{{remaining}} more to reach {{level}}",
-    "max_level_reached": "You've reached the top level — Scientist!"
+    "max_level_reached": "You've reached the top level — Scientist!",
+    "streak_label": "Day streak",
+    "badges_heading": "Achievements",
+    "badges": {
+      "first_steps": {
+        "name": "First Steps",
+        "desc": "Complete 1 challenge"
+      },
+      "getting_curious": {
+        "name": "Getting Curious",
+        "desc": "Complete 5 challenges"
+      },
+      "dedicated_explorer": {
+        "name": "Dedicated Explorer",
+        "desc": "Complete 15 challenges"
+      },
+      "cosmic_scholar": {
+        "name": "Cosmic Scholar",
+        "desc": "Complete 30 challenges"
+      },
+      "master_astronomer": {
+        "name": "Master Astronomer",
+        "desc": "Complete 50 challenges"
+      },
+      "week_streak": {
+        "name": "Steady Stargazer",
+        "desc": "Visit 7 days in a row"
+      }
+    }
   },
   "sources": {
     "title": "Sources & Accuracy",

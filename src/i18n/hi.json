@@ -1098,7 +1098,35 @@
       "physicsChallenges": "भौतिकी चुनौतियाँ"
     },
     "next_level_progress": "{{level}} तक पहुँचने के लिए {{remaining}} और",
-    "max_level_reached": "आप सबसे ऊपरी स्तर पर पहुँच गए हैं — वैज्ञानिक!"
+    "max_level_reached": "आप सबसे ऊपरी स्तर पर पहुँच गए हैं — वैज्ञानिक!",
+    "streak_label": "दिन का स्ट्रीक",
+    "badges_heading": "उपलब्धियाँ",
+    "badges": {
+      "first_steps": {
+        "name": "पहला कदम",
+        "desc": "1 चुनौती पूरी करें"
+      },
+      "getting_curious": {
+        "name": "जिज्ञासा की शुरुआत",
+        "desc": "5 चुनौतियाँ पूरी करें"
+      },
+      "dedicated_explorer": {
+        "name": "समर्पित खोजकर्ता",
+        "desc": "15 चुनौतियाँ पूरी करें"
+      },
+      "cosmic_scholar": {
+        "name": "कॉस्मिक स्कॉलर",
+        "desc": "30 चुनौतियाँ पूरी करें"
+      },
+      "master_astronomer": {
+        "name": "मास्टर एस्ट्रोनॉमर",
+        "desc": "50 चुनौतियाँ पूरी करें"
+      },
+      "week_streak": {
+        "name": "स्थिर स्टारगेज़र",
+        "desc": "लगातार 7 दिन विज़िट करें"
+      }
+    }
   },
   "sources": {
     "title": "स्रोत और सटीकता",

@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState, useCallback } from "react";
+import { createContext, useContext, useEffect, useState, useCallback, useRef } from "react";
 import {
   onAuthStateChanged,
   signInWithPopup,
@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, db, googleProvider, firebaseEnabled } from "../lib/firebase";
-import { loadPassport, savePassport, EMPTY_PASSPORT_SHAPE } from "../lib/passport";
+import { loadPassport, savePassport, EMPTY_PASSPORT_SHAPE, bumpStreak } from "../lib/passport";
 
 const PassportContext = createContext(null);
 
@@ -43,6 +43,7 @@ export function PassportProvider({ children }) {
   const [authReady, setAuthReady] = useState(!firebaseEnabled);
   const [passport, setPassport] = useState(() => loadPassport());
   const [syncing, setSyncing] = useState(false);
+  const streakBumpedForRef = useRef(null);
 
   // Track auth state.
   useEffect(() => {
@@ -70,6 +71,31 @@ export function PassportProvider({ children }) {
     });
     return unsubscribe;
   }, []);
+
+  // Bump the daily visit streak exactly once per settled session per
+  // account (or once for guest mode), after the real passport has finished
+  // loading — never before, so we never bump against stale/empty data.
+  useEffect(() => {
+    const identity = user ? user.uid : "guest";
+    if (!firebaseEnabled) {
+      if (streakBumpedForRef.current === identity) return;
+    } else {
+      if (!authReady || syncing) return;
+      if (streakBumpedForRef.current === identity) return;
+    }
+    streakBumpedForRef.current = identity;
+
+    setPassport((prev) => {
+      const next = bumpStreak(prev);
+      if (next === prev) return prev;
+      if (user && firebaseEnabled) {
+        writeCloudPassport(user.uid, next);
+      } else {
+        savePassport(next);
+      }
+      return next;
+    });
+  }, [authReady, syncing, user]);
 
   const complete = useCallback(
     async (category, activityId) => {

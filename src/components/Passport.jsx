@@ -17,11 +17,21 @@ const LEVEL_THRESHOLDS = [
   { key: "level_scientist", min: 15 },
 ];
 
+const BADGES = [
+  { key: "first_steps", check: (total) => total >= 1 },
+  { key: "getting_curious", check: (total) => total >= 5 },
+  { key: "dedicated_explorer", check: (total) => total >= 15 },
+  { key: "cosmic_scholar", check: (total) => total >= 30 },
+  { key: "master_astronomer", check: (total) => total >= 50 },
+  { key: "week_streak", check: (total, streak) => streak >= 7 },
+];
+
 export default function Passport() {
   const { t } = useTranslation();
   const { passport, syncing } = usePassport();
 
   const total = totalCompleted(passport);
+  const streakCount = passport?.streak?.count || 0;
   const level = levelFor(passport);
   const currentIdx = LEVEL_THRESHOLDS.findIndex((l) => l.key === level);
   const nextLevel = LEVEL_THRESHOLDS[currentIdx + 1];
@@ -48,6 +58,11 @@ export default function Passport() {
           <div className="text-right">
             <div className="text-xs uppercase tracking-widest text-muted">Level</div>
             <div className="font-display text-xl text-text mt-1">{t(`passport.${level}`)}</div>
+            {streakCount > 0 && (
+              <div className="text-xs text-starlight mt-2">
+                🔥 {streakCount} {t("passport.streak_label")}
+              </div>
+            )}
           </div>
         </div>
 
@@ -93,6 +108,35 @@ export default function Passport() {
           })}
         </div>
       )}
+
+      <div className="mt-10">
+        <h2 className="font-display text-sm uppercase tracking-widest text-muted mb-4">
+          {t("passport.badges_heading")}
+        </h2>
+        <div className="grid sm:grid-cols-3 gap-3">
+          {BADGES.map((badge) => {
+            const unlocked = badge.check(total, streakCount);
+            return (
+              <div
+                key={badge.key}
+                className={`rounded-xl border p-4 text-center transition ${
+                  unlocked
+                    ? "border-starlight/50 bg-starlight/5 shadow-glowGold"
+                    : "border-white/10 bg-panel opacity-50"
+                }`}
+              >
+                <div className="text-2xl mb-1">{unlocked ? "🏅" : "🔒"}</div>
+                <div className="font-display text-sm text-text">
+                  {t(`passport.badges.${badge.key}.name`)}
+                </div>
+                <div className="text-muted text-xs mt-1">
+                  {t(`passport.badges.${badge.key}.desc`)}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

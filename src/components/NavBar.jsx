@@ -4,7 +4,8 @@ import { usePassport } from "../context/PassportContext.jsx";
 
 export default function NavBar({ view, setView }) {
   const { t, i18n } = useTranslation();
-  const { user, signIn, signOutUser, firebaseEnabled, syncing } = usePassport();
+  const { user, signIn, signOutUser, firebaseEnabled, syncing, passport } = usePassport();
+  const streakCount = passport?.streak?.count || 0;
 
   const items = [
     { key: "home", label: t("nav.home") },
@@ -36,6 +37,14 @@ export default function NavBar({ view, setView }) {
         </nav>
 
         <div className="flex items-center gap-2 ml-auto">
+          {streakCount > 1 && (
+            <span
+              className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full text-xs bg-starlight/10 border border-starlight/30 text-starlight"
+              title={t("passport.streak_label")}
+            >
+              🔥 {streakCount}
+            </span>
+          )}
           {firebaseEnabled && syncing && (
             <span className="text-xs text-nebulaSoft animate-pulse hidden sm:inline">
               {t("auth.syncing")}

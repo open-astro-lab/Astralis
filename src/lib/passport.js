@@ -1,5 +1,13 @@
 const STORAGE_KEY = "astralis_passport_v1";
 
+export const CATEGORY_KEYS = [
+  "objectsExplored",
+  "asteroidInvestigations",
+  "exoplanetInvestigations",
+  "stellarInvestigations",
+  "physicsChallenges",
+];
+
 export function EMPTY_PASSPORT_SHAPE() {
   return {
     objectsExplored: [],
@@ -7,6 +15,7 @@ export function EMPTY_PASSPORT_SHAPE() {
     exoplanetInvestigations: [],
     stellarInvestigations: [],
     physicsChallenges: [],
+    streak: { count: 0, lastVisitDate: null },
   };
 }
 
@@ -25,8 +34,10 @@ export function savePassport(passport) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(passport));
 }
 
+// Only sums the real challenge categories — never the streak object, which
+// isn't a completion count.
 export function totalCompleted(passport) {
-  return Object.values(passport).reduce((sum, arr) => sum + (arr?.length || 0), 0);
+  return CATEGORY_KEYS.reduce((sum, key) => sum + (passport[key]?.length || 0), 0);
 }
 
 export function levelFor(passport) {
@@ -35,4 +46,22 @@ export function levelFor(passport) {
   if (total >= 8) return "level_investigator";
   if (total >= 3) return "level_explorer";
   return "level_curious";
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+// Returns an updated passport with the visit streak bumped, only if today
+// hasn't already been counted. Consecutive calendar days increment the
+// streak; a gap of more than one day resets it to 1.
+export function bumpStreak(passport) {
+  const today = todayStr();
+  const streak = passport.streak || { count: 0, lastVisitDate: null };
+  if (streak.lastVisitDate === today) return passport; // already counted today
+
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const newCount = streak.lastVisitDate === yesterday ? streak.count + 1 : 1;
+
+  return { ...passport, streak: { count: newCount, lastVisitDate: today } };
 }
