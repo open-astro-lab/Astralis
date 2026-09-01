@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar.jsx";
 import GuestBanner from "./components/GuestBanner.jsx";
 import Home from "./components/Home.jsx";
 import Passport from "./components/Passport.jsx";
+import Glossary from "./components/Glossary.jsx";
 import PhysicsLab from "./modules/physics-lab/PhysicsLab.jsx";
 import UniverseExplorer from "./modules/universe-explorer/UniverseExplorer.jsx";
 import SkyExplorer from "./modules/sky-explorer/SkyExplorer.jsx";
@@ -57,6 +58,7 @@ export default function App() {
         </div>
       )}
       {view === "passport" && <Passport />}
+      {view === "glossary" && <Glossary />}
     </div>
   );
 }

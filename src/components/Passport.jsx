@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../context/PassportContext.jsx";
-import { totalCompleted, levelFor } from "../lib/passport";
+import { totalCompleted, levelProgress } from "../lib/passport";
 
 const CATEGORIES = [
   "objectsExplored",
@@ -8,13 +8,7 @@ const CATEGORIES = [
   "exoplanetInvestigations",
   "stellarInvestigations",
   "physicsChallenges",
-];
-
-const LEVEL_THRESHOLDS = [
-  { key: "level_curious", min: 0 },
-  { key: "level_explorer", min: 3 },
-  { key: "level_investigator", min: 8 },
-  { key: "level_scientist", min: 15 },
+  "dailyChallenges",
 ];
 
 const BADGES = [
@@ -32,13 +26,7 @@ export default function Passport() {
 
   const total = totalCompleted(passport);
   const streakCount = passport?.streak?.count || 0;
-  const level = levelFor(passport);
-  const currentIdx = LEVEL_THRESHOLDS.findIndex((l) => l.key === level);
-  const nextLevel = LEVEL_THRESHOLDS[currentIdx + 1];
-  const prevMin = LEVEL_THRESHOLDS[currentIdx].min;
-  const levelProgressPct = nextLevel
-    ? Math.min(100, ((total - prevMin) / (nextLevel.min - prevMin)) * 100)
-    : 100;
+  const { current, next, pct } = levelProgress(passport);
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
@@ -57,7 +45,9 @@ export default function Passport() {
           </div>
           <div className="text-right">
             <div className="text-xs uppercase tracking-widest text-muted">Level</div>
-            <div className="font-display text-xl text-text mt-1">{t(`passport.${level}`)}</div>
+            <div className="font-display text-xl text-text mt-1">
+              {t(`passport.levels.level_${current.key}`)}
+            </div>
             {streakCount > 0 && (
               <div className="text-xs text-starlight mt-2">
                 🔥 {streakCount} {t("passport.streak_label")}
@@ -70,14 +60,14 @@ export default function Passport() {
           <div className="h-2 rounded-full bg-void/60 overflow-hidden">
             <div
               className="h-full rounded-full bg-gradient-to-r from-nebula to-starlight transition-all duration-500"
-              style={{ width: `${levelProgressPct}%` }}
+              style={{ width: `${pct}%` }}
             />
           </div>
           <p className="text-muted text-xs mt-2">
-            {nextLevel
+            {next
               ? t("passport.next_level_progress", {
-                  remaining: nextLevel.min - total,
-                  level: t(`passport.${nextLevel.key}`),
+                  remaining: next.min - total,
+                  level: t(`passport.levels.level_${next.key}`),
                 })
               : t("passport.max_level_reached")}
           </p>

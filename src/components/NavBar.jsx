@@ -9,6 +9,7 @@ export default function NavBar({ view, setView }) {
 
   const items = [
     { key: "home", label: t("nav.home") },
+    { key: "glossary", label: t("nav.glossary") },
     { key: "passport", label: t("nav.passport") },
   ];
 

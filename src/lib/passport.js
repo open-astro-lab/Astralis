@@ -1,3 +1,5 @@
+import { LEVELS } from "./levels.js";
+
 const STORAGE_KEY = "astralis_passport_v1";
 
 export const CATEGORY_KEYS = [
@@ -6,7 +8,10 @@ export const CATEGORY_KEYS = [
   "exoplanetInvestigations",
   "stellarInvestigations",
   "physicsChallenges",
+  "dailyChallenges",
 ];
+
+export { LEVELS };
 
 export function EMPTY_PASSPORT_SHAPE() {
   return {
@@ -15,6 +20,7 @@ export function EMPTY_PASSPORT_SHAPE() {
     exoplanetInvestigations: [],
     stellarInvestigations: [],
     physicsChallenges: [],
+    dailyChallenges: [],
     streak: { count: 0, lastVisitDate: null },
   };
 }
@@ -40,12 +46,29 @@ export function totalCompleted(passport) {
   return CATEGORY_KEYS.reduce((sum, key) => sum + (passport[key]?.length || 0), 0);
 }
 
+// LEVELS is sorted ascending by threshold; find the highest level whose
+// minimum is at or below the current total.
 export function levelFor(passport) {
   const total = totalCompleted(passport);
-  if (total >= 15) return "level_scientist";
-  if (total >= 8) return "level_investigator";
-  if (total >= 3) return "level_explorer";
-  return "level_curious";
+  let current = LEVELS[0];
+  for (const lvl of LEVELS) {
+    if (total >= lvl.min) current = lvl;
+    else break;
+  }
+  return `level_${current.key}`;
+}
+
+export function levelProgress(passport) {
+  const total = totalCompleted(passport);
+  let idx = 0;
+  for (let i = 0; i < LEVELS.length; i++) {
+    if (total >= LEVELS[i].min) idx = i;
+    else break;
+  }
+  const current = LEVELS[idx];
+  const next = LEVELS[idx + 1] || null;
+  const pct = next ? Math.min(100, ((total - current.min) / (next.min - current.min)) * 100) : 100;
+  return { current, next, pct, total };
 }
 
 function todayStr() {

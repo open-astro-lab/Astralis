@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import AuthPrompt from "./AuthPrompt.jsx";
 import Starfield from "./Starfield.jsx";
 import FactOfTheDay from "./FactOfTheDay.jsx";
+import DailyChallenge from "./DailyChallenge.jsx";
 import ModuleGlyph from "./ModuleGlyph.jsx";
 
 const MODULES = [
@@ -22,6 +23,7 @@ export default function Home({ setView }) {
       <div className="relative max-w-5xl mx-auto px-6 py-16" style={{ zIndex: 1 }}>
         <AuthPrompt />
         <FactOfTheDay />
+        <DailyChallenge />
 
         <div className="max-w-2xl">
           <h1 className="font-display text-4xl md:text-5xl leading-tight text-text">

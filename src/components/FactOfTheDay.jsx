@@ -1,14 +1,8 @@
 import { useTranslation } from "react-i18next";
-
-function dayOfYear() {
-  const now = new Date();
-  const start = new Date(now.getFullYear(), 0, 0);
-  const diff = now - start;
-  return Math.floor(diff / 86400000);
-}
+import { dayOfYear } from "../lib/date.js";
 
 export default function FactOfTheDay() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const facts = t("home.facts", { returnObjects: true });
   const list = Array.isArray(facts) ? facts : [];
   const fact = list.length ? list[dayOfYear() % list.length] : "";

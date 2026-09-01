@@ -9,7 +9,8 @@
   },
   "nav": {
     "home": "Home",
-    "passport": "My Passport"
+    "passport": "My Passport",
+    "glossary": "Glossary"
   },
   "home": {
     "heading": "The universe, one question at a time.",
@@ -33,7 +34,8 @@
       "Olympus Mons on Mars is the largest volcano in the solar system — nearly three times the height of Mount Everest.",
       "In space, two pieces of the same untreated metal can bond permanently on contact — a real phenomenon called cold welding.",
       "The asteroid belt's total mass is less than that of Earth's Moon, despite containing millions of individual objects."
-    ]
+    ],
+    "daily_challenge_heading": "Today's Challenge"
   },
   "modules": {
     "universe_explorer": "Universe Explorer",
@@ -1085,17 +1087,14 @@
   "passport": {
     "title": "My Astronomy Passport",
     "empty": "Nothing explored yet — your first completed challenge will show up here.",
-    "level_curious": "Curious",
-    "level_explorer": "Explorer",
-    "level_investigator": "Investigator",
-    "level_scientist": "Scientist",
     "challenges_completed": "Challenges completed",
     "breakdown": {
       "objectsExplored": "Objects explored",
       "asteroidInvestigations": "Asteroid investigations",
       "exoplanetInvestigations": "Exoplanet investigations",
       "stellarInvestigations": "Stellar investigations",
-      "physicsChallenges": "Physics challenges"
+      "physicsChallenges": "Physics challenges",
+      "dailyChallenges": "Daily challenges"
     },
     "next_level_progress": "{{remaining}} more to reach {{level}}",
     "max_level_reached": "You've reached the top level — Scientist!",
@@ -1126,6 +1125,63 @@
         "name": "Steady Stargazer",
         "desc": "Visit 7 days in a row"
       }
+    },
+    "levels": {
+      "level_curious": "Curious",
+      "level_stargazer": "Stargazer",
+      "level_skywatcher": "Skywatcher",
+      "level_novice_observer": "Novice Observer",
+      "level_backyard_astronomer": "Backyard Astronomer",
+      "level_constellation_tracker": "Constellation Tracker",
+      "level_moon_watcher": "Moon Watcher",
+      "level_planet_spotter": "Planet Spotter",
+      "level_comet_chaser": "Comet Chaser",
+      "level_asteroid_tracker": "Asteroid Tracker",
+      "level_meteor_watcher": "Meteor Watcher",
+      "level_nebula_admirer": "Nebula Admirer",
+      "level_cluster_fan": "Star Cluster Fan",
+      "level_galaxy_gazer": "Galaxy Gazer",
+      "level_exoplanet_seeker": "Exoplanet Seeker",
+      "level_transit_hunter": "Transit Hunter",
+      "level_habitable_zone_scout": "Habitable Zone Scout",
+      "level_spectral_analyst": "Spectral Analyst",
+      "level_stellar_classifier": "Stellar Classifier",
+      "level_orbit_calculator": "Orbit Calculator",
+      "level_velocity_expert": "Velocity Expert",
+      "level_physics_apprentice": "Physics Apprentice",
+      "level_formula_solver": "Formula Solver",
+      "level_data_analyst": "Data Analyst",
+      "level_junior_researcher": "Junior Researcher",
+      "level_field_investigator": "Field Investigator",
+      "level_observatory_assistant": "Observatory Assistant",
+      "level_research_assistant": "Research Assistant",
+      "level_lab_technician": "Lab Technician",
+      "level_data_scientist": "Data Scientist",
+      "level_astrophysics_student": "Astrophysics Student",
+      "level_graduate_researcher": "Graduate Researcher",
+      "level_phd_candidate": "PhD Candidate",
+      "level_postdoc_researcher": "Postdoc Researcher",
+      "level_staff_astronomer": "Staff Astronomer",
+      "level_senior_researcher": "Senior Researcher",
+      "level_observatory_director": "Observatory Director",
+      "level_mission_specialist": "Mission Specialist",
+      "level_agency_analyst": "Space Agency Analyst",
+      "level_planetary_scientist": "Planetary Scientist",
+      "level_cosmologist": "Cosmologist",
+      "level_astrobiologist": "Astrobiologist",
+      "level_theoretical_physicist": "Theoretical Physicist",
+      "level_research_fellow": "Research Fellow",
+      "level_distinguished_scientist": "Distinguished Scientist",
+      "level_award_winning_astronomer": "Award-Winning Astronomer",
+      "level_nobel_contender": "Nobel Contender",
+      "level_chief_astronomer": "Chief Astronomer",
+      "level_astronomer_royal": "Astronomer Royal",
+      "level_cosmic_pioneer": "Cosmic Pioneer",
+      "level_galactic_explorer": "Galactic Explorer",
+      "level_universal_scholar": "Universal Scholar",
+      "level_master_astronomer": "Master Astronomer",
+      "level_legendary_stargazer": "Legendary Stargazer",
+      "level_astralis_grandmaster": "Astralis Grandmaster"
     }
   },
   "sources": {
@@ -1150,5 +1206,237 @@
     "retry": "Try again",
     "failed": "Not quite yet — review the explanations below and try again.",
     "next_default": "Next"
+  },
+  "glossary": {
+    "title": "Astronomy Glossary",
+    "subtitle": "Every term used across Astralis, explained simply, in one place.",
+    "search_placeholder": "Search terms...",
+    "no_results": "No terms match your search.",
+    "terms": {
+      "au": {
+        "name": "AU (Astronomical Unit)",
+        "def": "The average distance from Earth to the Sun — about 150 million km. Used to measure distances within a solar system."
+      },
+      "light_year": {
+        "name": "Light-year",
+        "def": "The distance light travels in one year — about 9.46 trillion km. Used to measure distances between stars and galaxies."
+      },
+      "parsec": {
+        "name": "Parsec",
+        "def": "A distance unit equal to about 3.26 light-years, based on how much a star's position appears to shift (parallax) as Earth orbits the Sun."
+      },
+      "escape_velocity": {
+        "name": "Escape Velocity",
+        "def": "The minimum speed an object needs to permanently break free from a body's gravity without further propulsion."
+      },
+      "orbital_velocity": {
+        "name": "Orbital Velocity",
+        "def": "The speed an object needs to maintain a stable orbit around a body, balancing gravity's pull against its own motion."
+      },
+      "transit_method": {
+        "name": "Transit Method",
+        "def": "A way of detecting exoplanets by observing the tiny, periodic dip in a star's brightness as a planet passes in front of it."
+      },
+      "radial_velocity": {
+        "name": "Radial Velocity Method",
+        "def": "A way of detecting exoplanets by observing the periodic 'wobble' a planet's gravity causes in its star's light."
+      },
+      "habitable_zone": {
+        "name": "Habitable Zone",
+        "def": "The range of distances from a star where a planet could be warm enough for liquid water, but not so hot that it boils away."
+      },
+      "spectral_class": {
+        "name": "Spectral Class",
+        "def": "A classification system for stars (O, B, A, F, G, K, M — hottest to coolest) based on surface temperature and color."
+      },
+      "luminosity": {
+        "name": "Luminosity",
+        "def": "The total energy a star radiates per second — its true brightness, independent of how far away it is."
+      },
+      "apparent_brightness": {
+        "name": "Apparent Brightness",
+        "def": "How bright a star looks from Earth, which depends on both its true luminosity and its distance from us."
+      },
+      "aphelion_perihelion": {
+        "name": "Aphelion / Perihelion",
+        "def": "The farthest point (aphelion) and nearest point (perihelion) in an object's orbit around the Sun."
+      },
+      "apogee_perigee": {
+        "name": "Apogee / Perigee",
+        "def": "The farthest point (apogee) and nearest point (perigee) in an object's orbit around Earth."
+      },
+      "blackbody_radiation": {
+        "name": "Blackbody Radiation",
+        "def": "The characteristic glow any object emits based purely on its temperature — hotter objects glow bluer, cooler ones redder."
+      },
+      "event_horizon": {
+        "name": "Event Horizon",
+        "def": "The boundary around a black hole beyond which nothing, not even light, can escape its gravity."
+      },
+      "supernova": {
+        "name": "Supernova",
+        "def": "The explosive death of a massive star, or of a white dwarf that reaches a critical mass — briefly outshining an entire galaxy."
+      },
+      "nebula": {
+        "name": "Nebula",
+        "def": "A cloud of gas and dust in space — sometimes a nursery where new stars form, sometimes the remains left behind after a star dies."
+      },
+      "globular_cluster": {
+        "name": "Globular Cluster",
+        "def": "A dense, roughly spherical group of tens of thousands to millions of old stars, tightly bound by gravity."
+      },
+      "neo": {
+        "name": "NEO (Near-Earth Object)",
+        "def": "An asteroid or comet whose orbit brings it close enough to Earth's to be tracked for potential impact risk."
+      },
+      "trojan_asteroid": {
+        "name": "Trojan Asteroid",
+        "def": "An asteroid sharing a planet's orbit, clustered near gravitationally stable points about 60° ahead of or behind it."
+      },
+      "lightcurve": {
+        "name": "Lightcurve",
+        "def": "A graph of an object's brightness over time — used to study asteroid rotation, exoplanet transits, and more."
+      },
+      "synodic_month": {
+        "name": "Synodic Month",
+        "def": "The time it takes the Moon to return to the same phase (e.g. full moon to full moon) — about 29.5 days."
+      },
+      "keplers_third_law": {
+        "name": "Kepler's Third Law",
+        "def": "The mathematical relationship between a planet's orbital period and its distance from the Sun: the period squared is proportional to the distance cubed."
+      },
+      "redshift": {
+        "name": "Redshift",
+        "def": "The stretching of light to longer, redder wavelengths as an object moves away from us or as space itself expands."
+      },
+      "orbital_period": {
+        "name": "Orbital Period",
+        "def": "The time an object takes to complete one full orbit around another body — Earth's orbital period around the Sun is one year."
+      },
+      "rotation_period": {
+        "name": "Rotation Period",
+        "def": "The time an object takes to spin once on its own axis — Earth's rotation period is about 24 hours, defining a day."
+      },
+      "circumpolar": {
+        "name": "Circumpolar",
+        "def": "A star or constellation that never sets below the horizon from a given location, instead circling the celestial pole endlessly."
+      },
+      "asterism": {
+        "name": "Asterism",
+        "def": "A recognizable star pattern that isn't itself an official constellation, like the Big Dipper (part of Ursa Major) or the Summer Triangle."
+      },
+      "zodiac": {
+        "name": "Zodiac",
+        "def": "The band of 12 (traditionally) constellations that the Sun appears to pass through over the course of a year, as seen from Earth."
+      },
+      "main_belt": {
+        "name": "Main Belt",
+        "def": "The region between Mars and Jupiter (roughly 2.1–3.3 AU from the Sun) where most known asteroids in the solar system orbit."
+      },
+      "lagrange_point": {
+        "name": "Lagrange Point",
+        "def": "A location in space where the gravity of two large bodies balances the motion of a smaller object, letting it stay in a stable relative position."
+      },
+      "blink_comparator": {
+        "name": "Blink Comparator",
+        "def": "A device (and technique) astronomers use to rapidly compare two images of the same sky, revealing any object that moved between them."
+      },
+      "white_dwarf": {
+        "name": "White Dwarf",
+        "def": "The hot, extremely dense, Earth-sized remnant left behind after a Sun-like star exhausts its fuel and sheds its outer layers."
+      },
+      "red_giant": {
+        "name": "Red Giant",
+        "def": "A late-life stage of a star like the Sun, where it swells enormously and cools, glowing red, after exhausting hydrogen fuel in its core."
+      },
+      "neutron_star": {
+        "name": "Neutron Star",
+        "def": "An extremely dense stellar remnant left after a massive star's core collapses in a supernova, packing more mass than the Sun into a city-sized sphere."
+      },
+      "main_sequence": {
+        "name": "Main Sequence",
+        "def": "The stable, long-lasting phase of a star's life when it fuses hydrogen into helium in its core — most stars, including the Sun, are in this phase."
+      },
+      "cosmic_microwave_background": {
+        "name": "Cosmic Microwave Background (CMB)",
+        "def": "Faint radiation left over from about 380,000 years after the Big Bang, filling all of space at a nearly uniform temperature of 2.7 K."
+      },
+      "dark_matter": {
+        "name": "Dark Matter",
+        "def": "An invisible form of matter, detected only through its gravitational effects, that makes up roughly 27% of the universe."
+      },
+      "dark_energy": {
+        "name": "Dark Energy",
+        "def": "A mysterious force driving the accelerating expansion of the universe, making up roughly 68% of its total energy content."
+      },
+      "observable_universe": {
+        "name": "Observable Universe",
+        "def": "The portion of the universe we can possibly see, limited by the age of the universe and the speed of light — about 93 billion light-years across."
+      },
+      "solar_system": {
+        "name": "Solar System",
+        "def": "The Sun and everything gravitationally bound to it — planets, moons, asteroids, comets — formed together about 4.6 billion years ago."
+      },
+      "kuiper_belt": {
+        "name": "Kuiper Belt",
+        "def": "A region beyond Neptune's orbit filled with icy bodies, including Pluto, and the source of many shorter-period comets."
+      },
+      "oort_cloud": {
+        "name": "Oort Cloud",
+        "def": "A vast, distant, spherical shell of icy objects surrounding the solar system, thought to be the source of long-period comets."
+      },
+      "wien_law": {
+        "name": "Wien's Law",
+        "def": "A rule stating that the wavelength at which an object radiates most strongly is inversely proportional to its temperature — hotter objects glow bluer."
+      },
+      "stefan_boltzmann_law": {
+        "name": "Stefan–Boltzmann Law",
+        "def": "A rule stating that a star's luminosity depends on both its surface area and temperature: L ∝ R²T⁴."
+      },
+      "inverse_square_law": {
+        "name": "Inverse-Square Law",
+        "def": "A rule stating that a light source's apparent brightness falls off with the square of the distance from it."
+      },
+      "schwarzschild_radius": {
+        "name": "(Related) Photon Energy",
+        "def": "The energy carried by a single photon of light, given by E = hf, where h is Planck's constant and f is the light's frequency — a foundational idea in quantum physics."
+      },
+      "circumstellar_habitable_zone": {
+        "name": "Conservative vs. Optimistic Habitable Zone",
+        "def": "Two boundary estimates for where liquid water could exist: a narrower 'conservative' zone considered most likely, and a wider 'optimistic' one possible under some conditions."
+      },
+      "runaway_greenhouse": {
+        "name": "Runaway Greenhouse Effect",
+        "def": "A process where a planet traps heat so effectively that any surface water boils away entirely — this happened to Venus."
+      },
+      "gravitational_lensing": {
+        "name": "Gravitational Lensing",
+        "def": "The bending of light around a massive object, like a galaxy cluster, which can magnify or distort the image of objects behind it."
+      },
+      "declination_right_ascension": {
+        "name": "Declination & Right Ascension",
+        "def": "The two coordinates astronomers use to pinpoint an object's fixed position in the sky, similar to latitude and longitude on Earth."
+      },
+      "zenith": {
+        "name": "Zenith",
+        "def": "The point in the sky directly overhead an observer, at 90° above the horizon."
+      },
+      "occultation": {
+        "name": "Occultation",
+        "def": "An event where one astronomical object passes directly in front of another, temporarily blocking it from view — for example, the Moon occulting a star."
+      },
+      "conjunction": {
+        "name": "Conjunction",
+        "def": "An event where two astronomical objects appear very close together in the sky, as seen from Earth."
+      },
+      "meteor_meteorite": {
+        "name": "Meteor vs. Meteorite",
+        "def": "A meteor is the streak of light from a small object burning up in Earth's atmosphere; a meteorite is a piece of that object that survives to reach the ground."
+      },
+      "albedo": {
+        "name": "Albedo",
+        "def": "A measure of how much light a surface reflects, from 0 (absorbs everything) to 1 (reflects everything) — snow has a high albedo, dark rock a low one."
+      }
+    }
   }
 }
