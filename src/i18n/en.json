@@ -35,7 +35,8 @@
       "In space, two pieces of the same untreated metal can bond permanently on contact — a real phenomenon called cold welding.",
       "The asteroid belt's total mass is less than that of Earth's Moon, despite containing millions of individual objects."
     ],
-    "daily_challenge_heading": "Today's Challenge"
+    "daily_challenge_heading": "Today's Challenge",
+    "map_instruction": "Tap a world to travel there"
   },
   "modules": {
     "universe_explorer": "Universe Explorer",
