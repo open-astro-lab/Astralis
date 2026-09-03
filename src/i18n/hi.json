@@ -1743,5 +1743,11 @@
     "subtitle": "अब आप हैं",
     "close": "खोजना जारी रखें"
   },
-  "xp_toast": "+1"
+  "xp_toast": "+1",
+  "combo": {
+    "label": "{{count}}x कॉम्बो",
+    "on_fire": "आग लगा दी!",
+    "unstoppable": "अजेय!",
+    "legendary": "लीजेंडरी स्ट्रीक!"
+  }
 }

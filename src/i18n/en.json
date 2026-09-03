@@ -1743,5 +1743,11 @@
     "subtitle": "You're now a",
     "close": "Keep exploring"
   },
-  "xp_toast": "+1"
+  "xp_toast": "+1",
+  "combo": {
+    "label": "{{count}}x combo",
+    "on_fire": "On fire!",
+    "unstoppable": "Unstoppable!",
+    "legendary": "Legendary streak!"
+  }
 }

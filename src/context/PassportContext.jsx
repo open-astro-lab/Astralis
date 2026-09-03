@@ -47,6 +47,7 @@ export function PassportProvider({ children }) {
   const [xpEvent, setXpEvent] = useState(null); // { id } — bumps on every new completion
   const [levelUpEvent, setLevelUpEvent] = useState(null); // { levelKey } — set when the level actually changes
   const xpCounterRef = useRef(0);
+  const [combo, setCombo] = useState(0); // session-only — resets on any wrong quiz submission
 
   // Track auth state.
   useEffect(() => {
@@ -135,6 +136,8 @@ export function PassportProvider({ children }) {
   );
 
   const clearLevelUpEvent = useCallback(() => setLevelUpEvent(null), []);
+  const bumpCombo = useCallback(() => setCombo((c) => c + 1), []);
+  const resetCombo = useCallback(() => setCombo(0), []);
 
   const signIn = useCallback(async () => {
     if (!firebaseEnabled) return;
@@ -150,7 +153,7 @@ export function PassportProvider({ children }) {
     <PassportContext.Provider
       value={{
         user, authReady, passport, complete, signIn, signOutUser, syncing, firebaseEnabled,
-        xpEvent, levelUpEvent, clearLevelUpEvent,
+        xpEvent, levelUpEvent, clearLevelUpEvent, combo, bumpCombo, resetCombo,
       }}
     >
       {children}
