@@ -370,7 +370,262 @@
     "next_formula": "Next: {{name}}",
     "challenge_heading": "🎯 Precision Challenge",
     "challenge_hint": "Adjust the sliders until your result matches the target.",
-    "challenge_nailed": "🎉 Nailed it — within range!"
+    "challenge_nailed": "🎉 Nailed it — within range!",
+    "doppler_shift": {
+      "title": "Doppler Shift",
+      "prompt": "How does a star's motion toward or away from us change the light we see?",
+      "velocity_label": "Star's velocity (km/s, + = away, − = toward)",
+      "result_label": "Wavelength shift",
+      "formula_explainer": "As a star moves away, its light stretches to longer (redder) wavelengths; moving toward us, it compresses to shorter (bluer) ones. This is the same physics behind the radial velocity method for finding exoplanets.",
+      "sanity_check": "A star moving away at 20 km/s shifts a 500nm line by only about 0.033 nm — tiny, but precisely measurable.",
+      "challenge_label": "Match the shift for a star receding at 100 km/s",
+      "quiz": {
+        "q1": {
+          "prompt": "A star's light shifts toward longer, redder wavelengths. What does this tell you?",
+          "opt1": "The star is moving away from us",
+          "opt2": "The star is moving toward us",
+          "opt3": "The star is getting hotter",
+          "explain": "A shift to longer wavelengths (redshift) means the source is moving away — the same effect as a car horn dropping in pitch as it drives away."
+        },
+        "q2": {
+          "prompt": "What everyday phenomenon works on the same principle as the Doppler shift?",
+          "opt1": "A siren changing pitch as an ambulance passes",
+          "opt2": "A mirror reflecting light",
+          "opt3": "A prism splitting white light",
+          "explain": "The Doppler effect applies to any wave, including sound — a siren sounds higher-pitched approaching and lower-pitched receding, exactly like light shifting blue or red."
+        }
+      }
+    },
+    "angular_size": {
+      "title": "Angular Size",
+      "prompt": "How big does an object appear in the sky, based on its real size and distance?",
+      "size_label": "Object's actual diameter (km)",
+      "distance_label": "Distance (km)",
+      "result_label": "Angular size",
+      "formula_explainer": "An object's apparent size in the sky depends on both its true size and how far away it is — a small nearby object can look the same size as a huge distant one.",
+      "sanity_check": "The Moon and Sun have almost the same angular size from Earth (~0.5°) despite the Sun being 400× larger — because it's also about 400× farther away, which is why total solar eclipses are possible.",
+      "challenge_label": "Match the Moon's real angular size: about 0.52°",
+      "quiz": {
+        "q1": {
+          "prompt": "Why do the Sun and Moon appear almost the same size in Earth's sky?",
+          "opt1": "The Sun is about 400× larger but also about 400× farther away",
+          "opt2": "They are actually the same physical size",
+          "opt3": "It's an optical illusion with no real explanation",
+          "explain": "This near-perfect coincidence in ratios is exactly what makes total solar eclipses — where the Moon precisely covers the Sun — possible."
+        },
+        "q2": {
+          "prompt": "If two objects have the same angular size, what must be true?",
+          "opt1": "Their true-size-to-distance ratio must be equal",
+          "opt2": "They must be the same actual size",
+          "opt3": "They must be the same distance away",
+          "explain": "Angular size depends on the ratio of size to distance — a huge, far object and a small, near one can share the same angular size."
+        }
+      }
+    },
+    "surface_gravity": {
+      "title": "Surface Gravity",
+      "prompt": "How strong is the pull of gravity on a planet's surface?",
+      "mass_label": "Mass (× 10²⁴ kg)",
+      "radius_label": "Radius (km)",
+      "result_label": "Surface gravity",
+      "formula_explainer": "Surface gravity depends on both mass and radius — a planet can be more massive than Earth yet have weaker surface gravity if it's also proportionally larger.",
+      "sanity_check": "Real value for Earth: 9.8 m/s². Real value for Mars: about 3.7 m/s² — over a third of Earth's, despite Mars having only about 10% of Earth's mass, because Mars is also much smaller.",
+      "challenge_label": "Match Mars's real surface gravity: 3.7 m/s²",
+      "quiz": {
+        "q1": {
+          "prompt": "Why can a less massive planet sometimes have similar surface gravity to a more massive one?",
+          "opt1": "Surface gravity depends on radius too — a smaller radius concentrates the same pull closer to the surface",
+          "opt2": "Mass is the only factor that matters",
+          "opt3": "Surface gravity is unrelated to mass or radius",
+          "explain": "Because g = GM/R², a smaller radius increases surface gravity for the same mass — radius matters just as much as mass."
+        },
+        "q2": {
+          "prompt": "What would happen to your weight (not mass) if you stood on a planet with half Earth's surface gravity?",
+          "opt1": "You would weigh half as much",
+          "opt2": "You would weigh the same",
+          "opt3": "You would weigh twice as much",
+          "explain": "Weight is a force proportional to surface gravity — half the gravitational pull means half the weight, even though your actual mass stays the same."
+        }
+      }
+    },
+    "density": {
+      "title": "Density",
+      "prompt": "How tightly packed is a planet's matter, on average?",
+      "mass_label": "Mass (× 10²⁴ kg)",
+      "volume_label": "Volume (× 10¹² km³)",
+      "result_label": "Average density",
+      "formula_explainer": "Density tells you how compact an object's matter is, regardless of its total size — it's a major clue to what a planet is made of.",
+      "sanity_check": "Real value for Earth: about 5.5 g/cm³ (mostly rock and metal). Real value for Saturn: about 0.69 g/cm³ — less dense than water, which is why Saturn would float in a large enough ocean.",
+      "challenge_label": "Match Saturn's real density: 0.69 g/cm³",
+      "quiz": {
+        "q1": {
+          "prompt": "What does a planet's density mainly tell astronomers?",
+          "opt1": "What the planet is likely made of — rock, metal, gas, or ice",
+          "opt2": "How old the planet is",
+          "opt3": "How fast the planet rotates",
+          "explain": "Density is a strong clue to composition: rocky planets like Earth are dense, while gas giants like Saturn are far less dense, dominated by light elements like hydrogen and helium."
+        },
+        "q2": {
+          "prompt": "Saturn's density is lower than water's. What would happen if you placed Saturn in a large enough ocean?",
+          "opt1": "It would float",
+          "opt2": "It would sink immediately",
+          "opt3": "It would dissolve",
+          "explain": "Saturn's average density (about 0.69 g/cm³) is lower than water's (1 g/cm³), so in principle it would float, given an ocean large enough to hold it."
+        }
+      }
+    },
+    "schwarzschild_radius": {
+      "title": "Schwarzschild Radius",
+      "prompt": "How small would an object need to be compressed to become a black hole?",
+      "mass_label": "Mass (× solar masses)",
+      "result_label": "Schwarzschild radius",
+      "formula_explainer": "The Schwarzschild radius is the size an object's mass would need to be compressed within for its escape velocity to exceed the speed of light — becoming a black hole.",
+      "sanity_check": "Real value for the Sun: about 3 km. The Sun isn't a black hole because it's nowhere near that compressed — but if it were, this is how small it would need to be.",
+      "challenge_label": "Match the Schwarzschild radius for 10 solar masses: about 30 km",
+      "quiz": {
+        "q1": {
+          "prompt": "What does the Schwarzschild radius represent?",
+          "opt1": "The size an object's mass would need to be compressed within to become a black hole",
+          "opt2": "The actual physical size of every black hole's core",
+          "opt3": "The distance a black hole's gravity can be felt",
+          "explain": "It's a threshold size for a given mass — cross it (get compressed smaller than this radius) and even light can no longer escape."
+        },
+        "q2": {
+          "prompt": "Why isn't the Sun a black hole, even though it has a Schwarzschild radius?",
+          "opt1": "The Sun's actual radius is far larger than its Schwarzschild radius",
+          "opt2": "The Sun doesn't have enough mass",
+          "opt3": "Black holes can only form from planets",
+          "explain": "Every mass has a theoretical Schwarzschild radius, but only becomes a black hole if actually compressed within it — the Sun, at about 696,000 km radius, is nowhere close to its 3 km Schwarzschild radius."
+        }
+      }
+    },
+    "hubble_law": {
+      "title": "Hubble's Law",
+      "prompt": "How does a galaxy's distance relate to how fast it's moving away from us?",
+      "distance_label": "Distance (million light-years)",
+      "result_label": "Recession velocity",
+      "formula_explainer": "Hubble's Law describes the expansion of the universe: the farther away a galaxy is, the faster it appears to be moving away from us, in every direction — this is the strongest evidence for cosmic expansion.",
+      "sanity_check": "This uses a Hubble constant of about 70 km/s per megaparsec — a galaxy 100 million light-years away recedes at roughly 1,500 km/s.",
+      "challenge_label": "Match a recession velocity of about 4,500 km/s",
+      "quiz": {
+        "q1": {
+          "prompt": "What does Hubble's Law tell us about the universe?",
+          "opt1": "The universe is expanding, with more distant galaxies receding faster",
+          "opt2": "The universe is shrinking",
+          "opt3": "Only nearby galaxies are moving",
+          "explain": "Hubble's Law, discovered by Edwin Hubble in 1929, showed that virtually all distant galaxies are receding from us, and faster ones are farther away — direct evidence the universe is expanding."
+        },
+        "q2": {
+          "prompt": "Does Hubble's Law mean we're at the center of the universe?",
+          "opt1": "No — the same pattern would be seen from any galaxy, since space itself is expanding everywhere",
+          "opt2": "Yes, this proves Earth is the center",
+          "opt3": "It only applies to our galaxy specifically",
+          "explain": "Because space itself is stretching everywhere, an observer in any galaxy would see every other galaxy receding — there's no special center."
+        }
+      }
+    },
+    "parallax": {
+      "title": "Parallax Distance",
+      "prompt": "How can astronomers measure a nearby star's distance without ever traveling there?",
+      "parallax_label": "Parallax angle (arcseconds)",
+      "result_label": "Distance",
+      "formula_explainer": "As Earth orbits the Sun, nearby stars appear to shift slightly against distant background stars. Measuring that tiny shift angle directly gives the distance — no assumptions needed, just geometry.",
+      "sanity_check": "Real value for Proxima Centauri (the nearest star): parallax of about 0.768 arcseconds gives a distance of about 1.3 parsecs (4.2 light-years).",
+      "challenge_label": "Match a distance of 10 parsecs (parallax = 0.1 arcsec)",
+      "quiz": {
+        "q1": {
+          "prompt": "What causes the parallax shift used to measure star distances?",
+          "opt1": "Earth's own orbital motion around the Sun, viewed from opposite sides of the orbit",
+          "opt2": "The star's own motion through space",
+          "opt3": "Earth's daily rotation",
+          "explain": "Observing a star from opposite points in Earth's orbit (six months apart) gives two different viewing angles, causing the nearby star to appear to shift against the distant background."
+        },
+        "q2": {
+          "prompt": "Why is parallax considered one of the most reliable distance measurements in astronomy?",
+          "opt1": "It relies on direct geometry, not on assumptions about a star's brightness or type",
+          "opt2": "It only works for extremely distant galaxies",
+          "opt3": "It requires no telescopes at all",
+          "explain": "Unlike brightness-based distance methods, which assume things about a star's true luminosity, parallax is pure geometry — making it a foundational, assumption-free technique."
+        }
+      }
+    },
+    "photon_energy": {
+      "title": "Photon Energy",
+      "prompt": "How much energy does a single particle of light carry?",
+      "frequency_label": "Frequency (× 10¹⁴ Hz)",
+      "result_label": "Photon energy",
+      "formula_explainer": "Light behaves as both a wave and a stream of particles called photons. Each photon's energy is directly proportional to its frequency — higher-frequency light (like blue or UV) carries more energetic photons than lower-frequency light (like red or infrared).",
+      "sanity_check": "Real value for green light (~5.5×10¹⁴ Hz): about 3.65×10⁻¹⁹ joules per photon — tiny, but this quantum relationship underlies all of modern physics.",
+      "challenge_label": "Match the energy of violet light at 7.5×10¹⁴ Hz",
+      "quiz": {
+        "q1": {
+          "prompt": "Which carries more energy per photon: red light or blue light?",
+          "opt1": "Blue light, because it has a higher frequency",
+          "opt2": "Red light, because it travels faster",
+          "opt3": "They carry exactly the same energy",
+          "explain": "Photon energy is proportional to frequency (E = hf), and blue light has a higher frequency than red light, so each blue photon carries more energy."
+        },
+        "q2": {
+          "prompt": "This formula, E = hf, was central to which major shift in physics?",
+          "opt1": "The birth of quantum mechanics",
+          "opt2": "The discovery of gravity",
+          "opt3": "The invention of the telescope",
+          "explain": "Max Planck and Albert Einstein's work on this exact relationship, showing light's energy comes in discrete packets, helped launch quantum mechanics in the early 20th century."
+        }
+      }
+    },
+    "synodic_period": {
+      "title": "Synodic Period",
+      "prompt": "How often does a planet appear at the same position relative to Earth and the Sun?",
+      "period1_label": "Earth's orbital period (years)",
+      "period2_label": "Other planet's orbital period (years)",
+      "result_label": "Synodic period",
+      "formula_explainer": "Because Earth and another planet both orbit the Sun at different speeds, the time between similar alignments (like repeated oppositions) isn't the same as either planet's own year — it's a combination of both.",
+      "sanity_check": "Real value for Mars: Earth takes 1 year, Mars takes about 1.88 years, giving a synodic period of about 2.135 years — matching the real ~26-month gap between Mars oppositions.",
+      "challenge_label": "Match Mars's real synodic period: about 2.135 years",
+      "quiz": {
+        "q1": {
+          "prompt": "Why isn't a planet's synodic period the same as its actual orbital period?",
+          "opt1": "Because Earth is also moving, so the alignment depends on both planets' relative motion",
+          "opt2": "Synodic period and orbital period are always identical",
+          "opt3": "Synodic period only applies to moons, not planets",
+          "explain": "The synodic period accounts for Earth's own motion — since we're observing from a moving platform, the apparent repeat interval differs from either planet's actual year."
+        },
+        "q2": {
+          "prompt": "What real-world event does Mars's synodic period explain the timing of?",
+          "opt1": "Why Mars oppositions (best viewing times) happen roughly every 26 months",
+          "opt2": "Why Mars has seasons",
+          "opt3": "Why Mars has two moons",
+          "explain": "Mars's synodic period of about 2.135 years (~26 months) is exactly why the best times to view Mars from Earth recur on that same cycle."
+        }
+      }
+    },
+    "rocket_equation": {
+      "title": "The Rocket Equation",
+      "prompt": "How much speed can a rocket actually gain from its engines and fuel?",
+      "exhaust_velocity_label": "Exhaust velocity (km/s)",
+      "mass_ratio_label": "Mass ratio (fueled ÷ empty)",
+      "result_label": "Velocity change (Δv)",
+      "formula_explainer": "Derived by Konstantin Tsiolkovsky in 1903, this equation shows a rocket's total possible speed change depends on how fast it can expel exhaust and what fraction of its total mass is fuel — explaining why multi-stage rockets exist.",
+      "sanity_check": "Real value: a rocket with 3 km/s exhaust velocity and a mass ratio of 10 gains about 6.9 km/s — this is why reaching orbit (needing ~9.4 km/s) requires multiple stages.",
+      "challenge_label": "Match a Δv of about 6.9 km/s (exhaust 3 km/s, ratio 10)",
+      "quiz": {
+        "q1": {
+          "prompt": "Why do most orbital rockets use multiple stages instead of one big one?",
+          "opt1": "Dropping empty stages reduces mass, letting the rocket equation deliver more total Δv",
+          "opt2": "Multiple stages are simply a tradition with no real benefit",
+          "opt3": "A single stage could never physically launch anything",
+          "explain": "Since the rocket equation depends on the mass ratio at each point, jettisoning empty fuel tanks and engines mid-flight — dropping dead weight — lets each remaining stage do less work, achieving a higher total Δv than one giant stage could alone."
+        },
+        "q2": {
+          "prompt": "Who derived the rocket equation that's still used today?",
+          "opt1": "Konstantin Tsiolkovsky",
+          "opt2": "Isaac Newton",
+          "opt3": "Johannes Kepler",
+          "explain": "Russian scientist Konstantin Tsiolkovsky derived this equation in 1903, laying essential groundwork for the entire field of rocketry decades before actual spaceflight was possible."
+        }
+      }
+    }
   },
   "universe_explorer": {
     "title": "Universe Explorer",
@@ -437,6 +692,36 @@
         "name": "The Andromeda Galaxy",
         "description": "The nearest large galaxy to our own, about 2.5 million light-years away, and visible to the naked eye as a faint smudge on a dark night. It's a spiral galaxy like the Milky Way, and the two are on a slow collision course, expected to merge in roughly 4.5 billion years.",
         "detail": "Despite being visible to the naked eye, Andromeda's light left it about 2.5 million years ago. It's actually larger in the sky than the full Moon, but too faint and spread out to notice without long-exposure photography."
+      },
+      "quasars": {
+        "name": "Quasars",
+        "description": "A quasar is the extremely luminous core of a distant galaxy, powered by a supermassive black hole actively feeding on infalling gas and dust. Some quasars outshine their entire host galaxy combined.",
+        "detail": "Quasars are among the most distant objects we can observe, meaning their light left them billions of years ago — studying them shows us what the early universe looked like, when galaxies and black holes were still young and voraciously growing."
+      },
+      "pulsars": {
+        "name": "Pulsars",
+        "description": "A pulsar is a rapidly rotating neutron star that emits beams of radiation from its magnetic poles. As it spins, the beam sweeps past Earth like a lighthouse, appearing to 'pulse' with extreme regularity.",
+        "detail": "Pulsars were first discovered in 1967 by Jocelyn Bell Burnell, who noticed an unusually precise, repeating radio signal. Some pulsars spin hundreds of times per second and are so regular that astronomers use them as natural cosmic clocks."
+      },
+      "brown_dwarfs": {
+        "name": "Brown Dwarfs",
+        "description": "A brown dwarf is sometimes called a 'failed star' — too massive to be a planet, but too small to sustain the full hydrogen fusion that powers true stars.",
+        "detail": "Brown dwarfs bridge the gap between the most massive gas giant planets and the smallest true stars, glowing faintly from leftover heat rather than active fusion, and gradually cooling over billions of years."
+      },
+      "local_group": {
+        "name": "The Local Group",
+        "description": "The Local Group is the cluster of roughly 80 galaxies gravitationally bound together, including our own Milky Way and the Andromeda Galaxy, spanning about 10 million light-years.",
+        "detail": "The Milky Way and Andromeda are the Local Group's two largest members, and their slow mutual approach — expected to result in a merger in about 4.5 billion years — will eventually reshape the entire group."
+      },
+      "big_bang": {
+        "name": "The Big Bang",
+        "description": "The Big Bang marks the beginning of the observable universe's expansion, roughly 13.8 billion years ago — not an explosion in space, but the start of space itself expanding.",
+        "detail": "Evidence for the Big Bang includes the universe's ongoing expansion (discovered by Edwin Hubble in 1929) and the Cosmic Microwave Background — the leftover glow from the early universe, discovered in 1965."
+      },
+      "gravitational_waves": {
+        "name": "Gravitational Waves",
+        "description": "Gravitational waves are ripples in spacetime itself, caused by massive accelerating objects like merging black holes or neutron stars.",
+        "detail": "Predicted by Einstein in 1916, gravitational waves weren't directly detected until 2015, when the LIGO observatory measured the ripple from two black holes merging over a billion light-years away — a discovery that earned the 2017 Nobel Prize in Physics."
       }
     },
     "scale_steps": {
@@ -1438,5 +1723,18 @@
         "def": "A measure of how much light a surface reflects, from 0 (absorbs everything) to 1 (reflects everything) — snow has a high albedo, dark rock a low one."
       }
     }
+  },
+  "onboarding": {
+    "link_label": "New here? Click to learn how Astralis works",
+    "title": "How Astralis Works",
+    "what_is_astronomy_heading": "What is astronomy?",
+    "what_is_astronomy_text": "Astronomy is the study of everything beyond Earth — stars, planets, galaxies, and the physics that governs them. You don't need to know any of it yet. Every module here teaches you by doing, not by reading walls of text.",
+    "modules_heading": "The six modules",
+    "modules_text": "Each card on the Home page is a different way to explore. Universe Explorer introduces big cosmic objects. Sky Explorer teaches you the real night sky. Asteroid Hunter and Exoplanet Hunter turn real detection techniques into games. Stellar Detective teaches you to read a star's color. Astrophysics Lab lets you play with real formulas using sliders. Mission Control lets you plan and fly a real space mission.",
+    "how_challenges_work_heading": "How challenges work",
+    "how_challenges_work_text": "Most activities end in a short quiz. Passing it marks that topic complete in your Astronomy Passport and counts toward your level. If you get a question wrong, you'll see why — then you can try again immediately.",
+    "passport_heading": "Your Passport",
+    "passport_text": "Every challenge you complete is tracked. Sign in with Google (optional) to keep your progress synced across every device — or skip it and just play, with progress saved to this device only.",
+    "close_button": "Got it — let's explore"
   }
 }

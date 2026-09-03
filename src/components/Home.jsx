@@ -4,6 +4,7 @@ import Starfield from "./Starfield.jsx";
 import FactOfTheDay from "./FactOfTheDay.jsx";
 import DailyChallenge from "./DailyChallenge.jsx";
 import ModuleGlyph from "./ModuleGlyph.jsx";
+import OnboardingGuide from "./OnboardingGuide.jsx";
 
 const MODULES = [
   { key: "universe_explorer", labelKey: "modules.universe_explorer", descKey: "universe_explorer.subtitle" },
@@ -21,6 +22,7 @@ export default function Home({ setView }) {
     <div className="relative">
       <Starfield />
       <div className="relative max-w-5xl mx-auto px-6 py-16" style={{ zIndex: 1 }}>
+        <OnboardingGuide />
         <div className="max-w-2xl">
           <h1 className="font-display text-4xl md:text-5xl leading-tight text-text">
             {t("home.heading")}
