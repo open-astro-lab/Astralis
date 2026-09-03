@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../i18n";
 import { usePassport } from "../context/PassportContext.jsx";
+import { totalCompleted } from "../lib/passport";
 
 export default function NavBar({ view, setView }) {
   const { t, i18n } = useTranslation();
   const { user, signIn, signOutUser, firebaseEnabled, syncing, passport } = usePassport();
   const streakCount = passport?.streak?.count || 0;
+  const xpTotal = totalCompleted(passport);
 
   const items = [
     { key: "home", label: t("nav.home") },
@@ -38,6 +40,12 @@ export default function NavBar({ view, setView }) {
         </nav>
 
         <div className="flex items-center gap-2 ml-auto">
+          <button
+            onClick={() => setView("passport")}
+            className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full text-xs bg-nebula/10 border border-nebula/30 text-nebulaSoft font-mono hover:border-nebula transition"
+          >
+            ⭐ {xpTotal} XP
+          </button>
           {streakCount > 1 && (
             <span
               className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full text-xs bg-starlight/10 border border-starlight/30 text-starlight"

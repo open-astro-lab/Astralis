@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, db, googleProvider, firebaseEnabled } from "../lib/firebase";
-import { loadPassport, savePassport, EMPTY_PASSPORT_SHAPE, bumpStreak } from "../lib/passport";
+import { loadPassport, savePassport, EMPTY_PASSPORT_SHAPE, bumpStreak, levelFor } from "../lib/passport";
 
 const PassportContext = createContext(null);
 
@@ -44,6 +44,9 @@ export function PassportProvider({ children }) {
   const [passport, setPassport] = useState(() => loadPassport());
   const [syncing, setSyncing] = useState(false);
   const streakBumpedForRef = useRef(null);
+  const [xpEvent, setXpEvent] = useState(null); // { id } — bumps on every new completion
+  const [levelUpEvent, setLevelUpEvent] = useState(null); // { levelKey } — set when the level actually changes
+  const xpCounterRef = useRef(0);
 
   // Track auth state.
   useEffect(() => {
@@ -100,11 +103,25 @@ export function PassportProvider({ children }) {
   const complete = useCallback(
     async (category, activityId) => {
       setPassport((prev) => {
+        const alreadyHas = prev[category]?.includes(activityId);
+        if (alreadyHas) return prev; // no-op, no XP for re-completing the same thing
+
         const next = { ...prev };
         if (!next[category]) next[category] = [];
-        if (!next[category].includes(activityId)) {
-          next[category] = [...next[category], activityId];
+        next[category] = [...next[category], activityId];
+
+        // Fire a lightweight XP toast for every genuinely new completion.
+        xpCounterRef.current += 1;
+        setXpEvent({ id: xpCounterRef.current });
+
+        // If this completion crossed into a new level, fire the bigger
+        // level-up celebration too.
+        const prevLevel = levelFor(prev);
+        const nextLevel = levelFor(next);
+        if (nextLevel !== prevLevel) {
+          setLevelUpEvent({ levelKey: nextLevel, id: xpCounterRef.current });
         }
+
         // Persist in the background to whichever backend is active.
         if (user && firebaseEnabled) {
           writeCloudPassport(user.uid, next);
@@ -116,6 +133,8 @@ export function PassportProvider({ children }) {
     },
     [user]
   );
+
+  const clearLevelUpEvent = useCallback(() => setLevelUpEvent(null), []);
 
   const signIn = useCallback(async () => {
     if (!firebaseEnabled) return;
@@ -129,7 +148,10 @@ export function PassportProvider({ children }) {
 
   return (
     <PassportContext.Provider
-      value={{ user, authReady, passport, complete, signIn, signOutUser, syncing, firebaseEnabled }}
+      value={{
+        user, authReady, passport, complete, signIn, signOutUser, syncing, firebaseEnabled,
+        xpEvent, levelUpEvent, clearLevelUpEvent,
+      }}
     >
       {children}
     </PassportContext.Provider>

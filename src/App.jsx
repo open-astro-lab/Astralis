@@ -4,6 +4,8 @@ import LanguagePicker from "./components/LanguagePicker.jsx";
 import NavBar from "./components/NavBar.jsx";
 import GuestBanner from "./components/GuestBanner.jsx";
 import Home from "./components/Home.jsx";
+import XpToast from "./components/XpToast.jsx";
+import LevelUpModal from "./components/LevelUpModal.jsx";
 
 // Lazily loaded — these only download once the user actually opens that
 // module, keeping the initial page load fast for everyone starting at Home.
@@ -54,6 +56,8 @@ export default function App() {
     <div className="min-h-screen">
       <NavBar view={view} setView={setView} />
       <GuestBanner />
+      <XpToast />
+      <LevelUpModal />
       {view === "home" && <Home setView={setView} />}
       {moduleView && (
         <div className="max-w-5xl mx-auto px-6 py-12">

@@ -1736,5 +1736,11 @@
     "passport_heading": "Your Passport",
     "passport_text": "Every challenge you complete is tracked. Sign in with Google (optional) to keep your progress synced across every device — or skip it and just play, with progress saved to this device only.",
     "close_button": "Got it — let's explore"
-  }
+  },
+  "level_up": {
+    "title": "Level Up!",
+    "subtitle": "You're now a",
+    "close": "Keep exploring"
+  },
+  "xp_toast": "+1"
 }
