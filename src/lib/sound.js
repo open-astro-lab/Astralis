@@ -54,44 +54,85 @@ export function playLevelUp() {
   );
 }
 
-// A soft, slowly shifting ambient pad — three detuned triangle oscillators
-// forming a gentle chord, with a slow LFO breathing the volume in and out.
+// A layered ambient soundscape: a warm filtered pad chord with a slow
+// filter sweep for movement, plus a soft pentatonic arpeggio ticking over
+// it for genuine rhythmic energy — not just a static drone.
+let ambientTimers = [];
+
 export function startAmbient() {
   if (ambientPlaying) return;
   const ctx = getCtx();
   if (!ctx) return;
 
   const master = ctx.createGain();
-  master.gain.value = 0.03;
+  master.gain.value = 0.0001;
   master.connect(ctx.destination);
+  master.gain.linearRampToValueAtTime(0.045, ctx.currentTime + 1.5);
 
-  const freqs = [130.81, 164.81, 196.0]; // soft low C-E-G
-  const oscillators = freqs.map((f, i) => {
+  const filter = ctx.createBiquadFilter();
+  filter.type = "lowpass";
+  filter.frequency.value = 900;
+  filter.Q.value = 0.7;
+  filter.connect(master);
+
+  // Warm Cmaj7-ish pad, low register.
+  const padFreqs = [130.81, 164.81, 196.0, 246.94]; // C3 E3 G3 B3
+  const oscillators = padFreqs.map((f, i) => {
     const osc = ctx.createOscillator();
     osc.type = "triangle";
     osc.frequency.value = f;
-    osc.detune.value = (i - 1) * 5;
-    osc.connect(master);
+    osc.detune.value = (i - 1.5) * 4;
+    const oGain = ctx.createGain();
+    oGain.gain.value = 0.55;
+    osc.connect(oGain);
+    oGain.connect(filter);
     osc.start();
     return osc;
   });
 
-  const lfo = ctx.createOscillator();
-  lfo.frequency.value = 0.045;
-  const lfoGain = ctx.createGain();
-  lfoGain.gain.value = 0.012;
-  lfo.connect(lfoGain);
-  lfoGain.connect(master.gain);
-  lfo.start();
+  // Slow filter sweep gives the pad a gentle breathing/opening motion.
+  const filterLfo = ctx.createOscillator();
+  filterLfo.frequency.value = 0.07;
+  const filterLfoGain = ctx.createGain();
+  filterLfoGain.gain.value = 450;
+  filterLfo.connect(filterLfoGain);
+  filterLfoGain.connect(filter.frequency);
+  filterLfo.start();
 
-  ambientNodes = { oscillators, master, lfo };
+  // Soft pentatonic arpeggio — the "energy" layer, ticking gently on top.
+  const scale = [523.25, 587.33, 659.25, 783.99, 880.0]; // C5 D5 E5 G5 A5
+  let step = 0;
+  function scheduleArp() {
+    if (!ambientPlaying) return;
+    const freq = scale[step % scale.length];
+    const osc = ctx.createOscillator();
+    const g = ctx.createGain();
+    osc.type = "sine";
+    osc.frequency.value = freq;
+    osc.connect(g);
+    g.connect(master);
+    const t0 = ctx.currentTime;
+    g.gain.setValueAtTime(0, t0);
+    g.gain.linearRampToValueAtTime(0.05, t0 + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.55);
+    osc.start(t0);
+    osc.stop(t0 + 0.6);
+    step += 1;
+    const delay = step % 4 === 0 ? 780 : 480;
+    ambientTimers.push(setTimeout(scheduleArp, delay));
+  }
+  ambientTimers.push(setTimeout(scheduleArp, 400));
+
+  ambientNodes = { oscillators, master, filterLfo };
   ambientPlaying = true;
 }
 
 export function stopAmbient() {
   if (!ambientPlaying || !ambientNodes) return;
+  ambientTimers.forEach(clearTimeout);
+  ambientTimers = [];
   const ctx = getCtx();
-  const { oscillators, master, lfo } = ambientNodes;
+  const { oscillators, master, filterLfo } = ambientNodes;
   if (ctx) {
     master.gain.cancelScheduledValues(ctx.currentTime);
     master.gain.setValueAtTime(master.gain.value, ctx.currentTime);
@@ -101,7 +142,7 @@ export function stopAmbient() {
     oscillators.forEach((o) => {
       try { o.stop(); } catch { /* already stopped */ }
     });
-    try { lfo.stop(); } catch { /* already stopped */ }
+    try { filterLfo.stop(); } catch { /* already stopped */ }
   }, 450);
   ambientPlaying = false;
   ambientNodes = null;
