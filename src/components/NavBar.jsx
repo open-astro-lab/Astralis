@@ -1,17 +1,25 @@
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../i18n";
 import { usePassport } from "../context/PassportContext.jsx";
+import { useSound } from "../context/SoundContext.jsx";
 import { totalCompleted } from "../lib/passport";
 
 export default function NavBar({ view, setView }) {
   const { t, i18n } = useTranslation();
   const { user, signIn, signOutUser, firebaseEnabled, syncing, passport, combo } = usePassport();
+  const { enabled: soundEnabled, toggle: toggleSound, playClick } = useSound();
   const streakCount = passport?.streak?.count || 0;
   const xpTotal = totalCompleted(passport);
+
+  function go(key) {
+    playClick();
+    setView(key);
+  }
 
   const items = [
     { key: "home", label: t("nav.home") },
     { key: "glossary", label: t("nav.glossary") },
+    { key: "collection", label: t("nav.collection") },
     { key: "passport", label: t("nav.passport") },
   ];
 
@@ -19,7 +27,7 @@ export default function NavBar({ view, setView }) {
     <header className="sticky top-0 z-10 border-b border-white/5 bg-void/80 backdrop-blur">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
         <button
-          onClick={() => setView("home")}
+          onClick={() => go("home")}
           className="font-display text-lg text-text tracking-tight shrink-0"
         >
           Astralis
@@ -29,7 +37,7 @@ export default function NavBar({ view, setView }) {
           {items.map((item) => (
             <button
               key={item.key}
-              onClick={() => setView(item.key)}
+              onClick={() => go(item.key)}
               className={`px-3.5 py-1.5 rounded-full text-sm transition ${
                 view === item.key ? "bg-panelLight text-text" : "text-muted hover:text-text"
               }`}
@@ -40,6 +48,14 @@ export default function NavBar({ view, setView }) {
         </nav>
 
         <div className="flex items-center gap-2 ml-auto">
+          <button
+            onClick={toggleSound}
+            className="flex items-center justify-center w-8 h-8 rounded-full border border-white/10 text-muted hover:text-text hover:border-white/25 transition"
+            aria-label={soundEnabled ? "Mute sound" : "Unmute sound"}
+            title={soundEnabled ? "Mute sound" : "Unmute sound"}
+          >
+            {soundEnabled ? "🔊" : "🔇"}
+          </button>
           <button
             onClick={() => setView("passport")}
             className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full text-xs bg-nebula/10 border border-nebula/30 text-nebulaSoft font-mono hover:border-nebula transition"

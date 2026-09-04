@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../context/PassportContext.jsx";
+import { useSound } from "../context/SoundContext.jsx";
 import ConfettiBurst from "./ConfettiBurst.jsx";
 
 function comboMessageKey(count) {
@@ -19,6 +20,7 @@ function comboMessageKey(count) {
 export default function Quiz({ questions, category, activityId, onPassed, nextLabel, onNext }) {
   const { t } = useTranslation();
   const { complete, combo, bumpCombo, resetCombo } = usePassport();
+  const { playClick, playCorrect, playWrong } = useSound();
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [passed, setPassed] = useState(false);
@@ -26,6 +28,7 @@ export default function Quiz({ questions, category, activityId, onPassed, nextLa
 
   function selectAnswer(qId, optionIndex) {
     if (submitted) return;
+    playClick();
     setAnswers((prev) => ({ ...prev, [qId]: optionIndex }));
   }
 
@@ -34,11 +37,13 @@ export default function Quiz({ questions, category, activityId, onPassed, nextLa
     setSubmitted(true);
     setPassed(allCorrect);
     if (allCorrect) {
+      playCorrect();
       complete(category, activityId);
       bumpCombo();
       setComboAtPass(combo + 1);
       onPassed?.();
     } else {
+      playWrong();
       resetCombo();
     }
   }
@@ -141,7 +146,7 @@ export default function Quiz({ questions, category, activityId, onPassed, nextLa
         <div className="space-y-3">
           <div className="text-starlight text-sm font-medium">{t("quiz.failed")}</div>
           <button
-            onClick={retry}
+            onClick={() => { playClick(); retry(); }}
             className="px-5 py-2.5 rounded-full border border-white/15 text-sm text-text hover:border-nebula transition"
           >
             {t("quiz.retry")}

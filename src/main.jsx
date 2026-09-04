@@ -4,11 +4,14 @@ import "./i18n";
 import "./index.css";
 import App from "./App.jsx";
 import { PassportProvider } from "./context/PassportContext.jsx";
+import { SoundProvider } from "./context/SoundContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <PassportProvider>
-      <App />
-    </PassportProvider>
+    <SoundProvider>
+      <PassportProvider>
+        <App />
+      </PassportProvider>
+    </SoundProvider>
   </StrictMode>
 );

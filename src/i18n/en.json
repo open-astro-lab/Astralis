@@ -10,7 +10,8 @@
   "nav": {
     "home": "Home",
     "passport": "My Passport",
-    "glossary": "Glossary"
+    "glossary": "Glossary",
+    "collection": "Collection"
   },
   "home": {
     "heading": "The universe, one question at a time.",
@@ -1749,5 +1750,12 @@
     "on_fire": "On fire!",
     "unstoppable": "Unstoppable!",
     "legendary": "Legendary streak!"
+  },
+  "collection": {
+    "title": "Star Card Collection",
+    "subtitle": "Every object and constellation you discover becomes a card here. Keep exploring to fill the set.",
+    "progress": "{{unlocked}} / {{total}} collected",
+    "locked_label": "Not yet discovered",
+    "nav_label": "Collection"
   }
 }

@@ -11,6 +11,7 @@ import LevelUpModal from "./components/LevelUpModal.jsx";
 // module, keeping the initial page load fast for everyone starting at Home.
 const Passport = lazy(() => import("./components/Passport.jsx"));
 const Glossary = lazy(() => import("./components/Glossary.jsx"));
+const Collection = lazy(() => import("./components/Collection.jsx"));
 const PhysicsLab = lazy(() => import("./modules/physics-lab/PhysicsLab.jsx"));
 const UniverseExplorer = lazy(() => import("./modules/universe-explorer/UniverseExplorer.jsx"));
 const SkyExplorer = lazy(() => import("./modules/sky-explorer/SkyExplorer.jsx"));
@@ -82,6 +83,11 @@ export default function App() {
       {view === "glossary" && (
         <Suspense fallback={<LoadingFallback />}>
           <Glossary />
+        </Suspense>
+      )}
+      {view === "collection" && (
+        <Suspense fallback={<LoadingFallback />}>
+          <Collection />
         </Suspense>
       )}
     </div>

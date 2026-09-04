@@ -1,10 +1,18 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../context/PassportContext.jsx";
+import { useSound } from "../context/SoundContext.jsx";
 import ConfettiBurst from "./ConfettiBurst.jsx";
 
 export default function LevelUpModal() {
   const { t } = useTranslation();
   const { levelUpEvent, clearLevelUpEvent } = usePassport();
+  const { playLevelUp } = useSound();
+
+  useEffect(() => {
+    if (levelUpEvent) playLevelUp();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [levelUpEvent?.id]);
 
   if (!levelUpEvent) return null;
 

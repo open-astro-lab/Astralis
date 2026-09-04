@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useSound } from "../context/SoundContext.jsx";
 
 const NODES = [
   { key: "universe_explorer", labelKey: "modules.universe_explorer", ring: 1, angle: -30, color: "#7C6CF0" },
@@ -19,11 +20,13 @@ function polar(cx, cy, r, angleDeg) {
 
 export default function OrbitalMap({ setView }) {
   const { t } = useTranslation();
+  const { playClick } = useSound();
   const [hovered, setHovered] = useState(null);
   const [launching, setLaunching] = useState(null);
   const cx = 200, cy = 200;
 
   function travel(key) {
+    playClick();
     setLaunching(key);
     setTimeout(() => setView(key), 320);
   }
