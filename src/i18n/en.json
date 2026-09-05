@@ -11,7 +11,8 @@
     "home": "Home",
     "passport": "My Passport",
     "glossary": "Glossary",
-    "collection": "Collection"
+    "collection": "Collection",
+    "trivia": "Trivia Blitz"
   },
   "home": {
     "heading": "The universe, one question at a time.",
@@ -1757,5 +1758,19 @@
     "progress": "{{unlocked}} / {{total}} collected",
     "locked_label": "Not yet discovered",
     "nav_label": "Collection"
+  },
+  "trivia": {
+    "title": "Trivia Blitz",
+    "subtitle": "60 seconds. Random questions from everything in Astralis. No pressure — just see how far you get.",
+    "start_button": "Start Blitz",
+    "time_left": "Time",
+    "score_label": "Score",
+    "best_label": "Best",
+    "streak_label": "Streak",
+    "play_again": "Play Again",
+    "time_up_heading": "Time's up!",
+    "final_score": "Final score",
+    "new_best": "🎉 New best score!",
+    "exit_button": "Back to Home"
   }
 }

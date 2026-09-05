@@ -139,6 +139,24 @@ export function PassportProvider({ children }) {
   const bumpCombo = useCallback(() => setCombo((c) => c + 1), []);
   const resetCombo = useCallback(() => setCombo(0), []);
 
+  // Only overwrites triviaBestScore when the new score is actually higher —
+  // never lets a lower replay score erase a real best.
+  const submitTriviaScore = useCallback(
+    (score) => {
+      setPassport((prev) => {
+        if (score <= (prev.triviaBestScore || 0)) return prev;
+        const next = { ...prev, triviaBestScore: score };
+        if (user && firebaseEnabled) {
+          writeCloudPassport(user.uid, next);
+        } else {
+          savePassport(next);
+        }
+        return next;
+      });
+    },
+    [user]
+  );
+
   const signIn = useCallback(async () => {
     if (!firebaseEnabled) return;
     await signInWithPopup(auth, googleProvider);
@@ -153,7 +171,7 @@ export function PassportProvider({ children }) {
     <PassportContext.Provider
       value={{
         user, authReady, passport, complete, signIn, signOutUser, syncing, firebaseEnabled,
-        xpEvent, levelUpEvent, clearLevelUpEvent, combo, bumpCombo, resetCombo,
+        xpEvent, levelUpEvent, clearLevelUpEvent, combo, bumpCombo, resetCombo, submitTriviaScore,
       }}
     >
       {children}

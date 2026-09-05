@@ -11,7 +11,8 @@
     "home": "होम",
     "passport": "मेरा पासपोर्ट",
     "glossary": "शब्दावली",
-    "collection": "संग्रह"
+    "collection": "संग्रह",
+    "trivia": "ट्रिविया ब्लिट्ज़"
   },
   "home": {
     "heading": "ब्रह्मांड, एक सवाल के साथ शुरू।",
@@ -1757,5 +1758,19 @@
     "progress": "{{unlocked}} / {{total}} संग्रहित",
     "locked_label": "अभी तक खोजा नहीं गया",
     "nav_label": "संग्रह"
+  },
+  "trivia": {
+    "title": "ट्रिविया ब्लिट्ज़",
+    "subtitle": "60 सेकंड। Astralis की हर चीज़ से रैंडम सवाल। कोई दबाव नहीं — बस देखें आप कितनी दूर जाते हैं।",
+    "start_button": "ब्लिट्ज़ शुरू करें",
+    "time_left": "समय",
+    "score_label": "स्कोर",
+    "best_label": "सर्वश्रेष्ठ",
+    "streak_label": "स्ट्रीक",
+    "play_again": "फिर से खेलें",
+    "time_up_heading": "समय समाप्त!",
+    "final_score": "अंतिम स्कोर",
+    "new_best": "🎉 नया सर्वश्रेष्ठ स्कोर!",
+    "exit_button": "होम पर वापस जाएँ"
   }
 }

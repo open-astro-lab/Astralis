@@ -21,6 +21,7 @@ export function EMPTY_PASSPORT_SHAPE() {
     stellarInvestigations: [],
     physicsChallenges: [],
     dailyChallenges: [],
+    triviaBestScore: 0,
     streak: { count: 0, lastVisitDate: null },
   };
 }
