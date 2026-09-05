@@ -20,6 +20,7 @@ export default function NavBar({ view, setView }) {
     { key: "home", label: t("nav.home") },
     { key: "glossary", label: t("nav.glossary") },
     { key: "collection", label: t("nav.collection") },
+    { key: "trivia", label: t("nav.trivia") },
     { key: "passport", label: t("nav.passport") },
   ];
 

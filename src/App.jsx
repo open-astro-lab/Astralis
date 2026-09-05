@@ -12,6 +12,7 @@ import LevelUpModal from "./components/LevelUpModal.jsx";
 const Passport = lazy(() => import("./components/Passport.jsx"));
 const Glossary = lazy(() => import("./components/Glossary.jsx"));
 const Collection = lazy(() => import("./components/Collection.jsx"));
+const TriviaBlitz = lazy(() => import("./components/TriviaBlitz.jsx"));
 const PhysicsLab = lazy(() => import("./modules/physics-lab/PhysicsLab.jsx"));
 const UniverseExplorer = lazy(() => import("./modules/universe-explorer/UniverseExplorer.jsx"));
 const SkyExplorer = lazy(() => import("./modules/sky-explorer/SkyExplorer.jsx"));
@@ -89,6 +90,19 @@ export default function App() {
         <Suspense fallback={<LoadingFallback />}>
           <Collection />
         </Suspense>
+      )}
+      {view === "trivia" && (
+        <div className="max-w-5xl mx-auto px-6 py-12">
+          <button
+            onClick={() => setView("home")}
+            className="text-muted text-sm hover:text-text transition mb-4"
+          >
+            ← {t("nav.home")}
+          </button>
+          <Suspense fallback={<LoadingFallback />}>
+            <TriviaBlitz />
+          </Suspense>
+        </div>
       )}
     </div>
   );
