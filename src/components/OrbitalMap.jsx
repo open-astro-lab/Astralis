@@ -6,9 +6,10 @@ const NODES = [
   { key: "universe_explorer", labelKey: "modules.universe_explorer", ring: 1, angle: -30, color: "#7C6CF0" },
   { key: "sky_explorer", labelKey: "modules.sky_explorer", ring: 1, angle: 90, color: "#F2C572" },
   { key: "physics_lab", labelKey: "modules.physics_lab", ring: 1, angle: 210, color: "#3FD6B0" },
-  { key: "asteroid_hunter", labelKey: "modules.asteroid_hunter", ring: 2, angle: 30, color: "#8B93AE" },
-  { key: "exoplanet_hunter", labelKey: "modules.exoplanet_hunter", ring: 2, angle: 150, color: "#A79AF5" },
+  { key: "asteroid_hunter", labelKey: "modules.asteroid_hunter", ring: 2, angle: 20, color: "#8B93AE" },
+  { key: "exoplanet_hunter", labelKey: "modules.exoplanet_hunter", ring: 2, angle: 145, color: "#A79AF5" },
   { key: "stellar_detective", labelKey: "modules.stellar_detective", ring: 2, angle: 270, color: "#FF9F6B" },
+  { key: "system_builder", labelKey: "modules.system_builder", ring: 2, angle: 315, color: "#FFFFFF" },
 ];
 
 const RING_R = { 1: 100, 2: 165 };

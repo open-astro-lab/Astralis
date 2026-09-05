@@ -19,6 +19,7 @@ const SkyExplorer = lazy(() => import("./modules/sky-explorer/SkyExplorer.jsx"))
 const ExoplanetHunter = lazy(() => import("./modules/exoplanet-hunter/ExoplanetHunter.jsx"));
 const AsteroidHunter = lazy(() => import("./modules/asteroid-hunter/AsteroidHunter.jsx"));
 const StellarDetective = lazy(() => import("./modules/stellar-detective/StellarDetective.jsx"));
+const StarSystemBuilder = lazy(() => import("./modules/system-builder/StarSystemBuilder.jsx"));
 
 const MODULE_VIEWS = {
   physics_lab: { titleKey: "physics_lab.title", subtitleKey: "physics_lab.subtitle", Component: PhysicsLab },
@@ -27,6 +28,7 @@ const MODULE_VIEWS = {
   exoplanet_hunter: { titleKey: "exoplanet_hunter.title", subtitleKey: "exoplanet_hunter.subtitle", Component: ExoplanetHunter },
   asteroid_hunter: { titleKey: "asteroid_hunter.title", subtitleKey: "asteroid_hunter.subtitle", Component: AsteroidHunter },
   stellar_detective: { titleKey: "stellar_detective.title", subtitleKey: "stellar_detective.subtitle", Component: StellarDetective },
+  system_builder: { titleKey: "system_builder.title", subtitleKey: "system_builder.subtitle", Component: StarSystemBuilder },
 };
 
 function LoadingFallback() {

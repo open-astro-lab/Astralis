@@ -46,7 +46,8 @@
     "asteroid_hunter": "एस्टेरॉइड हंटर",
     "exoplanet_hunter": "एक्सोप्लैनेट हंटर",
     "stellar_detective": "स्टेलर डिटेक्टिव",
-    "physics_lab": "एस्ट्रोफिज़िक्स लैब"
+    "physics_lab": "एस्ट्रोफिज़िक्स लैब",
+    "system_builder": "स्टार सिस्टम बिल्डर"
   },
   "physics_lab": {
     "title": "एस्ट्रोफिज़िक्स लैब",
@@ -1382,7 +1383,8 @@
       "exoplanetInvestigations": "एक्सोप्लैनेट जाँच",
       "stellarInvestigations": "तारकीय जाँच",
       "physicsChallenges": "भौतिकी चुनौतियाँ",
-      "dailyChallenges": "दैनिक चुनौतियाँ"
+      "dailyChallenges": "दैनिक चुनौतियाँ",
+      "systemBuilder": "बनाई गई दुनियाएँ"
     },
     "next_level_progress": "{{level}} तक पहुँचने के लिए {{remaining}} और",
     "max_level_reached": "आप सबसे ऊपरी स्तर पर पहुँच गए हैं — वैज्ञानिक!",
@@ -1772,5 +1774,25 @@
     "final_score": "अंतिम स्कोर",
     "new_best": "🎉 नया सर्वश्रेष्ठ स्कोर!",
     "exit_button": "होम पर वापस जाएँ"
+  },
+  "system_builder": {
+    "title": "स्टार सिस्टम बिल्डर",
+    "subtitle": "अपना तारा डिज़ाइन करें, ग्रह जोड़ें, और देखें कि असली भौतिकी क्या तय करती है — कोई क्विज़ नहीं, बस बनाएँ और खोजें।",
+    "star_heading": "आपका तारा",
+    "temp_label": "सतही तापमान (K)",
+    "mass_label": "द्रव्यमान (× सूर्य का द्रव्यमान)",
+    "radius_label": "त्रिज्या (× सूर्य की त्रिज्या)",
+    "luminosity_label": "परिणामी ल्यूमिनोसिटी (× सूर्य की)",
+    "habitable_zone_label": "हैबिटेबल ज़ोन यहाँ है",
+    "planets_heading": "आपके ग्रह",
+    "add_planet": "+ ग्रह जोड़ें",
+    "remove_planet": "हटाएँ",
+    "planet": "ग्रह {{n}}",
+    "distance_label": "तारे से दूरी (AU)",
+    "orbital_period_label": "कक्षीय अवधि",
+    "in_zone": "🌍 हैबिटेबल ज़ोन में",
+    "out_zone": "हैबिटेबल ज़ोन के बाहर",
+    "first_planet_achievement": "पहली दुनिया रखी गई!",
+    "habitable_achievement": "🎉 आपने एक संभावित रहने योग्य दुनिया बनाई!"
   }
 }

@@ -46,7 +46,8 @@
     "asteroid_hunter": "Asteroid Hunter",
     "exoplanet_hunter": "Exoplanet Hunter",
     "stellar_detective": "Stellar Detective",
-    "physics_lab": "Astrophysics Lab"
+    "physics_lab": "Astrophysics Lab",
+    "system_builder": "Star System Builder"
   },
   "physics_lab": {
     "title": "Astrophysics Lab",
@@ -1382,7 +1383,8 @@
       "exoplanetInvestigations": "Exoplanet investigations",
       "stellarInvestigations": "Stellar investigations",
       "physicsChallenges": "Physics challenges",
-      "dailyChallenges": "Daily challenges"
+      "dailyChallenges": "Daily challenges",
+      "systemBuilder": "Worlds built"
     },
     "next_level_progress": "{{remaining}} more to reach {{level}}",
     "max_level_reached": "You've reached the top level — Scientist!",
@@ -1772,5 +1774,25 @@
     "final_score": "Final score",
     "new_best": "🎉 New best score!",
     "exit_button": "Back to Home"
+  },
+  "system_builder": {
+    "title": "Star System Builder",
+    "subtitle": "Design your own star, add planets, and watch real physics decide what happens — no quiz, just build and explore.",
+    "star_heading": "Your Star",
+    "temp_label": "Surface temperature (K)",
+    "mass_label": "Mass (× Sun's mass)",
+    "radius_label": "Radius (× Sun's radius)",
+    "luminosity_label": "Resulting luminosity (× Sun's)",
+    "habitable_zone_label": "Habitable zone sits at",
+    "planets_heading": "Your Planets",
+    "add_planet": "+ Add a planet",
+    "remove_planet": "Remove",
+    "planet": "Planet {{n}}",
+    "distance_label": "Distance from star (AU)",
+    "orbital_period_label": "Orbital period",
+    "in_zone": "🌍 In the habitable zone",
+    "out_zone": "Outside the habitable zone",
+    "first_planet_achievement": "First world placed!",
+    "habitable_achievement": "🎉 You built a potentially habitable world!"
   }
 }
