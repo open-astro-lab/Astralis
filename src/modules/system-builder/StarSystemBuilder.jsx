@@ -29,7 +29,7 @@ export default function StarSystemBuilder() {
   const [starMass, setStarMass] = useState(1);
   const [starRadius, setStarRadius] = useState(1);
   const [planets, setPlanets] = useState([{ id: 0, distance: 1 }]);
-  const [everHitHabitable, setEverHitHabitable] = useState(false);
+  const [everHitHabitable, setEverHitHabitable] = useState({});
 
   const color = useMemo(() => temperatureToRGB(temp), [temp]);
   const luminosity = useMemo(
@@ -64,21 +64,59 @@ export default function StarSystemBuilder() {
     return Math.sqrt(Math.pow(distance, 3) / starMass);
   }
 
-  // Fire the habitable-world celebration once, the first time any planet lands in the zone.
   const anyInZone = planets.some((p) => inZone(p.distance));
+  const periods = planets.map((p) => orbitalPeriod(p.distance));
+  const maxPeriod = periods.length ? Math.max(...periods) : 0;
+  const minPeriod = periods.length ? Math.min(...periods) : Infinity;
+
+  const MISSIONS = [
+    { id: "habitable_world", done: anyInZone },
+    { id: "hot_star", done: temp > 10000 },
+    { id: "cool_habitable", done: temp < 3700 && anyInZone },
+    { id: "long_year", done: maxPeriod > 50 },
+    { id: "fast_orbit", done: minPeriod < 1 / 12 },
+    { id: "super_luminous", done: luminosity > 100 },
+  ];
+  const allMissionsDone = MISSIONS.every((m) => m.done);
+
+  // Fire each mission's celebration exactly once, the moment it's first satisfied.
   useEffect(() => {
-    if (anyInZone && !everHitHabitable) {
-      setEverHitHabitable(true);
-      complete("systemBuilder", "habitable_world");
-      playCorrect();
-    }
+    MISSIONS.forEach((m) => {
+      if (m.done && !everHitHabitable[m.id]) {
+        setEverHitHabitable((prev) => ({ ...prev, [m.id]: true }));
+        complete("systemBuilder", m.id);
+        playCorrect();
+      }
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [anyInZone]);
+  }, [temp, starMass, starRadius, planets]);
 
   const maxDistance = Math.max(5, ...planets.map((p) => p.distance), habitableDistance * 1.3);
 
   return (
     <div className="space-y-8">
+      <div className="rounded-2xl border border-nebula/30 bg-void/50 p-6">
+        <h2 className="font-display text-lg mb-1">{t("system_builder.missions_heading")}</h2>
+        <p className="text-muted text-sm mb-4">{t("system_builder.missions_subtitle")}</p>
+        <div className="grid sm:grid-cols-2 gap-2">
+          {MISSIONS.map((m) => (
+            <div
+              key={m.id}
+              className={`flex items-start gap-2 rounded-lg border px-3 py-2 text-sm transition ${
+                m.done ? "border-verified/50 bg-verified/10 text-text" : "border-white/10 text-muted"
+              }`}
+            >
+              <span>{m.done ? "✅" : "⬜"}</span>
+              <span>{t(`system_builder.missions.${m.id}`)}</span>
+            </div>
+          ))}
+        </div>
+        {allMissionsDone && (
+          <p className="text-verified text-sm font-medium mt-4">
+            {t("system_builder.missions_complete")}
+          </p>
+        )}
+      </div>
       <div className="rounded-2xl border border-white/10 bg-panel p-6">
         <h2 className="font-display text-lg mb-4">{t("system_builder.star_heading")}</h2>
         <div className="grid md:grid-cols-2 gap-6">
