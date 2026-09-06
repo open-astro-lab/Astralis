@@ -1106,6 +1106,20 @@
         "opt3": "Stars are only visible in winter",
         "explain": "Starlight twinkles because it travels much farther and gets disturbed more by our atmosphere; planets usually shine with a steadier light."
       }
+    },
+    "moon_game": {
+      "prompt": "Before we tell you: which phase do you think the Moon is in tonight?",
+      "reveal_button": "Reveal tonight's real phase",
+      "correct": "You got it exactly right!",
+      "close": "Close, but not quite — here's the real one:"
+    },
+    "planet_game": {
+      "heading": "Planet or Star?",
+      "prompt": "A point of light in the sky shines with a perfectly steady glow, never flickering. Is it a planet or a star?",
+      "opt_planet": "Planet",
+      "opt_star": "Star",
+      "correct": "Right! Planets shine steadily because they're close enough that their light isn't disturbed much by our atmosphere.",
+      "incorrect": "Actually, a steady, non-twinkling light is the sign of a planet — try again."
     }
   },
   "exoplanet_hunter": {

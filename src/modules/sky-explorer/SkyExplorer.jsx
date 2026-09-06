@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../../context/PassportContext.jsx";
+import { useSound } from "../../context/SoundContext.jsx";
 import Quiz from "../../components/Quiz.jsx";
 
 const SYNODIC_MONTH_DAYS = 29.53058867;
@@ -137,35 +138,135 @@ function ConstellationCard({ ckey }) {
   );
 }
 
+const PHASE_OPTIONS = [
+  "new_moon", "waxing_crescent", "first_quarter", "waxing_gibbous",
+  "full_moon", "waning_gibbous", "last_quarter", "waning_crescent",
+];
+
 export default function SkyExplorer() {
   const { t } = useTranslation();
+  const { complete } = usePassport();
+  const { playClick, playCorrect, playWrong } = useSound();
   const moon = useMemo(() => getMoonPhase(), []);
+  const [moonGuess, setMoonGuess] = useState(null);
+  const [moonRevealed, setMoonRevealed] = useState(false);
+  const [planetAnswered, setPlanetAnswered] = useState(false);
+  const [planetCorrect, setPlanetCorrect] = useState(false);
+
+  function guessMoonPhase(key) {
+    playClick();
+    setMoonGuess(key);
+  }
+
+  function revealMoon() {
+    playClick();
+    setMoonRevealed(true);
+    complete("objectsExplored", "moon_phase_guess");
+  }
+
+  function answerPlanet(choice) {
+    if (planetAnswered) return;
+    playClick();
+    const correct = choice === "planet";
+    setPlanetAnswered(true);
+    setPlanetCorrect(correct);
+    if (correct) {
+      playCorrect();
+      complete("objectsExplored", "planet_or_star_game");
+    } else {
+      playWrong();
+    }
+  }
 
   return (
     <div className="space-y-8">
       <div className="rounded-2xl border border-white/10 bg-panel p-6">
         <h3 className="font-display text-lg mb-4">{t("sky_explorer.moon.heading")}</h3>
-        <div className="grid sm:grid-cols-[auto_1fr] gap-6 items-center">
-          <MoonVisual fraction={moon.fraction} />
+
+        {!moonRevealed ? (
           <div>
-            <div className="flex gap-8">
+            <p className="text-text text-sm mb-4">{t("sky_explorer.moon_game.prompt")}</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {PHASE_OPTIONS.map((key) => (
+                <button
+                  key={key}
+                  onClick={() => guessMoonPhase(key)}
+                  className={`px-3 py-2 rounded-lg border text-xs transition ${
+                    moonGuess === key ? "border-nebula bg-panelLight text-text" : "border-white/10 text-muted hover:border-white/25"
+                  }`}
+                >
+                  {t(`sky_explorer.moon.phases.${key}`)}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={revealMoon}
+              disabled={!moonGuess}
+              className="mt-4 px-5 py-2.5 rounded-full bg-nebula text-void font-medium text-sm hover:bg-nebulaSoft transition disabled:opacity-40"
+            >
+              {t("sky_explorer.moon_game.reveal_button")}
+            </button>
+          </div>
+        ) : (
+          <>
+            <p className={`text-sm font-medium mb-4 ${moonGuess === moon.phaseKey ? "text-verified" : "text-starlight"}`}>
+              {moonGuess === moon.phaseKey ? t("sky_explorer.moon_game.correct") : t("sky_explorer.moon_game.close")}
+            </p>
+            <div className="grid sm:grid-cols-[auto_1fr] gap-6 items-center">
+              <MoonVisual fraction={moon.fraction} />
               <div>
-                <div className="text-xs uppercase tracking-widest text-muted">{t("sky_explorer.moon.phase_label")}</div>
-                <div className="font-display text-lg text-text mt-1">{t(`sky_explorer.moon.phases.${moon.phaseKey}`)}</div>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-muted">{t("sky_explorer.moon.illumination_label")}</div>
-                <div className="font-mono text-lg text-starlight mt-1">{Math.round(moon.illumination * 100)}%</div>
+                <div className="flex gap-8">
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-muted">{t("sky_explorer.moon.phase_label")}</div>
+                    <div className="font-display text-lg text-text mt-1">{t(`sky_explorer.moon.phases.${moon.phaseKey}`)}</div>
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-muted">{t("sky_explorer.moon.illumination_label")}</div>
+                    <div className="font-mono text-lg text-starlight mt-1">{Math.round(moon.illumination * 100)}%</div>
+                  </div>
+                </div>
+                <p className="text-muted text-sm mt-4 leading-relaxed">{t("sky_explorer.moon.explainer")}</p>
               </div>
             </div>
-            <p className="text-muted text-sm mt-4 leading-relaxed">{t("sky_explorer.moon.explainer")}</p>
-          </div>
-        </div>
+          </>
+        )}
       </div>
 
       <div className="rounded-2xl border border-white/10 bg-panel p-6">
         <h3 className="font-display text-lg mb-3">{t("sky_explorer.planets.heading")}</h3>
-        <p className="text-muted text-sm leading-relaxed">{t("sky_explorer.planets.text")}</p>
+        <p className="text-muted text-sm leading-relaxed mb-5">{t("sky_explorer.planets.text")}</p>
+
+        <div className="rounded-xl border border-nebula/30 bg-void/50 p-4">
+          <div className="text-xs uppercase tracking-widest text-nebulaSoft mb-2">
+            {t("sky_explorer.planet_game.heading")}
+          </div>
+          <p className="text-text text-sm mb-3">{t("sky_explorer.planet_game.prompt")}</p>
+          <div className="flex gap-2">
+            <button
+              onClick={() => answerPlanet("planet")}
+              disabled={planetAnswered}
+              className={`px-4 py-2 rounded-lg border text-sm transition ${
+                planetAnswered && planetCorrect ? "border-verified/60 bg-verified/10" : "border-white/10 hover:border-white/25"
+              }`}
+            >
+              {t("sky_explorer.planet_game.opt_planet")}
+            </button>
+            <button
+              onClick={() => answerPlanet("star")}
+              disabled={planetAnswered}
+              className={`px-4 py-2 rounded-lg border text-sm transition ${
+                planetAnswered && !planetCorrect ? "border-starlight/60 bg-starlight/10" : "border-white/10 hover:border-white/25"
+              }`}
+            >
+              {t("sky_explorer.planet_game.opt_star")}
+            </button>
+          </div>
+          {planetAnswered && (
+            <p className={`text-xs mt-3 leading-relaxed ${planetCorrect ? "text-verified" : "text-starlight"}`}>
+              {planetCorrect ? t("sky_explorer.planet_game.correct") : t("sky_explorer.planet_game.incorrect")}
+            </p>
+          )}
+        </div>
       </div>
 
       <div>
