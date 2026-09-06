@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../../context/PassportContext.jsx";
+import { useSound } from "../../context/SoundContext.jsx";
 import Quiz from "../../components/Quiz.jsx";
 
 const OBJECT_KEYS = [
@@ -42,50 +43,119 @@ function ObjectGlyph({ kind }) {
   );
 }
 
+function seededRandom(seed) {
+  let s = seed;
+  return () => {
+    s = (s * 9301 + 49297) % 233280;
+    return s / 233280;
+  };
+}
+
+function ObjectCard({ objKey, allKeys, discovered, onDiscover, t }) {
+  const { playCorrect, playWrong, playClick } = useSound();
+  const [guessed, setGuessed] = useState(discovered);
+  const [wrongFlash, setWrongFlash] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  const options = useMemo(() => {
+    const rand = seededRandom(objKey.length * 97 + objKey.charCodeAt(0));
+    const others = allKeys.filter((k) => k !== objKey);
+    const shuffledOthers = [...others].sort(() => rand() - 0.5);
+    const distractors = shuffledOthers.slice(0, 2);
+    return [objKey, ...distractors].sort(() => rand() - 0.5);
+  }, [objKey, allKeys]);
+
+  function guess(candidateKey) {
+    if (guessed) return;
+    playClick();
+    if (candidateKey === objKey) {
+      playCorrect();
+      setGuessed(true);
+      onDiscover(objKey);
+    } else {
+      playWrong();
+      setWrongFlash(true);
+      setTimeout(() => setWrongFlash(false), 500);
+    }
+  }
+
+  return (
+    <div className={`rounded-2xl border p-5 transition ${wrongFlash ? "border-starlight/60" : "border-white/10"} bg-panel`}>
+      <ObjectGlyph kind={objKey} />
+      <p className="text-muted text-sm mt-3 leading-relaxed">
+        {t(`universe_explorer.objects.${objKey}.description`)}
+      </p>
+
+      {!guessed ? (
+        <div className="mt-4">
+          <p className="text-nebulaSoft text-xs mb-2">{t("universe_explorer.guess_prompt")}</p>
+          <div className="grid gap-2">
+            {options.map((optKey) => (
+              <button
+                key={optKey}
+                onClick={() => guess(optKey)}
+                className="text-left px-3 py-2 rounded-lg border border-white/10 hover:border-nebula text-sm text-text transition"
+              >
+                {t(`universe_explorer.objects.${optKey}.name`)}
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="mt-3">
+          <div className="font-display text-lg text-starlight">
+            {t(`universe_explorer.objects.${objKey}.name`)}
+          </div>
+          <button
+            onClick={() => setExpanded((e) => !e)}
+            className="text-nebulaSoft text-xs mt-2"
+          >
+            {expanded ? "▲" : "▼"} {t("universe_explorer.tap_for_detail")}
+          </button>
+          {expanded && (
+            <p className="text-nebulaSoft text-sm mt-2 leading-relaxed border-t border-white/10 pt-2">
+              {t(`universe_explorer.objects.${objKey}.detail`)}
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function UniverseExplorer() {
   const { t } = useTranslation();
   const { complete } = usePassport();
   const [opened, setOpened] = useState({});
-  const [expanded, setExpanded] = useState({});
   const [scaleIndex, setScaleIndex] = useState(0);
 
-  function openObject(key) {
+  function discoverObject(key) {
     if (!opened[key]) {
       complete("objectsExplored", `universe_${key}`);
       setOpened((prev) => ({ ...prev, [key]: true }));
     }
-    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
   }
 
   const currentScale = SCALE_KEYS[scaleIndex];
   const allOpened = OBJECT_KEYS.every((k) => opened[k]);
+  const discoveredCount = OBJECT_KEYS.filter((k) => opened[k]).length;
 
   return (
     <div>
+      <div className="mb-5 text-sm font-mono text-nebulaSoft">
+        🔭 {t("universe_explorer.discovered_count", { count: discoveredCount, total: OBJECT_KEYS.length })}
+      </div>
+
       <div className="grid sm:grid-cols-2 gap-4">
         {OBJECT_KEYS.map((key) => (
-          <button
+          <ObjectCard
             key={key}
-            onClick={() => openObject(key)}
-            className="text-left rounded-2xl border border-white/10 bg-panel p-5 hover:border-nebula hover:shadow-glow transition"
-          >
-            <ObjectGlyph kind={key} />
-            <div className="font-display text-lg mt-3">
-              {t(`universe_explorer.objects.${key}.name`)}
-            </div>
-            <p className="text-muted text-sm mt-2 leading-relaxed">
-              {t(`universe_explorer.objects.${key}.description`)}
-            </p>
-            {expanded[key] ? (
-              <p className="text-nebulaSoft text-sm mt-3 leading-relaxed border-t border-white/10 pt-3">
-                {t(`universe_explorer.objects.${key}.detail`)}
-              </p>
-            ) : (
-              <p className="text-nebulaSoft text-xs mt-3">
-                {t("universe_explorer.tap_for_detail")} →
-              </p>
-            )}
-          </button>
+            objKey={key}
+            allKeys={OBJECT_KEYS}
+            discovered={!!opened[key]}
+            onDiscover={discoverObject}
+            t={t}
+          />
         ))}
       </div>
 

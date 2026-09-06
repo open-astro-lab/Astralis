@@ -790,7 +790,10 @@
         "explain": "Globular clusters are among the densest stellar environments known, tightly binding tens of thousands to millions of stars."
       }
     },
-    "tap_for_detail": "Tap for more detail"
+    "tap_for_detail": "Tap for more detail",
+    "guess_prompt": "What is this?",
+    "guess_wrong": "Not quite — try again",
+    "discovered_count": "{{count}} / {{total}} discovered"
   },
   "sky_explorer": {
     "title": "Sky Explorer",
