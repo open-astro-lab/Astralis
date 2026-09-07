@@ -1234,7 +1234,14 @@
         "runaway_greenhouse": "Too close to a star, a planet can suffer a 'runaway greenhouse effect' — like what happened to Venus — where heat gets trapped so effectively that any surface water boils away entirely, even before reaching the calculated inner edge."
       }
     },
-    "next_activity": "Next: {{name}}"
+    "next_activity": "Next: {{name}}",
+    "missions_heading": "Mission Objectives",
+    "missions": {
+      "transit_10": "Complete 10 Transit Method rounds",
+      "rv_10": "Complete 10 Radial Velocity rounds",
+      "habitable_used": "Use the Habitable Zone Calculator",
+      "all_quizzes": "Pass all three activity quizzes"
+    }
   },
   "asteroid_hunter": {
     "title": "Asteroid Hunter",
@@ -1345,7 +1352,14 @@
         }
       }
     },
-    "next_activity": "Next: {{name}}"
+    "next_activity": "Next: {{name}}",
+    "missions_heading": "Mission Objectives",
+    "missions": {
+      "blink_10": "Complete 10 Blink Comparison rounds",
+      "classify_10": "Classify 10 asteroid orbits correctly",
+      "rotation_10": "Read 10 asteroid rotation curves",
+      "all_quizzes": "Pass all three activity quizzes"
+    }
   },
   "stellar_detective": {
     "title": "Stellar Detective",
