@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { usePassport } from "../../context/PassportContext.jsx";
+import MissionsPanel from "../../components/MissionsPanel.jsx";
 import FormulaChallenge from "./FormulaChallenge.jsx";
 
 const G = 6.6743e-11;
@@ -26,6 +28,7 @@ const FORMULA_NAME_KEYS = {
 
 export default function PhysicsLab() {
   const { t } = useTranslation();
+  const { passport } = usePassport();
   const refs = {
     escape_velocity: useRef(null),
     orbital_velocity: useRef(null),
@@ -60,8 +63,21 @@ export default function PhysicsLab() {
     return t("physics_lab.next_formula", { name: t(FORMULA_NAME_KEYS[nextId]) });
   }
 
+  const done = passport?.physicsChallenges || [];
+  const revealedCount = done.filter((d) => !d.endsWith("_precision") && !d.endsWith("_quiz")).length;
+  const precisionCount = done.filter((d) => d.endsWith("_precision")).length;
+  const quizCount = done.filter((d) => d.endsWith("_quiz")).length;
+
+  const missions = [
+    { id: "reveal_8", labelKey: "physics_lab.missions.reveal_8", done: revealedCount >= 8 },
+    { id: "precision_5", labelKey: "physics_lab.missions.precision_5", done: precisionCount >= 5 },
+    { id: "quiz_10", labelKey: "physics_lab.missions.quiz_10", done: quizCount >= 10 },
+    { id: "master_all", labelKey: "physics_lab.missions.master_all", done: revealedCount >= 16 },
+  ];
+
   return (
     <div className="space-y-10">
+      <MissionsPanel headingKey="physics_lab.missions_heading" missions={missions} category="dailyChallenges" />
       {/* 1. Escape velocity */}
       <div ref={refs.escape_velocity}>
         <FormulaChallenge

@@ -629,6 +629,13 @@
           "explain": "Russian scientist Konstantin Tsiolkovsky derived this equation in 1903, laying essential groundwork for the entire field of rocketry decades before actual spaceflight was possible."
         }
       }
+    },
+    "missions_heading": "Mission Objectives",
+    "missions": {
+      "reveal_8": "Reveal 8 formulas",
+      "precision_5": "Hit 5 Precision Challenges",
+      "quiz_10": "Pass 10 formula quizzes",
+      "master_all": "Master all 16 formulas"
     }
   },
   "universe_explorer": {
@@ -1402,6 +1409,12 @@
         "opt3": "A",
         "explain": "M-type stars, under about 3,700 K, are the coolest and reddest class — and also by far the most common type of star in the galaxy."
       }
+    },
+    "missions_heading": "Mission Objectives",
+    "missions": {
+      "classify_5": "Correctly classify stars at 5 different temperatures",
+      "classify_15": "Correctly classify stars at 15 different temperatures",
+      "pass_quiz": "Pass the Stellar Detective quiz"
     }
   },
   "passport": {
