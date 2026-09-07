@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../i18n";
 import { usePassport } from "../context/PassportContext.jsx";
 import { useSound } from "../context/SoundContext.jsx";
-import { totalCompleted } from "../lib/passport";
+import { totalCompleted, CATEGORY_KEYS } from "../lib/passport";
 
 export default function NavBar({ view, setView }) {
   const { t, i18n } = useTranslation();
@@ -10,6 +10,10 @@ export default function NavBar({ view, setView }) {
   const { enabled: soundEnabled, toggle: toggleSound, playClick } = useSound();
   const streakCount = passport?.streak?.count || 0;
   const xpTotal = totalCompleted(passport);
+  const missionsCompleted = CATEGORY_KEYS.reduce(
+    (sum, key) => sum + (passport?.[key]?.filter((id) => id.startsWith("mission_")).length || 0),
+    0
+  );
 
   function go(key) {
     playClick();
@@ -63,6 +67,14 @@ export default function NavBar({ view, setView }) {
           >
             ⭐ {xpTotal} XP
           </button>
+          {missionsCompleted > 0 && (
+            <button
+              onClick={() => setView("passport")}
+              className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full text-xs bg-verified/10 border border-verified/30 text-verified font-mono hover:border-verified transition"
+            >
+              🎯 {missionsCompleted}
+            </button>
+          )}
           {combo >= 2 && (
             <span className="hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full text-xs bg-starlight/10 border border-starlight/40 text-starlight font-mono animate-pulse">
               🔥 {t("combo.label", { count: combo })}
