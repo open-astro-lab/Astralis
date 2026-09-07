@@ -1541,7 +1541,16 @@
     "passed": "Nice work — this concept is marked complete in your Passport.",
     "retry": "Try again",
     "failed": "Not quite yet — review the explanations below and try again.",
-    "next_default": "Next"
+    "next_default": "Next",
+    "celebrations": [
+      "Nice!",
+      "Brilliant!",
+      "Stellar work!",
+      "Excellent!",
+      "Well done!",
+      "Sharp thinking!",
+      "You nailed it!"
+    ]
   },
   "glossary": {
     "title": "Astronomy Glossary",

@@ -25,6 +25,7 @@ export default function Quiz({ questions, category, activityId, onPassed, nextLa
   const [submitted, setSubmitted] = useState(false);
   const [passed, setPassed] = useState(false);
   const [comboAtPass, setComboAtPass] = useState(0);
+  const [celebrationIdx] = useState(() => Math.floor(Math.random() * 7));
 
   function selectAnswer(qId, optionIndex) {
     if (submitted) return;
@@ -125,7 +126,9 @@ export default function Quiz({ questions, category, activityId, onPassed, nextLa
             <div className="w-7 h-7 rounded-full bg-verified/20 border border-verified flex items-center justify-center text-verified text-sm shrink-0">
               ✓
             </div>
-            <div className="text-verified text-sm font-medium">{t("quiz.passed")}</div>
+            <div className="text-verified text-sm font-medium">
+              {t("quiz.celebrations", { returnObjects: true })[celebrationIdx] || t("quiz.passed")}
+            </div>
           </div>
           {comboAtPass >= 2 && (
             <div className={`mt-2 text-xs font-mono ${onFire ? "text-starlight" : "text-nebulaSoft"}`}>
