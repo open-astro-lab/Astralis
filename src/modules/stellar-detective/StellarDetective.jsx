@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { usePassport } from "../../context/PassportContext.jsx";
+import MissionsPanel from "../../components/MissionsPanel.jsx";
 import Quiz from "../../components/Quiz.jsx";
 
 const CLASS_ORDER = ["O", "B", "A", "F", "G", "K", "M"];
@@ -53,7 +54,7 @@ function temperatureToRGB(kelvin) {
 
 export default function StellarDetective() {
   const { t } = useTranslation();
-  const { complete } = usePassport();
+  const { complete, passport } = usePassport();
   const [temperature, setTemperature] = useState(5778);
   const [selectedClass, setSelectedClass] = useState(null);
   const [checked, setChecked] = useState(false);
@@ -79,8 +80,18 @@ export default function StellarDetective() {
     setSelectedClass(null);
   }
 
+  const stellarDone = passport?.stellarInvestigations || [];
+  const uniqueClassifications = stellarDone.filter((d) => d.startsWith("classify_")).length;
+  const passedQuiz = stellarDone.includes("stellar_detective_quiz");
+  const missions = [
+    { id: "classify_5", labelKey: "stellar_detective.missions.classify_5", done: uniqueClassifications >= 5 },
+    { id: "classify_15", labelKey: "stellar_detective.missions.classify_15", done: uniqueClassifications >= 15 },
+    { id: "pass_quiz", labelKey: "stellar_detective.missions.pass_quiz", done: passedQuiz },
+  ];
+
   return (
     <div className="space-y-6">
+    <MissionsPanel headingKey="stellar_detective.missions_heading" missions={missions} category="dailyChallenges" />
     <div className="rounded-2xl border border-white/10 bg-panel p-6 md:p-8">
       <div className="flex justify-end mb-2">
         <span className="font-mono text-xs text-nebulaSoft">
