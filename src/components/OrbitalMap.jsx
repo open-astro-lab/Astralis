@@ -89,6 +89,11 @@ export default function OrbitalMap({ setView }) {
                 opacity={isLaunching ? 1 : 0.85}
               />
               <circle cx={x} cy={y} r="20" fill="none" stroke={node.color} strokeOpacity="0.5" strokeWidth={isHovered ? 3 : 1.5} />
+              {/* Idle breathing ring — invites tapping even before any interaction */}
+              <circle cx={x} cy={y} r="20" fill="none" stroke={node.color} strokeOpacity="0.4" strokeWidth="1.5">
+                <animate attributeName="r" values="20;27;20" dur="2.6s" begin={`${(x + y) % 3}s`} repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.4;0;0.4" dur="2.6s" begin={`${(x + y) % 3}s`} repeatCount="indefinite" />
+              </circle>
             </g>
           );
         })}
