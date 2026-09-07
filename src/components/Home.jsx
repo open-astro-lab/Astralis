@@ -5,9 +5,14 @@ import FactOfTheDay from "./FactOfTheDay.jsx";
 import DailyChallenge from "./DailyChallenge.jsx";
 import OnboardingGuide from "./OnboardingGuide.jsx";
 import OrbitalMap from "./OrbitalMap.jsx";
+import { usePassport } from "../context/PassportContext.jsx";
+import { totalCompleted, levelFor } from "../lib/passport";
 
 export default function Home({ setView }) {
   const { t } = useTranslation();
+  const { passport } = usePassport();
+  const hasProgress = totalCompleted(passport) > 0;
+  const levelKey = levelFor(passport);
 
   return (
     <div className="relative">
@@ -16,9 +21,13 @@ export default function Home({ setView }) {
         <OnboardingGuide />
         <div className="max-w-2xl">
           <h1 className="font-display text-4xl md:text-5xl leading-tight text-text">
-            {t("home.heading")}
+            {hasProgress
+              ? t("home.welcome_back", { level: t(`passport.levels.${levelKey}`) })
+              : t("home.heading")}
           </h1>
-          <p className="text-muted text-lg mt-4">{t("home.subheading")}</p>
+          <p className="text-muted text-lg mt-4">
+            {hasProgress ? t("home.welcome_back_subtitle") : t("home.subheading")}
+          </p>
         </div>
 
         <div className="mt-10">
