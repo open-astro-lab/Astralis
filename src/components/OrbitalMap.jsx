@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSound } from "../context/SoundContext.jsx";
+import { usePassport } from "../context/PassportContext.jsx";
+import { todayISO } from "../lib/date.js";
 
 const NODES = [
   { key: "universe_explorer", labelKey: "modules.universe_explorer", ring: 1, angle: -30, color: "#7C6CF0" },
@@ -21,10 +23,37 @@ function polar(cx, cy, r, angleDeg) {
 
 export default function OrbitalMap({ setView }) {
   const { t } = useTranslation();
-  const { playClick } = useSound();
+  const { playClick, playCorrect } = useSound();
+  const { complete, passport } = usePassport();
   const [hovered, setHovered] = useState(null);
   const [launching, setLaunching] = useState(null);
+  const [shootingStar, setShootingStar] = useState(null);
   const cx = 200, cy = 200;
+
+  const alreadyCaughtToday = (passport?.dailyChallenges || []).includes(`shooting_star_${todayISO()}`);
+
+  useEffect(() => {
+    function scheduleNext() {
+      const delay = 15000 + Math.random() * 20000;
+      return setTimeout(() => {
+        setShootingStar({ id: Date.now() });
+        setTimeout(() => setShootingStar(null), 2200);
+        timer = scheduleNext();
+      }, delay);
+    }
+    let timer = scheduleNext();
+    return () => clearTimeout(timer);
+  }, []);
+
+  function catchShootingStar() {
+    if (!shootingStar) return;
+    playClick();
+    setShootingStar(null);
+    if (!alreadyCaughtToday) {
+      playCorrect();
+      complete("dailyChallenges", `shooting_star_${todayISO()}`);
+    }
+  }
 
   function travel(key) {
     playClick();
@@ -47,6 +76,16 @@ export default function OrbitalMap({ setView }) {
         {Object.values(RING_R).map((r) => (
           <circle key={r} cx={cx} cy={cy} r={r} fill="none" stroke="#7C6CF0" strokeOpacity="0.25" strokeWidth="1" strokeDasharray="2 4" />
         ))}
+
+        {/* Rare shooting star surprise — clickable while visible for a small bonus */}
+        {shootingStar && (
+          <g onClick={catchShootingStar} className="cursor-pointer" key={shootingStar.id}>
+            <line x1="20" y1="30" x2="90" y2="80" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" opacity="0.9">
+              <animateMotion dur="2s" path="M 0,0 L 260,180" fill="freeze" />
+              <animate attributeName="opacity" values="0.9;0.9;0" dur="2s" fill="freeze" />
+            </line>
+          </g>
+        )}
 
         {/* Traveling glints along each ring — purely decorative, gives the map a living feel */}
         {Object.entries(RING_R).map(([ring, r]) => (
