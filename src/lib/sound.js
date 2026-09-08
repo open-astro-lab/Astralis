@@ -16,18 +16,20 @@ function getCtx() {
   return audioCtx;
 }
 
-// A shared compressor sits between every sound and the speakers, so we can
-// push volumes much louder without the output distorting or clipping.
+// A shared limiter sits between every sound and the speakers so louder
+// volumes don't clip — set gently so it acts as a safety net only, not an
+// active compressor (an aggressive compressor here was audibly "pumping"
+// every time a note hit, which is what sounded like a glitch).
 function getMasterBus() {
   const ctx = getCtx();
   if (!ctx) return null;
   if (!masterBus) {
     masterBus = ctx.createDynamicsCompressor();
-    masterBus.threshold.value = -12;
-    masterBus.knee.value = 18;
-    masterBus.ratio.value = 6;
-    masterBus.attack.value = 0.003;
-    masterBus.release.value = 0.15;
+    masterBus.threshold.value = -6;
+    masterBus.knee.value = 6;
+    masterBus.ratio.value = 2;
+    masterBus.attack.value = 0.02;
+    masterBus.release.value = 0.3;
     masterBus.connect(ctx.destination);
   }
   return masterBus;
@@ -46,29 +48,29 @@ function playTone({ freq, duration = 0.15, type = "sine", startTime = 0, gainPea
   gain.connect(bus);
   const t0 = ctx.currentTime + startTime;
   gain.gain.setValueAtTime(0.0001, t0);
-  gain.gain.linearRampToValueAtTime(gainPeak, t0 + 0.01);
+  gain.gain.linearRampToValueAtTime(gainPeak, t0 + 0.015);
   gain.gain.exponentialRampToValueAtTime(0.0001, t0 + duration);
   osc.start(t0);
   osc.stop(t0 + duration + 0.05);
 }
 
 export function playClick() {
-  playTone({ freq: 720, duration: 0.06, type: "sine", gainPeak: 0.35 });
+  playTone({ freq: 720, duration: 0.06, type: "sine", gainPeak: 0.3 });
 }
 
 export function playCorrect() {
-  playTone({ freq: 523.25, duration: 0.14, type: "sine", gainPeak: 0.55 });
-  playTone({ freq: 783.99, duration: 0.24, type: "sine", gainPeak: 0.55, startTime: 0.09 });
+  playTone({ freq: 523.25, duration: 0.14, type: "sine", gainPeak: 0.48 });
+  playTone({ freq: 783.99, duration: 0.24, type: "sine", gainPeak: 0.48, startTime: 0.09 });
 }
 
 export function playWrong() {
-  playTone({ freq: 196, duration: 0.24, type: "triangle", gainPeak: 0.42 });
-  playTone({ freq: 174.6, duration: 0.24, type: "triangle", gainPeak: 0.32, startTime: 0.03 });
+  playTone({ freq: 196, duration: 0.24, type: "triangle", gainPeak: 0.36 });
+  playTone({ freq: 174.6, duration: 0.24, type: "triangle", gainPeak: 0.28, startTime: 0.03 });
 }
 
 export function playLevelUp() {
   [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) =>
-    playTone({ freq, duration: 0.32, type: "sine", gainPeak: 0.55, startTime: i * 0.1 })
+    playTone({ freq, duration: 0.32, type: "sine", gainPeak: 0.48, startTime: i * 0.1 })
   );
 }
 
@@ -82,7 +84,7 @@ export function startAmbient() {
 
   const master = ctx.createGain();
   master.gain.setValueAtTime(0.0001, ctx.currentTime);
-  master.gain.linearRampToValueAtTime(0.32, ctx.currentTime + 1.2);
+  master.gain.linearRampToValueAtTime(0.26, ctx.currentTime + 1.2);
   master.connect(bus);
 
   const padFreqs = [130.81, 164.81, 196.0]; // C3 E3 G3 — simple, warm, stable
@@ -114,7 +116,7 @@ export function startAmbient() {
     g.connect(master);
     const t0 = ctxNow.currentTime;
     g.gain.setValueAtTime(0.0001, t0);
-    g.gain.linearRampToValueAtTime(0.26, t0 + 0.02);
+    g.gain.linearRampToValueAtTime(0.22, t0 + 0.03);
     g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.5);
     osc.start(t0);
     osc.stop(t0 + 0.55);
