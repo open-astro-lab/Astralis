@@ -2,6 +2,7 @@ let audioCtx = null;
 let ambientNodes = null;
 let ambientPlaying = false;
 let ambientTimers = [];
+let masterBus = null;
 
 function getCtx() {
   if (!audioCtx) {
@@ -15,16 +16,34 @@ function getCtx() {
   return audioCtx;
 }
 
-function playTone({ freq, duration = 0.15, type = "sine", startTime = 0, gainPeak = 0.18, detune = 0 }) {
+// A shared compressor sits between every sound and the speakers, so we can
+// push volumes much louder without the output distorting or clipping.
+function getMasterBus() {
   const ctx = getCtx();
-  if (!ctx) return;
+  if (!ctx) return null;
+  if (!masterBus) {
+    masterBus = ctx.createDynamicsCompressor();
+    masterBus.threshold.value = -12;
+    masterBus.knee.value = 18;
+    masterBus.ratio.value = 6;
+    masterBus.attack.value = 0.003;
+    masterBus.release.value = 0.15;
+    masterBus.connect(ctx.destination);
+  }
+  return masterBus;
+}
+
+function playTone({ freq, duration = 0.15, type = "sine", startTime = 0, gainPeak = 0.5, detune = 0 }) {
+  const ctx = getCtx();
+  const bus = getMasterBus();
+  if (!ctx || !bus) return;
   const osc = ctx.createOscillator();
   const gain = ctx.createGain();
   osc.type = type;
   osc.frequency.value = freq;
   osc.detune.value = detune;
   osc.connect(gain);
-  gain.connect(ctx.destination);
+  gain.connect(bus);
   const t0 = ctx.currentTime + startTime;
   gain.gain.setValueAtTime(0.0001, t0);
   gain.gain.linearRampToValueAtTime(gainPeak, t0 + 0.01);
@@ -34,37 +53,37 @@ function playTone({ freq, duration = 0.15, type = "sine", startTime = 0, gainPea
 }
 
 export function playClick() {
-  playTone({ freq: 720, duration: 0.06, type: "sine", gainPeak: 0.12 });
+  playTone({ freq: 720, duration: 0.06, type: "sine", gainPeak: 0.35 });
 }
 
 export function playCorrect() {
-  playTone({ freq: 523.25, duration: 0.14, type: "sine", gainPeak: 0.2 });
-  playTone({ freq: 783.99, duration: 0.24, type: "sine", gainPeak: 0.2, startTime: 0.09 });
+  playTone({ freq: 523.25, duration: 0.14, type: "sine", gainPeak: 0.55 });
+  playTone({ freq: 783.99, duration: 0.24, type: "sine", gainPeak: 0.55, startTime: 0.09 });
 }
 
 export function playWrong() {
-  playTone({ freq: 196, duration: 0.24, type: "triangle", gainPeak: 0.16 });
-  playTone({ freq: 174.6, duration: 0.24, type: "triangle", gainPeak: 0.12, startTime: 0.03 });
+  playTone({ freq: 196, duration: 0.24, type: "triangle", gainPeak: 0.42 });
+  playTone({ freq: 174.6, duration: 0.24, type: "triangle", gainPeak: 0.32, startTime: 0.03 });
 }
 
 export function playLevelUp() {
   [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) =>
-    playTone({ freq, duration: 0.32, type: "sine", gainPeak: 0.2, startTime: i * 0.1 })
+    playTone({ freq, duration: 0.32, type: "sine", gainPeak: 0.55, startTime: i * 0.1 })
   );
 }
 
-// Simple, robust ambient pad + gentle pentatonic arpeggio — no filter
-// modulation (that was the source of the glitchy sweep), just clean
-// oscillators straight to the master gain, at a clearly audible volume.
+// Simple, robust ambient pad + gentle pentatonic arpeggio — routed through
+// the shared compressor so it can run much louder without distorting.
 export function startAmbient() {
   if (ambientPlaying) return;
   const ctx = getCtx();
-  if (!ctx) return;
+  const bus = getMasterBus();
+  if (!ctx || !bus) return;
 
   const master = ctx.createGain();
   master.gain.setValueAtTime(0.0001, ctx.currentTime);
-  master.gain.linearRampToValueAtTime(0.11, ctx.currentTime + 1.2);
-  master.connect(ctx.destination);
+  master.gain.linearRampToValueAtTime(0.32, ctx.currentTime + 1.2);
+  master.connect(bus);
 
   const padFreqs = [130.81, 164.81, 196.0]; // C3 E3 G3 — simple, warm, stable
   const oscillators = padFreqs.map((f, i) => {
@@ -73,7 +92,7 @@ export function startAmbient() {
     osc.frequency.value = f;
     osc.detune.value = (i - 1) * 4;
     const oGain = ctx.createGain();
-    oGain.gain.value = 0.5;
+    oGain.gain.value = 0.55;
     osc.connect(oGain);
     oGain.connect(master);
     osc.start();
@@ -95,7 +114,7 @@ export function startAmbient() {
     g.connect(master);
     const t0 = ctxNow.currentTime;
     g.gain.setValueAtTime(0.0001, t0);
-    g.gain.linearRampToValueAtTime(0.09, t0 + 0.02);
+    g.gain.linearRampToValueAtTime(0.26, t0 + 0.02);
     g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.5);
     osc.start(t0);
     osc.stop(t0 + 0.55);
