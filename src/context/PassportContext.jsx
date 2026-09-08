@@ -48,6 +48,7 @@ export function PassportProvider({ children }) {
   const [levelUpEvent, setLevelUpEvent] = useState(null); // { levelKey } — set when the level actually changes
   const xpCounterRef = useRef(0);
   const [combo, setCombo] = useState(0); // session-only — resets on any wrong quiz submission
+  const [streakEvent, setStreakEvent] = useState(null); // { count } — set when the streak actually increments
 
   // Track auth state.
   useEffect(() => {
@@ -92,6 +93,11 @@ export function PassportProvider({ children }) {
     setPassport((prev) => {
       const next = bumpStreak(prev);
       if (next === prev) return prev;
+      // Only celebrate a real increase, never the very first day (count 1
+      // is just "started," not a streak yet) — and never a reset to 1.
+      if (next.streak.count > 1 && next.streak.count > (prev.streak?.count || 0)) {
+        setStreakEvent({ count: next.streak.count });
+      }
       if (user && firebaseEnabled) {
         writeCloudPassport(user.uid, next);
       } else {
@@ -100,6 +106,8 @@ export function PassportProvider({ children }) {
       return next;
     });
   }, [authReady, syncing, user]);
+
+  const clearStreakEvent = useCallback(() => setStreakEvent(null), []);
 
   const complete = useCallback(
     async (category, activityId) => {
@@ -172,6 +180,7 @@ export function PassportProvider({ children }) {
       value={{
         user, authReady, passport, complete, signIn, signOutUser, syncing, firebaseEnabled,
         xpEvent, levelUpEvent, clearLevelUpEvent, combo, bumpCombo, resetCombo, submitTriviaScore,
+        streakEvent, clearStreakEvent,
       }}
     >
       {children}

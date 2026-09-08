@@ -1520,7 +1520,8 @@
       "level_master_astronomer": "मास्टर एस्ट्रोनॉमर",
       "level_legendary_stargazer": "लीजेंडरी स्टारगेज़र",
       "level_astralis_grandmaster": "Astralis ग्रैंडमास्टर"
-    }
+    },
+    "streak_bonus_toast": "🔥 दिन {{count}} का स्ट्रीक!"
   },
   "sources": {
     "title": "स्रोत और सटीकता",

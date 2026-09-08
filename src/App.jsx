@@ -6,6 +6,7 @@ import GuestBanner from "./components/GuestBanner.jsx";
 import Home from "./components/Home.jsx";
 import XpToast from "./components/XpToast.jsx";
 import LevelUpModal from "./components/LevelUpModal.jsx";
+import StreakToast from "./components/StreakToast.jsx";
 
 // Lazily loaded — these only download once the user actually opens that
 // module, keeping the initial page load fast for everyone starting at Home.
@@ -62,6 +63,7 @@ export default function App() {
       <GuestBanner />
       <XpToast />
       <LevelUpModal />
+      <StreakToast />
       {view === "home" && <Home setView={setView} />}
       {moduleView && (
         <div className="max-w-5xl mx-auto px-6 py-12">

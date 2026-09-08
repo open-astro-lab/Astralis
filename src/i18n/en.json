@@ -1520,7 +1520,8 @@
       "level_master_astronomer": "Master Astronomer",
       "level_legendary_stargazer": "Legendary Stargazer",
       "level_astralis_grandmaster": "Astralis Grandmaster"
-    }
+    },
+    "streak_bonus_toast": "🔥 Day {{count}} streak!"
   },
   "sources": {
     "title": "Sources & Accuracy",
