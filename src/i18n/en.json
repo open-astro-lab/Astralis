@@ -12,7 +12,8 @@
     "passport": "My Passport",
     "glossary": "Glossary",
     "collection": "Collection",
-    "trivia": "Trivia Blitz"
+    "trivia": "Trivia Blitz",
+    "menu_label": "Menu"
   },
   "home": {
     "heading": "The universe, one question at a time.",
@@ -40,7 +41,8 @@
     "daily_challenge_heading": "Today's Challenge",
     "map_instruction": "Tap a world to travel there",
     "welcome_back": "Welcome back, {{level}}",
-    "welcome_back_subtitle": "Ready for your next discovery?"
+    "welcome_back_subtitle": "Ready for your next discovery?",
+    "shooting_star_caught": "🌠 Shooting star caught!"
   },
   "modules": {
     "universe_explorer": "Universe Explorer",

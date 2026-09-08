@@ -12,7 +12,8 @@
     "passport": "मेरा पासपोर्ट",
     "glossary": "शब्दावली",
     "collection": "संग्रह",
-    "trivia": "ट्रिविया ब्लिट्ज़"
+    "trivia": "ट्रिविया ब्लिट्ज़",
+    "menu_label": "मेनू"
   },
   "home": {
     "heading": "ब्रह्मांड, एक सवाल के साथ शुरू।",
@@ -40,7 +41,8 @@
     "daily_challenge_heading": "आज की चुनौती",
     "map_instruction": "किसी दुनिया की यात्रा करने के लिए उसे टैप करें",
     "welcome_back": "वापसी पर स्वागत है, {{level}}",
-    "welcome_back_subtitle": "अपनी अगली खोज के लिए तैयार हैं?"
+    "welcome_back_subtitle": "अपनी अगली खोज के लिए तैयार हैं?",
+    "shooting_star_caught": "🌠 शूटिंग स्टार पकड़ा!"
   },
   "modules": {
     "universe_explorer": "यूनिवर्स एक्सप्लोरर",
