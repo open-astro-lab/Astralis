@@ -151,15 +151,24 @@ export default function NavBar({ view, setView }) {
             </button>
             <button
               onClick={() => setMobileOpen((o) => !o)}
-              className="flex items-center gap-1.5 px-3 h-9 rounded-lg border border-nebula/40 bg-nebula/10 text-text text-sm font-medium"
+              className="flex items-center justify-center w-9 h-9 rounded-lg border border-nebula/40 bg-nebula/10 text-text"
               aria-label={t("nav.menu_label")}
               aria-expanded={mobileOpen}
             >
-              <span>{mobileOpen ? "✕" : "☰"}</span>
-              <span>{t("nav.menu_label")}</span>
+              {mobileOpen ? "✕" : "☰"}
             </button>
           </div>
         </div>
+
+        {/* Full-width, unmissable prompt on mobile — only shows when the menu is closed */}
+        {!mobileOpen && (
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="sm:hidden mt-3 w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-nebula/40 bg-nebula/10 text-text text-sm font-medium"
+          >
+            {t("nav.menu_label")}
+          </button>
+        )}
 
         {/* Mobile expandable menu — every tab and control fits on screen, no swiping */}
         {mobileOpen && (
