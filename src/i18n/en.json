@@ -1830,7 +1830,8 @@
     "time_up_heading": "Time's up!",
     "final_score": "Final score",
     "new_best": "🎉 New best score!",
-    "exit_button": "Back to Home"
+    "exit_button": "Back to Home",
+    "perfect_round": "🌟 Perfect round — no misses!"
   },
   "system_builder": {
     "title": "Star System Builder",

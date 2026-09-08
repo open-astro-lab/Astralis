@@ -18,6 +18,8 @@ export default function TriviaBlitz() {
   const [locked, setLocked] = useState(false);
   const [score, setScore] = useState(0);
   const [roundStreak, setRoundStreak] = useState(0);
+  const [answeredCount, setAnsweredCount] = useState(0);
+  const [wrongCount, setWrongCount] = useState(0);
   const [timeLeft, setTimeLeft] = useState(ROUND_SECONDS);
   const [justBeatBest, setJustBeatBest] = useState(false);
   const timerRef = useRef(null);
@@ -29,6 +31,8 @@ export default function TriviaBlitz() {
     setPool(shuffledPool(Date.now() % 100000));
     setIndex(0);
     setScore(0);
+    setAnsweredCount(0);
+    setWrongCount(0);
     setRoundStreak(0);
     setSelected(null);
     setLocked(false);
@@ -63,6 +67,7 @@ export default function TriviaBlitz() {
     setLocked(true);
     const current = pool[index % pool.length];
     const correct = oi === current.correctIndex;
+    setAnsweredCount((c) => c + 1);
     if (correct) {
       playCorrect();
       setScore((s) => s + 1);
@@ -72,6 +77,7 @@ export default function TriviaBlitz() {
       playWrong();
       setRoundStreak(0);
       resetCombo();
+      setWrongCount((c) => c + 1);
     }
     setTimeout(() => {
       setIndex((i) => i + 1);
@@ -111,6 +117,9 @@ export default function TriviaBlitz() {
           <div className="font-mono text-4xl text-starlight mt-1">{score}</div>
         </div>
         {justBeatBest && <p className="text-verified text-sm mt-3 font-medium">{t("trivia.new_best")}</p>}
+        {answeredCount > 0 && wrongCount === 0 && (
+          <p className="text-starlight text-sm mt-2 font-medium">{t("trivia.perfect_round")}</p>
+        )}
         <p className="text-muted text-xs mt-2">
           {t("trivia.best_label")}: {Math.max(score, best)}
         </p>
