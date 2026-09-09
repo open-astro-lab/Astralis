@@ -2,7 +2,6 @@ let audioCtx = null;
 let ambientNodes = null;
 let ambientPlaying = false;
 let ambientTimers = [];
-let masterBus = null;
 
 function getCtx() {
   if (!audioCtx) {
@@ -16,36 +15,21 @@ function getCtx() {
   return audioCtx;
 }
 
-// A shared limiter sits between every sound and the speakers so louder
-// volumes don't clip — set gently so it acts as a safety net only, not an
-// active compressor (an aggressive compressor here was audibly "pumping"
-// every time a note hit, which is what sounded like a glitch).
-function getMasterBus() {
+// No compressor — a compressor sitting on top of a constant ambient drone
+// was the source of the continuous buzzing/distortion artifact. Instead,
+// every sound connects straight to the output, with gain levels chosen so
+// even worst-case overlap (ambient pad + arpeggio + a UI tone, all at once)
+// stays safely under 1.0 and can never clip or distort.
+function playTone({ freq, duration = 0.15, type = "sine", startTime = 0, gainPeak = 0.35, detune = 0 }) {
   const ctx = getCtx();
-  if (!ctx) return null;
-  if (!masterBus) {
-    masterBus = ctx.createDynamicsCompressor();
-    masterBus.threshold.value = -6;
-    masterBus.knee.value = 6;
-    masterBus.ratio.value = 2;
-    masterBus.attack.value = 0.02;
-    masterBus.release.value = 0.3;
-    masterBus.connect(ctx.destination);
-  }
-  return masterBus;
-}
-
-function playTone({ freq, duration = 0.15, type = "sine", startTime = 0, gainPeak = 0.5, detune = 0 }) {
-  const ctx = getCtx();
-  const bus = getMasterBus();
-  if (!ctx || !bus) return;
+  if (!ctx) return;
   const osc = ctx.createOscillator();
   const gain = ctx.createGain();
   osc.type = type;
   osc.frequency.value = freq;
   osc.detune.value = detune;
   osc.connect(gain);
-  gain.connect(bus);
+  gain.connect(ctx.destination);
   const t0 = ctx.currentTime + startTime;
   gain.gain.setValueAtTime(0.0001, t0);
   gain.gain.linearRampToValueAtTime(gainPeak, t0 + 0.015);
@@ -59,33 +43,33 @@ export function playClick() {
 }
 
 export function playCorrect() {
-  playTone({ freq: 523.25, duration: 0.14, type: "sine", gainPeak: 0.48 });
-  playTone({ freq: 783.99, duration: 0.24, type: "sine", gainPeak: 0.48, startTime: 0.09 });
+  playTone({ freq: 523.25, duration: 0.14, type: "sine", gainPeak: 0.4 });
+  playTone({ freq: 783.99, duration: 0.24, type: "sine", gainPeak: 0.4, startTime: 0.09 });
 }
 
 export function playWrong() {
-  playTone({ freq: 196, duration: 0.24, type: "triangle", gainPeak: 0.36 });
-  playTone({ freq: 174.6, duration: 0.24, type: "triangle", gainPeak: 0.28, startTime: 0.03 });
+  playTone({ freq: 196, duration: 0.24, type: "triangle", gainPeak: 0.3 });
+  playTone({ freq: 174.6, duration: 0.24, type: "triangle", gainPeak: 0.24, startTime: 0.03 });
 }
 
 export function playLevelUp() {
   [523.25, 659.25, 783.99, 1046.5].forEach((freq, i) =>
-    playTone({ freq, duration: 0.32, type: "sine", gainPeak: 0.48, startTime: i * 0.1 })
+    playTone({ freq, duration: 0.32, type: "sine", gainPeak: 0.4, startTime: i * 0.1 })
   );
 }
 
-// Simple, robust ambient pad + gentle pentatonic arpeggio — routed through
-// the shared compressor so it can run much louder without distorting.
+// Simple ambient pad + gentle pentatonic arpeggio, gain-budgeted so the
+// running total (pad + arp, continuously) never comes close to clipping —
+// no compressor needed, so no pumping/distortion artifact is possible.
 export function startAmbient() {
   if (ambientPlaying) return;
   const ctx = getCtx();
-  const bus = getMasterBus();
-  if (!ctx || !bus) return;
+  if (!ctx) return;
 
   const master = ctx.createGain();
   master.gain.setValueAtTime(0.0001, ctx.currentTime);
-  master.gain.linearRampToValueAtTime(0.26, ctx.currentTime + 1.2);
-  master.connect(bus);
+  master.gain.linearRampToValueAtTime(0.27, ctx.currentTime + 1.2);
+  master.connect(ctx.destination);
 
   const padFreqs = [130.81, 164.81, 196.0]; // C3 E3 G3 — simple, warm, stable
   const oscillators = padFreqs.map((f, i) => {
@@ -94,7 +78,7 @@ export function startAmbient() {
     osc.frequency.value = f;
     osc.detune.value = (i - 1) * 4;
     const oGain = ctx.createGain();
-    oGain.gain.value = 0.55;
+    oGain.gain.value = 0.4;
     osc.connect(oGain);
     oGain.connect(master);
     osc.start();
@@ -116,7 +100,7 @@ export function startAmbient() {
     g.connect(master);
     const t0 = ctxNow.currentTime;
     g.gain.setValueAtTime(0.0001, t0);
-    g.gain.linearRampToValueAtTime(0.22, t0 + 0.03);
+    g.gain.linearRampToValueAtTime(0.35, t0 + 0.03);
     g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.5);
     osc.start(t0);
     osc.stop(t0 + 0.55);
