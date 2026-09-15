@@ -42,7 +42,15 @@
     "map_instruction": "Tap a world to travel there",
     "welcome_back": "Welcome back, {{level}}",
     "welcome_back_subtitle": "Ready for your next discovery?",
-    "shooting_star_caught": "🌠 Shooting star caught!"
+    "shooting_star_caught": "🌠 Shooting star caught!",
+    "install_title": "Add Astralis to your home screen",
+    "install_subtitle": "Open it like a real app — no Play Store needed.",
+    "install_button": "Add to Home Screen",
+    "install_dismiss": "Not now",
+    "install_ios_steps_title": "On iPhone / iPad:",
+    "install_ios_step1": "Tap the Share button (square with arrow)",
+    "install_ios_step2": "Scroll and choose “Add to Home Screen”",
+    "install_ios_step3": "Tap Add — done!"
   },
   "modules": {
     "universe_explorer": "Universe Explorer",

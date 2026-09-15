@@ -42,7 +42,15 @@
     "map_instruction": "किसी दुनिया की यात्रा करने के लिए उसे टैप करें",
     "welcome_back": "वापसी पर स्वागत है, {{level}}",
     "welcome_back_subtitle": "अपनी अगली खोज के लिए तैयार हैं?",
-    "shooting_star_caught": "🌠 शूटिंग स्टार पकड़ा!"
+    "shooting_star_caught": "🌠 शूटिंग स्टार पकड़ा!",
+    "install_title": "एस्ट्रेलिस को होम स्क्रीन पर जोड़ें",
+    "install_subtitle": "इसे असली ऐप की तरह खोलें — Play Store की ज़रूरत नहीं।",
+    "install_button": "होम स्क्रीन पर जोड़ें",
+    "install_dismiss": "अभी नहीं",
+    "install_ios_steps_title": "iPhone / iPad पर:",
+    "install_ios_step1": "Share बटन (वर्ग + तीर) पर टैप करें",
+    "install_ios_step2": "नीचे स्क्रॉल करके “Add to Home Screen” चुनें",
+    "install_ios_step3": "Add पर टैप करें — हो गया!"
   },
   "modules": {
     "universe_explorer": "यूनिवर्स एक्सप्लोरर",

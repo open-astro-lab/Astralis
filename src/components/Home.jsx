@@ -5,6 +5,7 @@ import FactOfTheDay from "./FactOfTheDay.jsx";
 import DailyChallenge from "./DailyChallenge.jsx";
 import OnboardingGuide from "./OnboardingGuide.jsx";
 import OrbitalMap from "./OrbitalMap.jsx";
+import InstallPrompt from "./InstallPrompt.jsx";
 import { usePassport } from "../context/PassportContext.jsx";
 import { totalCompleted, levelFor } from "../lib/passport";
 
@@ -18,6 +19,9 @@ export default function Home({ setView }) {
     <div className="relative">
       <Starfield />
       <div className="relative max-w-5xl mx-auto px-6 py-16" style={{ zIndex: 1 }}>
+        {/* Prominent Add-to-Home-Screen button at the very top */}
+        <InstallPrompt />
+
         <OnboardingGuide />
         <div className="max-w-2xl">
           <h1 className="font-display text-4xl md:text-5xl leading-tight text-text">
