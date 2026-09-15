@@ -50,7 +50,11 @@
     "install_ios_steps_title": "iPhone / iPad पर:",
     "install_ios_step1": "Share बटन (वर्ग + तीर) पर टैप करें",
     "install_ios_step2": "नीचे स्क्रॉल करके “Add to Home Screen” चुनें",
-    "install_ios_step3": "Add पर टैप करें — हो गया!"
+    "install_ios_step3": "Add पर टैप करें — हो गया!",
+    "install_installing": "इंस्टॉल हो रहा है…",
+    "install_already": "एस्ट्रेलिस आपकी होम स्क्रीन पर इंस्टॉल है",
+    "install_generic_title": "होम स्क्रीन पर कैसे जोड़ें:",
+    "install_generic_text": "ब्राउज़र मेनू (⋮ या ⋯) खोलें और “Add to Home screen” या “Install app” चुनें।"
   },
   "modules": {
     "universe_explorer": "यूनिवर्स एक्सप्लोरर",

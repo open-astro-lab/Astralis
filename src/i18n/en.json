@@ -50,7 +50,11 @@
     "install_ios_steps_title": "On iPhone / iPad:",
     "install_ios_step1": "Tap the Share button (square with arrow)",
     "install_ios_step2": "Scroll and choose “Add to Home Screen”",
-    "install_ios_step3": "Tap Add — done!"
+    "install_ios_step3": "Tap Add — done!",
+    "install_installing": "Installing…",
+    "install_already": "Astralis is installed on your home screen",
+    "install_generic_title": "How to add to home screen:",
+    "install_generic_text": "Open the browser menu (usually ⋮ or ⋯) and look for “Add to Home screen” or “Install app”."
   },
   "modules": {
     "universe_explorer": "Universe Explorer",
