@@ -2072,6 +2072,222 @@
         "setup": "Why are planets in the habitable zone always stressed about rent?",
         "punchline": "Too close to the star and you burn; too far and you freeze. Location is everything.",
         "science": "The habitable zone is the orbital range around a star where a rocky planet could have liquid water. It’s sometimes called the Goldilocks zone — not too hot, not too cold."
+      },
+      "jupiter_weight": {
+        "topic": "Jupiter",
+        "setup": "Why shouldn’t you try to stand on Jupiter?",
+        "punchline": "There’s no solid ground — and you’d weigh enough to make a bathroom scale quit its job.",
+        "science": "Jupiter is a gas giant. It has no solid surface like Earth’s. Under the clouds, pressure and temperature rise until hydrogen behaves like a liquid metal."
+      },
+      "venus_day": {
+        "topic": "Venus",
+        "setup": "Why is a day on Venus longer than its year?",
+        "punchline": "Venus spins so slowly that it finishes one trip around the Sun before it finishes one spin. Talk about taking your time getting dressed.",
+        "science": "Venus takes about 243 Earth days to rotate once, but only about 225 Earth days to orbit the Sun — so its day is longer than its year."
+      },
+      "mercury_hot": {
+        "topic": "Mercury",
+        "setup": "Why does Mercury never need a winter coat or sunscreen at the same time?",
+        "punchline": "One side can bake hotter than an oven while the night side freezes — it has almost no atmosphere to share the heat.",
+        "science": "Mercury has almost no atmosphere, so heat doesn’t spread. Daytime can exceed 400°C; at night it can drop below –170°C."
+      },
+      "neptune_wind": {
+        "topic": "Neptune",
+        "setup": "Why is Neptune terrible at flying kites?",
+        "punchline": "Its winds are so fast the kite would achieve orbit before you finished tying the string.",
+        "science": "Neptune has some of the fastest winds in the solar system — over 1,000 km/h — driven by its internal heat and thick atmosphere."
+      },
+      "uranus_tilt": {
+        "topic": "Uranus",
+        "setup": "Why does Uranus look like it’s rolling around the Sun?",
+        "punchline": "It’s tilted almost 98 degrees — basically lying on its side. Other planets spin like tops; Uranus rolls like a barrel.",
+        "science": "Uranus’s extreme axial tilt likely came from a giant impact long ago. Its poles get decades of continuous sunlight, then decades of darkness."
+      },
+      "pluto_club": {
+        "topic": "Pluto",
+        "setup": "Why was Pluto kicked out of the planet club?",
+        "punchline": "It didn’t clear its neighbourhood — too many icy neighbours in the same orbital zone. Demotion hurt, but the Kuiper Belt threw a welcome party.",
+        "science": "In 2006 Pluto was reclassified as a dwarf planet because it hasn’t cleared other objects from its orbital path, one of the official planet criteria."
+      },
+      "meteor_wish": {
+        "topic": "Meteors",
+        "setup": "What’s the difference between a meteoroid, a meteor, and a meteorite?",
+        "punchline": "In space it’s a meteoroid, streaking through the sky it’s a meteor (your wish), and if it lands it’s a meteorite — and your wish still doesn’t come with a warranty.",
+        "science": "Meteoroid = rock in space. Meteor = the streak of light in the atmosphere. Meteorite = the piece that reaches the ground."
+      },
+      "aurora_dance": {
+        "topic": "Auroras",
+        "setup": "Why do auroras put on free light shows near the poles?",
+        "punchline": "Charged particles from the Sun crash the Earth’s magnetic party and excite the air until it glows. Nature’s original nightclub — no cover charge.",
+        "science": "Auroras happen when solar wind particles are guided by Earth’s magnetic field into the upper atmosphere, making gases glow (often green from oxygen)."
+      },
+      "solar_flare_anger": {
+        "topic": "Solar flares",
+        "setup": "What happens when the Sun gets angry?",
+        "punchline": "It throws a solar flare — a burst of radiation that can mess with satellites and radio, like cosmic road rage.",
+        "science": "Solar flares are sudden releases of magnetic energy on the Sun. They send X-rays and energetic particles that can affect space technology and power grids."
+      },
+      "white_dwarf_retire": {
+        "topic": "White dwarfs",
+        "setup": "What does a Sun-like star do after retirement?",
+        "punchline": "It becomes a white dwarf — small, hot, and slowly cooling for billions of years. The ultimate quiet life.",
+        "science": "When a star like the Sun runs out of fuel, it sheds outer layers and leaves a dense core: a white dwarf about the size of Earth but with roughly the Sun’s mass."
+      },
+      "binary_star_date": {
+        "topic": "Binary stars",
+        "setup": "Why are binary stars the best couples in the galaxy?",
+        "punchline": "They spend their whole lives going around each other — and neither ever has to ask, “Where were you last night?”",
+        "science": "Many stars are in binary (or multiple) systems, orbiting a common centre of mass. We learn their masses by watching how they move."
+      },
+      "quasar_loud": {
+        "topic": "Quasars",
+        "setup": "Why can a quasar outshine an entire galaxy?",
+        "punchline": "It’s a supermassive black hole having a messy dinner — swallowing gas so violently the leftovers shine across the universe.",
+        "science": "Quasars are powered by material falling into supermassive black holes at galaxy centres. The glowing disk can outshine all the galaxy’s stars combined."
+      },
+      "cosmic_microwave": {
+        "topic": "CMB",
+        "setup": "What’s the oldest light we can still see?",
+        "punchline": "The cosmic microwave background — leftover glow from when the universe was a hot fog, now cooled to a faint microwave hiss in every direction.",
+        "science": "The CMB is radiation from about 380,000 years after the Big Bang, when the universe became transparent. It’s strong evidence for the Big Bang model."
+      },
+      "kuiper_attic": {
+        "topic": "Kuiper Belt",
+        "setup": "Where does the solar system keep its icy leftovers?",
+        "punchline": "In the Kuiper Belt — the attic beyond Neptune, full of frozen leftovers including Pluto.",
+        "science": "The Kuiper Belt is a region of icy bodies beyond Neptune. Pluto is one of its largest known members."
+      },
+      "oort_cloud_far": {
+        "topic": "Oort Cloud",
+        "setup": "How far is the solar system’s true edge?",
+        "punchline": "The Oort Cloud may stretch nearly a light-year out — a giant icy shell so far that the Sun looks like just another bright star.",
+        "science": "The Oort Cloud is a hypothesized spherical cloud of icy objects at the far edge of the Sun’s gravitational influence, thought to be the source of long-period comets."
+      },
+      "parallax_wink": {
+        "topic": "Parallax",
+        "setup": "How do astronomers measure the distance to nearby stars without a giant tape measure?",
+        "punchline": "They wink — observe the star from opposite sides of Earth’s orbit and watch it shift slightly against the background. That shift is parallax.",
+        "science": "Stellar parallax is the apparent shift of a nearby star when viewed from two points in Earth’s orbit. Larger shift means closer star."
+      },
+      "magnitude_bright": {
+        "topic": "Brightness",
+        "setup": "In astronomy, why is a magnitude 1 star brighter than a magnitude 5 star?",
+        "punchline": "Because the scale is backwards on purpose — smaller number, brighter object. Blame the ancient Greeks; they started it.",
+        "science": "The magnitude scale is logarithmic and inverted: lower (even negative) magnitudes mean brighter objects. Vega is near magnitude 0; the Sun is about −27."
+      },
+      "spectroscopy_rainbow": {
+        "topic": "Spectroscopy",
+        "setup": "How do we know what stars are made of without visiting them?",
+        "punchline": "We read their rainbows. Dark lines in the spectrum are like barcodes for hydrogen, helium, and more.",
+        "science": "Spectroscopy splits light into colours. Absorption and emission lines reveal which elements are present and how the star is moving."
+      },
+      "doppler_police": {
+        "topic": "Doppler effect",
+        "setup": "Why do police sirens and distant galaxies have something in common?",
+        "punchline": "Both change pitch (or colour) depending on whether they’re coming toward you or racing away — the Doppler effect.",
+        "science": "When a light source moves toward us, its light is blueshifted; when it moves away, it’s redshifted. This helps measure cosmic expansion and exoplanet wobbles."
+      },
+      "tidal_lock_face": {
+        "topic": "Tidal locking",
+        "setup": "Why do we only ever see one face of the Moon?",
+        "punchline": "It’s tidally locked — it rotates exactly once per orbit, so the same side always faces Earth. No, it’s not shy; it’s physics.",
+        "science": "Tidal locking happens when gravitational forces slow a moon’s rotation until one face always points at the planet. Many moons in the solar system are tidally locked."
+      },
+      "roche_limit_hug": {
+        "topic": "Roche limit",
+        "setup": "What happens if a moon gets too close to its planet?",
+        "punchline": "Past the Roche limit, tidal forces can tear it apart — the planet’s version of “you’re smothering me.”",
+        "science": "The Roche limit is the distance inside which a moon held only by its own gravity can be pulled apart by the planet’s tides. Planetary rings often form near this region."
+      },
+      "lagrange_spot": {
+        "topic": "Lagrange points",
+        "setup": "Where can a spacecraft “park” without using much fuel?",
+        "punchline": "At a Lagrange point — special gravitational sweet spots where the pulls of two big bodies balance. Cosmic free parking (almost).",
+        "science": "Lagrange points are positions where the gravity of two large bodies and the orbital motion balance. Missions like JWST use L2 for a stable vantage point."
+      },
+      "helium_balloon_star": {
+        "topic": "Stellar fuel",
+        "setup": "What happens when a star runs out of hydrogen?",
+        "punchline": "It starts burning helium — like switching from regular fuel to the emergency tank, and often swelling into a red giant.",
+        "science": "Stars fuse hydrogen into helium in their cores. When hydrogen runs low, many stars fuse helium into heavier elements and expand dramatically."
+      },
+      "fusion_cooking": {
+        "topic": "Nuclear fusion",
+        "setup": "How does the Sun keep shining for billions of years?",
+        "punchline": "It’s cooking hydrogen into helium in its core — nuclear fusion, the ultimate slow cooker with gravity as the lid.",
+        "science": "In the Sun’s core, hydrogen nuclei fuse into helium, releasing energy as light and heat. That energy takes a long time to reach the surface, then 8 minutes to reach us."
+      },
+      "cosmic_ray_speed": {
+        "topic": "Cosmic rays",
+        "setup": "What travels nearly as fast as light and is not a race car?",
+        "punchline": "Cosmic rays — mostly protons shot across the galaxy by explosive events, slamming into Earth’s atmosphere.",
+        "science": "Cosmic rays are high-energy particles (often protons) from the Sun, supernovae, and other energetic sources. They create secondary showers when they hit the atmosphere."
+      },
+      "zodiac_not_horoscope": {
+        "topic": "Zodiac",
+        "setup": "What’s the difference between the zodiac in astronomy and in a newspaper?",
+        "punchline": "In astronomy, the zodiac is just the path the Sun appears to follow through certain constellations. It does not predict your week.",
+        "science": "The zodiac constellations lie along the ecliptic — the Sun’s yearly path on the sky. Astrology uses similar names but is not a scientific prediction system."
+      },
+      "polaris_north": {
+        "topic": "Polaris",
+        "setup": "Why is Polaris called the North Star?",
+        "punchline": "It sits nearly above Earth’s north pole, so while other stars spin around the sky, Polaris barely moves — the ultimate reliable landmark.",
+        "science": "Polaris is close to the north celestial pole. As Earth rotates, stars appear to circle it. It’s useful for navigation in the Northern Hemisphere."
+      },
+      "andromeda_visit": {
+        "topic": "Andromeda",
+        "setup": "Which galaxy is scheduled to visit the Milky Way?",
+        "punchline": "Andromeda — in about 4 billion years. No RSVP needed; gravity already sent the invite.",
+        "science": "The Andromeda Galaxy is approaching the Milky Way. In billions of years the two will merge into a larger galaxy. Stars themselves rarely collide; orbits get reshuffled."
+      },
+      "local_group_neighbors": {
+        "topic": "Local Group",
+        "setup": "Who are the Milky Way’s closest big neighbours?",
+        "punchline": "The Local Group — a small gang of galaxies including Andromeda and Triangulum, hanging out in the same cosmic suburb.",
+        "science": "The Local Group contains the Milky Way, Andromeda, Triangulum, and dozens of smaller dwarf galaxies bound by gravity."
+      },
+      "void_empty": {
+        "topic": "Cosmic voids",
+        "setup": "What’s the emptiest address in the universe?",
+        "punchline": "A cosmic void — vast regions with almost no galaxies, where “sparse” is an understatement.",
+        "science": "Galaxies form a cosmic web of filaments and clusters. Between them are huge voids with far fewer galaxies than average."
+      },
+      "brown_dwarf_almost": {
+        "topic": "Brown dwarfs",
+        "setup": "What do you call a star that never quite made it?",
+        "punchline": "A brown dwarf — too big to be a normal planet, too small to sustain full hydrogen fusion. The “almost star.”",
+        "science": "Brown dwarfs are objects heavier than planets but lighter than true stars. They may fuse deuterium briefly but not sustain core hydrogen fusion like the Sun."
+      },
+      "magnetar_strong": {
+        "topic": "Magnetars",
+        "setup": "What’s the strongest magnet in the universe?",
+        "punchline": "A magnetar — a neutron star whose magnetic field could wipe a credit card from the distance of the Moon (if you somehow survived getting that close).",
+        "science": "Magnetars are neutron stars with extremely powerful magnetic fields, trillions of times stronger than Earth’s. Their flares can be detected across the galaxy."
+      },
+      "gamma_ray_burst": {
+        "topic": "Gamma-ray bursts",
+        "setup": "What’s the most dramatic goodbye a star can give?",
+        "punchline": "A gamma-ray burst — a focused beam of extreme energy that can briefly outshine whole galaxies in gamma rays.",
+        "science": "Gamma-ray bursts are the brightest electromagnetic events known, linked to collapsing massive stars or merging neutron stars, often aimed in narrow beams."
+      },
+      "transit_blink": {
+        "topic": "Planet transits",
+        "setup": "How can a tiny planet reveal itself light-years away?",
+        "punchline": "By walking in front of its star and dimming the light a fraction of a percent — the transit method. Cosmic hide-and-seek, and we still find them.",
+        "science": "When an exoplanet crosses in front of its star, the star’s brightness dips slightly. Measuring that dip reveals the planet’s size and orbital period."
+      },
+      "radial_velocity_wobble": {
+        "topic": "Radial velocity",
+        "setup": "How else do we catch exoplanets that don’t transit?",
+        "punchline": "We watch the star wobble. The planet tugs it, and the spectrum shifts red then blue — a gravitational dance partner we can’t see directly.",
+        "science": "The radial-velocity method detects periodic Doppler shifts in a star’s spectrum caused by an orbiting planet’s gravity."
+      },
+      "protoplanetary_disk": {
+        "topic": "Planet formation",
+        "setup": "Where are baby planets born?",
+        "punchline": "In a protoplanetary disk — a dusty, gassy pancake around a young star where pebbles stick together until someone calls them a planet.",
+        "science": "Planets form in rotating disks of gas and dust around young stars. Dust grains collide and grow into planetesimals, then into planets over millions of years."
       }
     }
   }
