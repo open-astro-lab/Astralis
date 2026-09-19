@@ -48,13 +48,16 @@
     "install_button": "होम स्क्रीन पर जोड़ें",
     "install_dismiss": "अभी नहीं",
     "install_ios_steps_title": "iPhone / iPad पर:",
-    "install_ios_step1": "Share बटन (वर्ग + तीर) पर टैप करें",
-    "install_ios_step2": "नीचे स्क्रॉल करके “Add to Home Screen” चुनें",
-    "install_ios_step3": "Add पर टैप करें — हो गया!",
+    "install_ios_step1": "Safari के नीचे Share बटन पर टैप करें",
+    "install_ios_step2": "नीचे स्क्रॉल करके “Add to Home Screen” पर टैप करें",
+    "install_ios_step3": "“Add” पर टैप करें — आइकन होम स्क्रीन पर आ जाएगा",
     "install_installing": "इंस्टॉल हो रहा है…",
     "install_already": "एस्ट्रेलिस आपकी होम स्क्रीन पर इंस्टॉल है",
     "install_generic_title": "होम स्क्रीन पर कैसे जोड़ें:",
-    "install_generic_text": "ब्राउज़र मेनू (⋮ या ⋯) खोलें और “Add to Home screen” या “Install app” चुनें।"
+    "install_generic_text": "ब्राउज़र मेनू (⋮ या ⋯) खोलें और “Add to Home screen” या “Install app” चुनें।",
+    "install_ios_simple": "iPhone पर सिर्फ 3 टैप लगते हैं:",
+    "install_android_simple": "आपके ब्राउज़र में एक और टैप चाहिए:",
+    "install_chrome_tip": "टिप: सबसे तेज़ इंस्टॉल के लिए Chrome में खोलें।"
   },
   "modules": {
     "universe_explorer": "यूनिवर्स एक्सप्लोरर",
@@ -1898,6 +1901,13 @@
     "language_title": "भाषा कैसे बदलें",
     "language_body": "जब आपने ऐप पहली बार खोला तो भाषा चुनी थी।\n\nअगर कभी English और Hindi के बीच बदलना हो, तो स्क्रीन के ऊपर एक छोटा भाषा चुनने वाला बॉक्स देखें (जिसमें वर्तमान भाषा लिखी होती है)।\n\nउस पर टैप करें और अपनी पसंद की भाषा चुनें।",
     "ready_title": "आप तैयार हैं!",
-    "ready_body": "शुरू करने के लिए आपको इतना ही जानना काफी है।\n\nनीचे बड़े बटन पर टैप करें और आप होम पेज पर पहुँच जाएँगे। वहाँ से कोई भी मॉड्यूल खोलकर ब्रह्मांड की खोज शुरू कर सकते हैं।"
+    "ready_body": "शुरू करने के लिए आपको इतना ही जानना काफी है।\n\nनीचे बड़े बटन पर टैप करें और आप होम पेज पर पहुँच जाएँगे। वहाँ से कोई भी मॉड्यूल खोलकर ब्रह्मांड की खोज शुरू कर सकते हैं।",
+    "welcome_visual": "आपकी मुफ़्त खगोल कक्षा",
+    "navigate_visual_label": "यह मेनू है",
+    "navigate_mobile_hint": "फ़ोन पर यह बड़ा बटन मेनू खोलता है",
+    "modules_visual_label": "किसी भी चमकते कार्ड पर टैप करके मॉड्यूल शुरू करें",
+    "passport_visual_label": "आपकी प्रगति",
+    "language_visual_label": "यहाँ भाषा बदलें",
+    "ready_visual": "सब कुछ आपके लिए तैयार है"
   }
 }

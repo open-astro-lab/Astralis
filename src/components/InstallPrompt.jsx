@@ -2,116 +2,98 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 /**
- * Always-visible "Add to Home Screen" button at the top of the Home page.
- * Works on every visit. Handles Android/Chrome install prompt + iOS instructions.
+ * Always-visible "Add to Home Screen" button.
+ * Tries the native one-tap install first.
+ * Only shows short visual help when the browser itself does not support direct install.
  */
 export default function InstallPrompt() {
   const { t } = useTranslation();
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [isStandalone, setIsStandalone] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
-  const [showIOSHelp, setShowIOSHelp] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
   const [installing, setInstalling] = useState(false);
 
   useEffect(() => {
-    // Detect if already running as installed app
     const standalone =
       window.matchMedia("(display-mode: standalone)").matches ||
       window.navigator.standalone === true;
     setIsStandalone(standalone);
 
-    // Detect iOS
     const ua = window.navigator.userAgent || "";
     const ios =
       /iPad|iPhone|iPod/.test(ua) ||
       (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
     setIsIOS(ios);
 
-    // Capture the browser install event (Android / Chrome / Edge)
     const handler = (e) => {
       e.preventDefault();
       setDeferredPrompt(e);
     };
     window.addEventListener("beforeinstallprompt", handler);
-
     window.addEventListener("appinstalled", () => {
       setDeferredPrompt(null);
       setInstalling(false);
+      setShowHelp(false);
     });
 
-    return () => {
-      window.removeEventListener("beforeinstallprompt", handler);
-    };
+    return () => window.removeEventListener("beforeinstallprompt", handler);
   }, []);
 
-  // Already running from home screen → show a small confirmation instead of the button
   if (isStandalone) {
     return (
       <div className="mb-6 rounded-xl border border-nebula/30 bg-nebula/10 px-4 py-3 text-center">
         <p className="text-sm text-nebula font-medium">
-          {t("home.install_already", "Astralis is installed on your home screen")}
+          {t("home.install_already")}
         </p>
       </div>
     );
   }
 
   const handleClick = async () => {
+    // Best case: browser gives us a native install dialog → one tap, no steps
     if (deferredPrompt) {
-      // Native install available (Android / Chrome)
       setInstalling(true);
       try {
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === "accepted") {
           setDeferredPrompt(null);
+        } else {
+          // User cancelled the native dialog – do nothing extra
         }
       } catch (err) {
         console.warn("Install prompt failed:", err);
+        setShowHelp(true);
       } finally {
         setInstalling(false);
       }
-    } else if (isIOS) {
-      // iOS – show instructions
-      setShowIOSHelp((prev) => !prev);
-    } else {
-      // Fallback for other browsers: show generic instructions
-      setShowIOSHelp((prev) => !prev);
+      return;
     }
+
+    // Native prompt not available → show the simplest possible visual help
+    setShowHelp((prev) => !prev);
   };
 
   return (
     <div className="mb-8 rounded-2xl border-2 border-nebula/50 bg-void/90 backdrop-blur-sm p-4 shadow-lg shadow-nebula/20">
       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-        {/* Icon */}
         <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-nebula/25 flex items-center justify-center">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-nebula"
-          >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-nebula">
             <path d="M12 2v8m0 0l-3-3m3 3l3-3" />
             <rect x="4" y="14" width="16" height="6" rx="1" />
           </svg>
         </div>
 
-        {/* Text + Button */}
         <div className="flex-1 min-w-0">
           <p className="font-display text-lg text-text leading-snug">
-            {t("home.install_title", "Add Astralis to your home screen")}
+            {t("home.install_title")}
           </p>
           <p className="text-muted text-sm mt-1">
-            {t(
-              "home.install_subtitle",
-              "Open it like a real app — no Play Store needed."
-            )}
+            {t("home.install_subtitle")}
           </p>
         </div>
 
-        {/* Main button – always visible */}
         <button
           onClick={handleClick}
           disabled={installing}
@@ -120,43 +102,63 @@ export default function InstallPrompt() {
           {installing ? (
             <>
               <span className="w-4 h-4 rounded-full border-2 border-void border-t-transparent animate-spin" />
-              {t("home.install_installing", "Installing…")}
+              {t("home.install_installing")}
             </>
           ) : (
             <>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M12 5v14M5 12h14" />
               </svg>
-              {t("home.install_button", "Add to Home Screen")}
+              {t("home.install_button")}
             </>
           )}
         </button>
       </div>
 
-      {/* Help text for iOS / unsupported browsers */}
-      {showIOSHelp && (
-        <div className="mt-4 text-sm text-muted bg-void/70 rounded-xl p-4 border border-white/10">
+      {/* Only shown when the browser cannot do a direct install */}
+      {showHelp && (
+        <div className="mt-4 rounded-xl bg-panel border border-white/10 p-4 space-y-4">
           {isIOS ? (
             <>
-              <p className="mb-2 font-medium text-text">
-                {t("home.install_ios_steps_title", "On iPhone / iPad:")}
+              <p className="text-text font-medium text-center">
+                {t("home.install_ios_simple")}
               </p>
-              <ol className="list-decimal list-inside space-y-1.5">
-                <li>{t("home.install_ios_step1", "Tap the Share button (square with arrow)")}</li>
-                <li>{t("home.install_ios_step2", "Scroll and choose “Add to Home Screen”")}</li>
-                <li>{t("home.install_ios_step3", "Tap Add — done!")}</li>
-              </ol>
+              <div className="grid gap-3">
+                <div className="flex items-center gap-3 rounded-lg bg-void/60 p-3">
+                  <div className="w-10 h-10 rounded-full bg-nebula/20 flex items-center justify-center text-xl shrink-0">1</div>
+                  <div className="flex-1">
+                    <p className="text-sm text-text">{t("home.install_ios_step1")}</p>
+                    <div className="mt-1 inline-flex items-center gap-1 px-2 py-1 rounded bg-panelLight text-xs text-muted">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8" />
+                        <polyline points="16 6 12 2 8 6" />
+                        <line x1="12" y1="2" x2="12" y2="15" />
+                      </svg>
+                      Share
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 rounded-lg bg-void/60 p-3">
+                  <div className="w-10 h-10 rounded-full bg-nebula/20 flex items-center justify-center text-xl shrink-0">2</div>
+                  <p className="text-sm text-text">{t("home.install_ios_step2")}</p>
+                </div>
+                <div className="flex items-center gap-3 rounded-lg bg-void/60 p-3">
+                  <div className="w-10 h-10 rounded-full bg-nebula/20 flex items-center justify-center text-xl shrink-0">3</div>
+                  <p className="text-sm text-text">{t("home.install_ios_step3")}</p>
+                </div>
+              </div>
             </>
           ) : (
             <>
-              <p className="mb-2 font-medium text-text">
-                {t("home.install_generic_title", "How to add to home screen:")}
+              <p className="text-text font-medium text-center">
+                {t("home.install_android_simple")}
               </p>
-              <p>
-                {t(
-                  "home.install_generic_text",
-                  "Open the browser menu (usually ⋮ or ⋯) and look for “Add to Home screen” or “Install app”."
-                )}
+              <div className="flex items-center gap-3 rounded-lg bg-void/60 p-3">
+                <div className="w-10 h-10 rounded-full bg-nebula/20 flex items-center justify-center text-xl shrink-0">⋮</div>
+                <p className="text-sm text-text">{t("home.install_generic_text")}</p>
+              </div>
+              <p className="text-xs text-muted text-center">
+                {t("home.install_chrome_tip")}
               </p>
             </>
           )}

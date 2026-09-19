@@ -48,13 +48,16 @@
     "install_button": "Add to Home Screen",
     "install_dismiss": "Not now",
     "install_ios_steps_title": "On iPhone / iPad:",
-    "install_ios_step1": "Tap the Share button (square with arrow)",
-    "install_ios_step2": "Scroll and choose “Add to Home Screen”",
-    "install_ios_step3": "Tap Add — done!",
+    "install_ios_step1": "Tap the Share button at the bottom of Safari",
+    "install_ios_step2": "Scroll down and tap “Add to Home Screen”",
+    "install_ios_step3": "Tap “Add” — the icon appears on your home screen",
     "install_installing": "Installing…",
     "install_already": "Astralis is installed on your home screen",
     "install_generic_title": "How to add to home screen:",
-    "install_generic_text": "Open the browser menu (usually ⋮ or ⋯) and look for “Add to Home screen” or “Install app”."
+    "install_generic_text": "Open the browser menu (usually ⋮ or ⋯) and look for “Add to Home screen” or “Install app”.",
+    "install_ios_simple": "On iPhone it takes 3 quick taps:",
+    "install_android_simple": "Your browser needs one extra tap:",
+    "install_chrome_tip": "Tip: Open this site in Chrome for the fastest one-tap install."
   },
   "modules": {
     "universe_explorer": "Universe Explorer",
@@ -1898,6 +1901,13 @@
     "language_title": "Changing the language",
     "language_body": "You chose a language when you first opened the app.\n\nIf you ever want to switch between English and Hindi, look at the top of the screen for a small language selector (it shows the current language).\n\nTap it and pick the language you prefer.",
     "ready_title": "You’re all set!",
-    "ready_body": "That’s everything you need to know to start.\n\nTap the big button below and you will land on the Home page. From there you can open any module and begin exploring the universe."
+    "ready_body": "That’s everything you need to know to start.\n\nTap the big button below and you will land on the Home page. From there you can open any module and begin exploring the universe.",
+    "welcome_visual": "Your free astronomy classroom",
+    "navigate_visual_label": "This is the menu",
+    "navigate_mobile_hint": "On phones this big button opens the menu",
+    "modules_visual_label": "Tap any glowing card to start a module",
+    "passport_visual_label": "Your progress",
+    "language_visual_label": "Change language here",
+    "ready_visual": "Everything is ready for you"
   }
 }
