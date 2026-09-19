@@ -10,6 +10,7 @@ export const CATEGORY_KEYS = [
   "physicsChallenges",
   "dailyChallenges",
   "systemBuilder",
+  "cosmicComedy",
 ];
 
 export { LEVELS };
@@ -23,6 +24,7 @@ export function EMPTY_PASSPORT_SHAPE() {
     physicsChallenges: [],
     dailyChallenges: [],
     systemBuilder: [],
+    cosmicComedy: [],
     triviaBestScore: 0,
     streak: { count: 0, lastVisitDate: null },
   };

@@ -12,6 +12,7 @@ const NODES = [
   { key: "exoplanet_hunter", labelKey: "modules.exoplanet_hunter", ring: 2, angle: 145, color: "#A79AF5" },
   { key: "stellar_detective", labelKey: "modules.stellar_detective", ring: 2, angle: 270, color: "#FF9F6B" },
   { key: "system_builder", labelKey: "modules.system_builder", ring: 2, angle: 315, color: "#FFFFFF" },
+  { key: "cosmic_comedy", labelKey: "modules.cosmic_comedy", ring: 2, angle: 70, color: "#FF6B9D" },
 ];
 
 const RING_R = { 1: 100, 2: 165 };

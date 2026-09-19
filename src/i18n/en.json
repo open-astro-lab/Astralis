@@ -66,7 +66,8 @@
     "exoplanet_hunter": "Exoplanet Hunter",
     "stellar_detective": "Stellar Detective",
     "physics_lab": "Astrophysics Lab",
-    "system_builder": "Star System Builder"
+    "system_builder": "Star System Builder",
+    "cosmic_comedy": "Cosmic Comedy"
   },
   "physics_lab": {
     "title": "Astrophysics Lab",
@@ -1892,7 +1893,7 @@
     "navigate_body": "At the very top of every page you will see the menu.\n\n• On a phone: look for the button that says “Navigate the app here 👉” or the ☰ icon.\n• On a computer: the menu items (Home, Passport, Glossary…) are always visible at the top.",
     "navigate_hint": "Tip: The menu is always at the top. You can return to Home from anywhere.",
     "modules_title": "The learning modules",
-    "modules_body": "On the Home page you will see colourful cards arranged like planets.\n\nEach card is a different activity:\n• Universe Explorer\n• Sky Explorer\n• Asteroid Hunter\n• Exoplanet Hunter\n• Stellar Detective\n• Astrophysics Lab\n• Star System Builder\n\nJust tap any card to start.",
+    "modules_body": "On the Home page you will see colourful cards arranged like planets.\n\nEach card is a different activity:\n• Universe Explorer\n• Sky Explorer\n• Asteroid Hunter\n• Exoplanet Hunter\n• Stellar Detective\n• Astrophysics Lab\n• Star System Builder\n• Cosmic Comedy (learn astronomy through jokes!)\n\nJust tap any card to start.",
     "modules_hint": "These cards are the heart of Astralis. Start with any one that looks interesting.",
     "passport_title": "Your Astronomy Passport",
     "passport_body": "Every time you finish a challenge or quiz, it is saved in your Passport.\n\nOpen “My Passport” from the top menu to see:\n• How many topics you have completed\n• Your current level\n• Your daily streak\n\nYou can sign in with Google (optional) so your progress follows you on every device.",
@@ -1909,5 +1910,169 @@
     "passport_visual_label": "Your progress",
     "language_visual_label": "Change language here",
     "ready_visual": "Everything is ready for you"
+  },
+  "cosmic_comedy": {
+    "title": "Cosmic Comedy",
+    "subtitle": "Learn real astronomy through jokes that actually make you laugh.",
+    "progress": "{{done}} of {{total}} jokes learned",
+    "reveal_button": "Show the punchline 😄",
+    "science_button": "What did I just learn?",
+    "science_label": "The real science",
+    "learned": "Learned",
+    "prev": "Previous",
+    "next": "Next joke",
+    "hint": "Green dots = jokes you’ve already learned. Tap any dot to jump.",
+    "jokes": {
+      "black_hole_party": {
+        "topic": "Black holes",
+        "setup": "Why don’t black holes ever throw parties?",
+        "punchline": "Because no one who goes in ever comes out — and the snacks can’t escape either.",
+        "science": "A black hole’s gravity is so strong that not even light can escape past a boundary called the event horizon. That’s why they look “black”."
+      },
+      "light_year_beer": {
+        "topic": "Light-years",
+        "setup": "A light-year is the distance light travels in one year. So if a spaceship goes at light speed for a year…",
+        "punchline": "…it still won’t get you a free drink. A light-year is a distance, not a time — and bars don’t take astronomical units.",
+        "science": "A light-year is about 9.5 trillion kilometres. It’s a unit of distance, not time. People often mix this up!"
+      },
+      "astronaut_space": {
+        "topic": "Space travel",
+        "setup": "Why did the astronaut break up with their partner?",
+        "punchline": "They needed more space.",
+        "science": "Jokes aside, “space” in astronomy means the nearly empty regions between planets, stars and galaxies — mostly vacuum with tiny amounts of gas and dust."
+      },
+      "saturn_rings": {
+        "topic": "Saturn",
+        "setup": "Why is Saturn so good at keeping secrets?",
+        "punchline": "It has a lot of rings — but none of them are phone rings you can answer.",
+        "science": "Saturn’s rings are made of countless chunks of ice and rock, from tiny grains to house-sized pieces, orbiting the planet."
+      },
+      "moon_cow": {
+        "topic": "The Moon",
+        "setup": "How do you know the Moon is friendly?",
+        "punchline": "It always comes out at night to keep Earth company — and it never asks for rent.",
+        "science": "The Moon is tidally locked: we always see roughly the same face. It reflects sunlight, which is why it shines at night."
+      },
+      "sun_glasses": {
+        "topic": "The Sun",
+        "setup": "Why does the Sun never need glasses?",
+        "punchline": "Because it’s already a star with perfect vision — it sees everything in a new light every 8 minutes.",
+        "science": "Sunlight takes about 8 minutes and 20 seconds to reach Earth. The Sun is an ordinary star, just much closer than the others."
+      },
+      "comet_ice": {
+        "topic": "Comets",
+        "setup": "What do you call a comet that tells jokes?",
+        "punchline": "A “pun-damental” snowball — dirty ice with a glowing sense of humour.",
+        "science": "Comets are icy bodies. When they near the Sun, ice turns to gas and releases dust, forming the bright coma and tail we see."
+      },
+      "galaxy_bar": {
+        "topic": "Galaxies",
+        "setup": "Why did the galaxy go to the bar?",
+        "punchline": "It heard the drinks were on the house — and the house was 100,000 light-years wide.",
+        "science": "Our Milky Way is a barred spiral galaxy roughly 100,000 light-years across and contains hundreds of billions of stars."
+      },
+      "neutron_diet": {
+        "topic": "Neutron stars",
+        "setup": "Why are neutron stars terrible at dieting?",
+        "punchline": "They already packed a whole star’s mass into a city-sized ball — there’s nowhere left to shrink.",
+        "science": "A neutron star is the crushed core of a massive star after a supernova. A teaspoon of its material would weigh billions of tonnes on Earth."
+      },
+      "telescope_far": {
+        "topic": "Telescopes",
+        "setup": "Why did the telescope break up with the microscope?",
+        "punchline": "It said, “You’re too focused on the small stuff. I need to see other stars.”",
+        "science": "Telescopes collect light from distant objects. Bigger mirrors or lenses gather more light, letting us see fainter and farther things."
+      },
+      "orbit_commitment": {
+        "topic": "Orbits",
+        "setup": "Why are planets so committed to the Sun?",
+        "punchline": "They’re stuck in a long-term orbit — divorce would require escaping the entire solar system.",
+        "science": "An orbit is a balance between gravity pulling inward and the planet’s sideways speed. Change either too much and the path changes."
+      },
+      "big_bang_noise": {
+        "topic": "Big Bang",
+        "setup": "What did the universe say after the Big Bang?",
+        "punchline": "“I’m still expanding on that idea.”",
+        "science": "The Big Bang wasn’t an explosion in space — it was the rapid expansion of space itself. The universe has been expanding ever since."
+      },
+      "mars_single": {
+        "topic": "Mars",
+        "setup": "Why is Mars still single?",
+        "punchline": "It has a lot of red flags — literally. The whole planet is covered in rusty dust.",
+        "science": "Mars looks red because its surface is rich in iron oxide (rust). It’s colder and much thinner-aired than Earth."
+      },
+      "constellation_connect": {
+        "topic": "Constellations",
+        "setup": "Why are constellation maps so popular with kids?",
+        "punchline": "They’re the original connect-the-dots — except the dots are nuclear furnaces trillions of kilometres away.",
+        "science": "Constellations are patterns humans imagined by connecting stars as seen from Earth. The stars in one constellation are usually not close to each other in space."
+      },
+      "eclipse_shadow": {
+        "topic": "Eclipses",
+        "setup": "Why did the Moon cover the Sun during the meeting?",
+        "punchline": "It wanted to throw some shade — scientifically speaking.",
+        "science": "A solar eclipse happens when the Moon passes between Earth and the Sun and casts a shadow on Earth. A lunar eclipse is when Earth shadows the Moon."
+      },
+      "asteroid_belt": {
+        "topic": "Asteroids",
+        "setup": "Why did the asteroid apply for a job in fashion?",
+        "punchline": "It wanted to work the belt — the one between Mars and Jupiter.",
+        "science": "Most asteroids in our solar system orbit in the asteroid belt between Mars and Jupiter. They’re leftover rocky pieces from the solar system’s formation."
+      },
+      "vacuum_clean": {
+        "topic": "Space vacuum",
+        "setup": "Is space messy?",
+        "punchline": "No — it’s a vacuum. Cleaning is included, but oxygen is not.",
+        "science": "Space is an extremely good vacuum compared with Earth’s air, but it’s not perfectly empty. There’s sparse gas, dust, radiation and magnetic fields."
+      },
+      "redshift_blues": {
+        "topic": "Redshift",
+        "setup": "Why was the distant galaxy feeling blue?",
+        "punchline": "It wasn’t — from Earth it looked redshifted. The universe stretched its light on the way here.",
+        "science": "As space expands, light from far galaxies stretches to longer (redder) wavelengths. This redshift tells us the universe is expanding."
+      },
+      "pulsar_clock": {
+        "topic": "Pulsars",
+        "setup": "Why do astronomers trust pulsars with the time?",
+        "punchline": "They’re the universe’s most reliable spinning lighthouses — tick, tick, tick, for millions of years.",
+        "science": "Pulsars are rotating neutron stars that sweep radio beams past Earth like lighthouse beams. Their pulses are extremely regular."
+      },
+      "exoplanet_house": {
+        "topic": "Exoplanets",
+        "setup": "Why did the exoplanet refuse to move in with its star?",
+        "punchline": "The neighbourhood was too hot — it preferred a house in the habitable zone.",
+        "science": "An exoplanet is a planet orbiting a star other than the Sun. The “habitable zone” is the distance range where liquid water could exist on a rocky world."
+      },
+      "milky_way_spill": {
+        "topic": "Milky Way",
+        "setup": "Who spilled milk across the night sky?",
+        "punchline": "Nobody — that’s our galaxy seen from the inside, a river of countless distant suns.",
+        "science": "The Milky Way band is the combined glow of stars in our galactic disk. We see it edge-on because we live inside that disk."
+      },
+      "gravity_pull": {
+        "topic": "Gravity",
+        "setup": "Why is gravity such a great friend?",
+        "punchline": "It always brings you back down to Earth — whether you like it or not.",
+        "science": "Gravity is the attraction between masses. On Earth it gives us weight; in space it keeps moons and planets in orbit."
+      },
+      "supernova_exit": {
+        "topic": "Supernovae",
+        "setup": "How does a massive star leave a party?",
+        "punchline": "It goes out with a bang — a supernova that can outshine an entire galaxy for weeks.",
+        "science": "A supernova is the explosive death of a massive star. It seeds the galaxy with heavy elements that later form new stars and planets."
+      },
+      "dark_matter_room": {
+        "topic": "Dark matter",
+        "setup": "Why is dark matter so hard to invite to dinner?",
+        "punchline": "It doesn’t show up on any photos — it only reveals itself by how it pulls on the guests who do.",
+        "science": "Dark matter doesn’t emit or absorb light, so we can’t see it directly. We detect it by its gravitational effect on stars and galaxies."
+      },
+      "habitable_zone_rent": {
+        "topic": "Habitable zone",
+        "setup": "Why are planets in the habitable zone always stressed about rent?",
+        "punchline": "Too close to the star and you burn; too far and you freeze. Location is everything.",
+        "science": "The habitable zone is the orbital range around a star where a rocky planet could have liquid water. It’s sometimes called the Goldilocks zone — not too hot, not too cold."
+      }
+    }
   }
 }
