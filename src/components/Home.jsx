@@ -3,7 +3,6 @@ import AuthPrompt from "./AuthPrompt.jsx";
 import Starfield from "./Starfield.jsx";
 import FactOfTheDay from "./FactOfTheDay.jsx";
 import DailyChallenge from "./DailyChallenge.jsx";
-import OnboardingGuide from "./OnboardingGuide.jsx";
 import OrbitalMap from "./OrbitalMap.jsx";
 import InstallPrompt from "./InstallPrompt.jsx";
 import { usePassport } from "../context/PassportContext.jsx";
@@ -22,7 +21,6 @@ export default function Home({ setView }) {
         {/* Prominent Add-to-Home-Screen button at the very top */}
         <InstallPrompt />
 
-        <OnboardingGuide />
         <div className="max-w-2xl">
           <h1 className="font-display text-4xl md:text-5xl leading-tight text-text">
             {hasProgress

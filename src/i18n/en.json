@@ -1876,5 +1876,28 @@
       "super_luminous": "Build a star over 100× the Sun's luminosity"
     },
     "missions_complete": "All missions complete — you've mastered the physics!"
+  },
+  "tutorial": {
+    "step_of": "Step {{current}} of {{total}}",
+    "next_button": "Next",
+    "back_button": "Back",
+    "skip_button": "Skip tutorial",
+    "ready_button": "I'm ready — take me to the homepage",
+    "welcome_title": "Welcome to Astralis",
+    "welcome_body": "Astralis is a free astronomy app made for complete beginners.\n\nYou don’t need any science background. Everything is taught by doing simple activities and short quizzes.",
+    "navigate_title": "How to move around the app",
+    "navigate_body": "At the very top of every page you will see the menu.\n\n• On a phone: look for the button that says “Navigate the app here 👉” or the ☰ icon.\n• On a computer: the menu items (Home, Passport, Glossary…) are always visible at the top.",
+    "navigate_hint": "Tip: The menu is always at the top. You can return to Home from anywhere.",
+    "modules_title": "The learning modules",
+    "modules_body": "On the Home page you will see colourful cards arranged like planets.\n\nEach card is a different activity:\n• Universe Explorer\n• Sky Explorer\n• Asteroid Hunter\n• Exoplanet Hunter\n• Stellar Detective\n• Astrophysics Lab\n• Star System Builder\n\nJust tap any card to start.",
+    "modules_hint": "These cards are the heart of Astralis. Start with any one that looks interesting.",
+    "passport_title": "Your Astronomy Passport",
+    "passport_body": "Every time you finish a challenge or quiz, it is saved in your Passport.\n\nOpen “My Passport” from the top menu to see:\n• How many topics you have completed\n• Your current level\n• Your daily streak\n\nYou can sign in with Google (optional) so your progress follows you on every device.",
+    "extra_title": "More things you can explore",
+    "extra_body": "From the top menu you can also open:\n\n• Glossary – simple meanings of astronomy words\n• Collection – interesting objects you discover\n• Trivia Blitz – quick fun questions\n\nEverything is optional. Explore at your own pace.",
+    "language_title": "Changing the language",
+    "language_body": "You chose a language when you first opened the app.\n\nIf you ever want to switch between English and Hindi, look at the top of the screen for a small language selector (it shows the current language).\n\nTap it and pick the language you prefer.",
+    "ready_title": "You’re all set!",
+    "ready_body": "That’s everything you need to know to start.\n\nTap the big button below and you will land on the Home page. From there you can open any module and begin exploring the universe."
   }
 }

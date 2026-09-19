@@ -4,6 +4,7 @@ import LanguagePicker from "./components/LanguagePicker.jsx";
 import NavBar from "./components/NavBar.jsx";
 import GuestBanner from "./components/GuestBanner.jsx";
 import Home from "./components/Home.jsx";
+import Tutorial from "./components/Tutorial.jsx";
 import XpToast from "./components/XpToast.jsx";
 import LevelUpModal from "./components/LevelUpModal.jsx";
 import StreakToast from "./components/StreakToast.jsx";
@@ -45,6 +46,9 @@ export default function App() {
   const [languageChosen, setLanguageChosen] = useState(
     () => !!localStorage.getItem("astralis_lang")
   );
+  // Show the guided tutorial every time the app is opened
+  // (after language is chosen). Users can always skip it.
+  const [showTutorial, setShowTutorial] = useState(true);
   const [view, setView] = useState("home");
 
   useEffect(() => {
@@ -53,6 +57,10 @@ export default function App() {
 
   if (!languageChosen) {
     return <LanguagePicker onChosen={() => setLanguageChosen(true)} />;
+  }
+
+  if (showTutorial) {
+    return <Tutorial onFinish={() => setShowTutorial(false)} />;
   }
 
   const moduleView = MODULE_VIEWS[view];
