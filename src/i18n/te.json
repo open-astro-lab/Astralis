@@ -1,26 +1,26 @@
 {
   "app": {
     "name": "Astralis",
-    "tagline": "ఖగోళ శాస్త్రం, మీ అన్వేషణకు."
+    "tagline": "ఖగోళ శాస్త్రం — మీ అన్వేషణకు."
   },
   "language_picker": {
-    "title": "మీ భాషను ఎంచుకోండి",
-    "subtitle": "దీన్ని ఎప్పుడైనా మార్చుకోవచ్చు."
+    "title": "భాషను ఎంచుకోండి",
+    "subtitle": "దీన్ని తర్వాత ఎప్పుడైనా మార్చుకోవచ్చు."
   },
   "nav": {
     "home": "హోమ్",
     "passport": "నా పాస్‌పోర్ట్",
-    "glossary": "నిఘంటువు",
+    "glossary": "పదకోశం",
     "collection": "సేకరణ",
-    "trivia": "ట్రివియా బ్లిట్జ్",
-    "menu_label": "యాప్‌ను ఇక్కడ నావిగేట్ చేయండి 👉"
+    "trivia": "త్వరిత ప్రశ్నలు",
+    "menu_label": "ఇక్కడకు వెళ్లండి 👉"
   },
   "home": {
-    "heading": "విశ్వం, ఒక్కో ప్రశ్నగా.",
-    "subheading": "జార్గన్ లేదు. అంచనాలు లేవు. నిజమైన ఖగోళ శాస్త్రం, చేసి నేర్చుకోండి.",
+    "heading": "విశ్వం — ఒక్కో ప్రశ్నగా.",
+    "subheading": "క్లిష్ట పదాలు లేవు. అంచనాలు లేవు. నిజమైన ఖగోళ శాస్త్రాన్ని చేసి నేర్చుకోండి.",
     "start_button": "అన్వేషించడం ప్రారంభించండి",
-    "modules_heading": "ఎక్కడ మొదలుపెట్టాలో ఎంచుకోండి",
-    "fact_heading": "ఈరోజు ఖగోళ వాస్తవం",
+    "modules_heading": "ఎక్కడ నుంచి మొదలుపెట్టాలి?",
+    "fact_heading": "నేటి ఖగోళ వాస్తవం",
     "facts": [
       "A day on Venus is longer than its year — Venus takes about 243 Earth days to rotate once, but only about 225 days to orbit the Sun.",
       "Neutron stars can spin over 600 times per second — the fastest known pulsars.",
@@ -38,36 +38,36 @@
       "In space, two pieces of the same untreated metal can bond permanently on contact — a real phenomenon called cold welding.",
       "The asteroid belt's total mass is less than that of Earth's Moon, despite containing millions of individual objects."
     ],
-    "daily_challenge_heading": "రోజువారీ సవాలు",
-    "map_instruction": "మాడ్యూల్ తెరవడానికి ఒక గోళాన్ని నొక్కండి",
-    "welcome_back": "తిరిగి స్వాగతం, {{level}}",
+    "daily_challenge_heading": "నేటి సవాలు",
+    "map_instruction": "ఒక విభాగం తెరవడానికి గోళాన్ని నొక్కండి",
+    "welcome_back": "మళ్లీ స్వాగతం, {{level}}",
     "welcome_back_subtitle": "మీరు ఆపిన చోట నుంచి కొనసాగించండి.",
     "shooting_star_caught": "🌠 Shooting star caught!",
     "install_title": "Astralisను హోమ్ స్క్రీన్‌కు జోడించండి",
-    "install_subtitle": "నిజమైన యాప్‌లా తెరవండి — Play Store అవసరం లేదు.",
+    "install_subtitle": "నిజమైన యాప్‌లా తెరుచుకుంటుంది — Play Store అవసరం లేదు.",
     "install_button": "హోమ్ స్క్రీన్‌కు జోడించు",
-    "install_dismiss": "ఇప్పుడు కాదు",
+    "install_dismiss": "తర్వాత",
     "install_ios_steps_title": "On iPhone / iPad:",
-    "install_ios_step1": "Safari దిగువ Share బటన్ నొక్కండి",
-    "install_ios_step2": "కిందికి స్క్రోల్ చేసి “Add to Home Screen” నొక్కండి",
-    "install_ios_step3": "“Add” నొక్కండి — ఐకాన్ హోమ్‌పై వస్తుంది",
+    "install_ios_step1": "Safari దిగువన Share బటన్ నొక్కండి",
+    "install_ios_step2": "కిందికి వెళ్లి “Add to Home Screen” ఎంచుకోండి",
+    "install_ios_step3": "“Add” నొక్కండి — ఐకాన్ హోమ్‌పై కనిపిస్తుంది",
     "install_installing": "ఇన్‌స్టాల్ అవుతోంది…",
     "install_already": "Astralis మీ హోమ్ స్క్రీన్‌పై ఉంది",
     "install_generic_title": "హోమ్ స్క్రీన్‌కు ఎలా జోడించాలి:",
-    "install_generic_text": "బ్రౌజర్ మెనూ (⋮ లేదా ⋯) తెరిచి “Add to Home screen” లేదా “Install app” ఎంచుకోండి.",
-    "install_ios_simple": "iPhoneలో 3 త్వరిత ట్యాప్‌లు:",
-    "install_android_simple": "మీ బ్రౌజర్‌కు ఒక అదనపు ట్యాప్ కావాలి:",
-    "install_chrome_tip": "చిట్కా: వేగవంతమైన ఇన్‌స్టాల్ కోసం Chromeలో తెరవండి."
+    "install_generic_text": "బ్రౌజర్ మెనూ తెరిచి “Add to Home screen” లేదా “Install app” ఎంచుకోండి.",
+    "install_ios_simple": "iPhoneలో మూడు సులభ దశలు:",
+    "install_android_simple": "మీ బ్రౌజర్‌లో ఒక అదనపు దశ:",
+    "install_chrome_tip": "చిట్కా: వేగంగా ఇన్‌స్టాల్ చేయడానికి Chromeలో తెరవండి."
   },
   "modules": {
-    "universe_explorer": "యూనివర్స్ ఎక్స్‌ప్లోరర్",
-    "sky_explorer": "స్కై ఎక్స్‌ప్లోరర్",
-    "asteroid_hunter": "ఆస్టరాయిడ్ హంటర్",
-    "exoplanet_hunter": "ఎక్సోప్లానెట్ హంటర్",
-    "stellar_detective": "స్టెల్లర్ డిటెక్టివ్",
-    "physics_lab": "ఆస్ట్రోఫిజిక్స్ ల్యాబ్",
-    "system_builder": "స్టార్ సిస్టమ్ బిల్డర్",
-    "cosmic_comedy": "కాస్మిక్ కామెడీ"
+    "universe_explorer": "విశ్వ అన్వేషణ",
+    "sky_explorer": "ఆకాశ అన్వేషణ",
+    "asteroid_hunter": "గ్రహశకల వేట",
+    "exoplanet_hunter": "బయటి గ్రహ వేట",
+    "stellar_detective": "నక్షత్ర పరిశీలన",
+    "physics_lab": "ఖగోళ భౌతిక శాస్త్ర ప్రయోగశాల",
+    "system_builder": "నక్షత్ర వ్యవస్థ నిర్మాత",
+    "cosmic_comedy": "అంతరిక్ష హాస్యం"
   },
   "physics_lab": {
     "title": "Astrophysics Lab",
@@ -1452,7 +1452,7 @@
     },
     "next_level_progress": "{{remaining}} more to reach {{level}}",
     "max_level_reached": "You've reached the top level — Scientist!",
-    "streak_label": "రోజువారీ స్ట్రీక్",
+    "streak_label": "వరుస రోజులు",
     "badges_heading": "Achievements",
     "badges": {
       "first_steps": {
@@ -1547,7 +1547,7 @@
     "sign_in": "సైన్ ఇన్",
     "sign_out": "సైన్ అవుట్",
     "guest_warning": "You're browsing as a guest — progress won't be saved across devices.",
-    "save_progress_heading": "మీ పురోగతిని సేవ్ చేయాలా?",
+    "save_progress_heading": "పురోగతిని సేవ్ చేయాలా?",
     "save_progress_subtitle": "Sign in once with Google, and your Astronomy Passport follows you — phone, tablet, laptop, wherever you open Astralis.",
     "skip_button": "Skip for now",
     "skip_caption": "Your progress won't be saved across devices.",
@@ -1818,7 +1818,7 @@
     "how_challenges_work_text": "Most activities end in a short quiz. Passing it marks that topic complete in your Astronomy Passport and counts toward your level. If you get a question wrong, you'll see why — then you can try again immediately.",
     "passport_heading": "Your Passport",
     "passport_text": "Every challenge you complete is tracked. Sign in with Google (optional) to keep your progress synced across every device — or skip it and just play, with progress saved to this device only.",
-    "close_button": "అర్థమైంది — అన్వేషిద్దాం"
+    "close_button": "అర్థమైంది — మొదలుపెడదాం"
   },
   "level_up": {
     "title": "Level Up!",
@@ -1890,21 +1890,21 @@
     "next_button": "తర్వాత",
     "back_button": "వెనక్కి",
     "skip_button": "ట్యుటోరియల్ దాటవేయి",
-    "ready_button": "నేను సిద్ధం — హోమ్‌కు తీసుకెళ్లు",
+    "ready_button": "సిద్ధం — హోమ్‌కు వెళ్లు",
     "welcome_title": "Astralisకు స్వాగతం",
-    "welcome_body": "Astralis పూర్తి ప్రారంభస్థాయి వారికి ఉచిత ఖగోళ యాప్.\n\nసైన్స్ నేపథ్యం అవసరం లేదు. అన్నీ సాధారణ కార్యకలాపాలు మరియు చిన్న క్విజ్‌లతో నేర్పుతాయి.",
+    "welcome_body": "Astralis పూర్తి ప్రారంభస్థాయి వారికి ఉచిత ఖగోళ యాప్.\n\nసైన్స్ నేపథ్యం అవసరం లేదు. సులభమైన కార్యకలాపాలు మరియు చిన్న క్విజ్‌ల ద్వారా నేర్పుతుంది.",
     "navigate_title": "యాప్‌లో ఎలా తిరగాలి",
-    "navigate_body": "ప్రతి పేజీ పైన మెనూ ఉంటుంది.\n\n• ఫోన్‌లో: “Navigate the app here 👉” లేదా ☰.\n• కంప్యూటర్‌లో: Home, Passport మొదలైనవి పైన కనిపిస్తాయి.",
-    "navigate_hint": "చిట్కా: మెనూ ఎల్లప్పుడూ పైన. ఎక్కడి నుంచైనా Homeకు తిరిగి రావచ్చు.",
-    "modules_title": "నేర్చుకునే మాడ్యూల్స్",
-    "modules_body": "హోమ్‌పై గ్రహాల్లా అమర్చిన రంగు కార్డులు.\n\nప్రతి కార్డు వేరే కార్యకలాపం. ఇష్టమైనది నొక్కి మొదలుపెట్టండి.",
-    "modules_hint": "ఈ కార్డులు Astralis హృదయం. ఆసక్తికరమైనదానితో మొదలుపెట్టండి.",
+    "navigate_body": "ప్రతి పేజీ పైన మెనూ ఉంటుంది.\n\n• ఫోన్‌లో: “ఇక్కడకు వెళ్లండి 👉” లేదా ☰.\n• కంప్యూటర్‌లో: హోమ్, పాస్‌పోర్ట్ మొదలైనవి పైన కనిపిస్తాయి.",
+    "navigate_hint": "చిట్కా: మెనూ ఎల్లప్పుడూ పైన ఉంటుంది. ఎక్కడి నుంచైనా హోమ్‌కు తిరిగి రావచ్చు.",
+    "modules_title": "నేర్చుకునే విభాగాలు",
+    "modules_body": "హోమ్‌పై గ్రహాల్లా అమర్చిన రంగు కార్డులు కనిపిస్తాయి.\n\nప్రతి కార్డు వేరే కార్యకలాపం. ఇష్టమైనది నొక్కి మొదలుపెట్టండి.",
+    "modules_hint": "ఈ కార్డులే Astralis హృదయం. ఆసక్తికరమైనదానితో మొదలుపెట్టండి.",
     "passport_title": "మీ ఖగోళ పాస్‌పోర్ట్",
-    "passport_body": "ప్రతి సవాలు పాస్‌పోర్ట్‌లో సేవ్ అవుతుంది.\n\nపై మెనూ నుంచి “My Passport” తెరిచి పురోగతి, లెవెల్, స్ట్రీక్ చూడండి.",
-    "extra_title": "మరిన్ని అన్వేషించండి",
-    "extra_body": "నిఘంటువు, సేకరణ, ట్రివియా — అన్నీ ఐచ్ఛికం. మీ వేగంతో వెళ్లండి.",
+    "passport_body": "మీరు పూర్తి చేసే ప్రతి సవాలు పాస్‌పోర్ట్‌లో సేవ్ అవుతుంది.\n\nపై మెనూ నుంచి “నా పాస్‌పోర్ట్” తెరిచి పురోగతి చూడండి.",
+    "extra_title": "మరిన్ని చూడండి",
+    "extra_body": "పదకోశం, సేకరణ, త్వరిత ప్రశ్నలు — అన్నీ ఐచ్ఛికం. మీ వేగంతో వెళ్లండి.",
     "language_title": "భాష మార్చడం",
-    "language_body": "పైన ఉన్న చిన్న భాష సెలెక్టర్ నొక్కి మీ భాష మార్చుకోండి.",
+    "language_body": "పైన ఉన్న చిన్న భాష ఎంపికను నొక్కి, కావలసిన భాష ఎంచుకోండి.",
     "ready_title": "మీరు సిద్ధం!",
     "ready_body": "మొదలుపెట్టడానికి ఇంతే చాలు.\n\nకింద పెద్ద బటన్ నొక్కి హోమ్‌కు వెళ్లండి.",
     "welcome_visual": "మీ ఉచిత ఖగోళ తరగతి",
@@ -1913,19 +1913,19 @@
     "modules_visual_label": "మొదలుపెట్టడానికి ఏదైనా మెరిసే కార్డు నొక్కండి",
     "passport_visual_label": "మీ పురోగతి",
     "language_visual_label": "ఇక్కడ భాష మార్చండి",
-    "ready_visual": "అన్నీ మీ కోసం సిద్ధం"
+    "ready_visual": "అన్నీ సిద్ధం"
   },
   "cosmic_comedy": {
-    "title": "కాస్మిక్ కామెడీ",
+    "title": "అంతరిక్ష హాస్యం",
     "subtitle": "నిజంగా నవ్వించే జోకులతో నిజమైన ఖగోళ శాస్త్రం నేర్చుకోండి.",
     "progress": "{{done}} / {{total}} జోకులు నేర్చుకున్నారు",
-    "reveal_button": "పంచ్‌లైన్ చూపించు 😄",
+    "reveal_button": "జవాబు చూపించు 😄",
     "science_button": "నేను ఏమి నేర్చుకున్నాను?",
     "science_label": "నిజమైన సైన్స్",
     "learned": "నేర్చుకున్నారు",
-    "prev": "మునుపటి",
+    "prev": "మునుపటిది",
     "next": "తర్వాతి జోకు",
-    "hint": "ఆకుపచ్చ డాట్‌లు = నేర్చుకున్నవి. దూకడానికి ఏ డాట్‌నైనా నొక్కండి.",
+    "hint": "ఆకుపచ్చ బిందువు = నేర్చుకున్నవి. దూకడానికి ఏదైనా బిందువు నొక్కండి.",
     "jokes": {
       "black_hole_party": {
         "topic": "Black holes",

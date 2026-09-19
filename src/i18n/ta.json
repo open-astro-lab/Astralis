@@ -1,25 +1,25 @@
 {
   "app": {
     "name": "Astralis",
-    "tagline": "வானியல், உங்கள் ஆய்வுக்கு."
+    "tagline": "வானியல் — உங்கள் ஆராய்ச்சிக்கு."
   },
   "language_picker": {
-    "title": "உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்",
-    "subtitle": "இதை எப்போது வேண்டுமானாலும் மாற்றலாம்."
+    "title": "மொழியைத் தேர்ந்தெடுக்கவும்",
+    "subtitle": "பின்னர் எப்போது வேண்டுமானாலும் மாற்றலாம்."
   },
   "nav": {
     "home": "முகப்பு",
     "passport": "என் பாஸ்போர்ட்",
-    "glossary": "அகராதி",
+    "glossary": "சொற்களஞ்சியம்",
     "collection": "தொகுப்பு",
-    "trivia": "டிரிவியா பிளிட்ஸ்",
-    "menu_label": "பயன்பாட்டை இங்கே வழிநடத்துங்கள் 👉"
+    "trivia": "விரைவு வினாடி வினா",
+    "menu_label": "இங்கு செல்லுங்கள் 👉"
   },
   "home": {
-    "heading": "பிரபஞ்சம், ஒரு கேள்விக்கு ஒரு பதில்.",
-    "subheading": "ஜார்கன் இல்லை. அனுமானங்கள் இல்லை. உண்மையான வானியல், செயல்பாட்டுடன்.",
+    "heading": "பிரபஞ்சம் — ஒவ்வொரு கேள்வியாக.",
+    "subheading": "கடினமான சொற்கள் இல்லை. யூகங்கள் இல்லை. உண்மையான வானியலைச் செய்து கற்றுக்கொள்ளுங்கள்.",
     "start_button": "ஆராயத் தொடங்கு",
-    "modules_heading": "எங்கே தொடங்குவது என்பதைத் தேர்வு செய்யுங்கள்",
+    "modules_heading": "எங்கிருந்து தொடங்க வேண்டும்?",
     "fact_heading": "இன்றைய வானியல் உண்மை",
     "facts": [
       "A day on Venus is longer than its year — Venus takes about 243 Earth days to rotate once, but only about 225 days to orbit the Sun.",
@@ -38,36 +38,36 @@
       "In space, two pieces of the same untreated metal can bond permanently on contact — a real phenomenon called cold welding.",
       "The asteroid belt's total mass is less than that of Earth's Moon, despite containing millions of individual objects."
     ],
-    "daily_challenge_heading": "தினசரி சவால்",
-    "map_instruction": "ஒரு தொகுதியைத் திறக்க ஒரு கோளத்தைத் தட்டவும்",
+    "daily_challenge_heading": "இன்றைய சவால்",
+    "map_instruction": "ஒரு பகுதியைத் திறக்க வட்டத்தைத் தட்டவும்",
     "welcome_back": "மீண்டும் வரவேற்கிறோம், {{level}}",
-    "welcome_back_subtitle": "நீங்கள் விட்ட இடத்திலிருந்து தொடரவும்.",
+    "welcome_back_subtitle": "நீங்கள் நிறுத்திய இடத்திலிருந்து தொடருங்கள்.",
     "shooting_star_caught": "🌠 Shooting star caught!",
-    "install_title": "Astralis-ஐ முகப்புத் திரையில் சேர்க்கவும்",
-    "install_subtitle": "உண்மையான ஆப் போல திறக்கவும் — Play Store தேவையில்லை.",
+    "install_title": "Astralis-ஐ முகப்புத் திரையில் சேருங்கள்",
+    "install_subtitle": "உண்மையான செயலியைப் போல திறக்கும் — Play Store தேவையில்லை.",
     "install_button": "முகப்புத் திரையில் சேர்",
-    "install_dismiss": "இப்போது வேண்டாம்",
+    "install_dismiss": "பின்னர்",
     "install_ios_steps_title": "On iPhone / iPad:",
-    "install_ios_step1": "Safari அடியில் Share பொத்தானைத் தட்டவும்",
-    "install_ios_step2": "கீழே உருட்டி “Add to Home Screen” தட்டவும்",
-    "install_ios_step3": "“Add” தட்டவும் — ஐகான் முகப்பில் வரும்",
+    "install_ios_step1": "Safari கீழே உள்ள பகிர் பொத்தானைத் தட்டவும்",
+    "install_ios_step2": "கீழே சென்று “Add to Home Screen” தேர்வு செய்யவும்",
+    "install_ios_step3": "“Add” தட்டவும் — ஐகான் முகப்பில் தோன்றும்",
     "install_installing": "நிறுவுகிறது…",
-    "install_already": "Astralis உங்கள் முகப்புத் திரையில் நிறுவப்பட்டுள்ளது",
-    "install_generic_title": "முகப்புத் திரையில் எப்படி சேர்ப்பது:",
-    "install_generic_text": "உலாவி மெனுவை (⋮ அல்லது ⋯) திறந்து “Add to Home screen” அல்லது “Install app” தேர்வு செய்யவும்.",
-    "install_ios_simple": "iPhone-ல் 3 விரைவு தட்டுகள்:",
-    "install_android_simple": "உங்கள் உலாவிக்கு ஒரு கூடுதல் தட்டு தேவை:",
-    "install_chrome_tip": "குறிப்பு: விரைவான நிறுவலுக்கு Chrome-ல் திறக்கவும்."
+    "install_already": "Astralis உங்கள் முகப்புத் திரையில் உள்ளது",
+    "install_generic_title": "முகப்புத் திரையில் சேர்ப்பது எப்படி:",
+    "install_generic_text": "உலாவி மெனுவைத் திறந்து “Add to Home screen” அல்லது “Install app” என்பதைத் தேர்வு செய்யவும்.",
+    "install_ios_simple": "iPhone-ல் மூன்று எளிய படிகள்:",
+    "install_android_simple": "உங்கள் உலாவியில் ஒரு கூடுதல் படி:",
+    "install_chrome_tip": "குறிப்பு: விரைவாக நிறுவ Chrome-ல் திறக்கவும்."
   },
   "modules": {
-    "universe_explorer": "பிரபஞ்ச ஆய்வாளர்",
-    "sky_explorer": "வான ஆய்வாளர்",
+    "universe_explorer": "பிரபஞ்ச ஆய்வு",
+    "sky_explorer": "வான ஆய்வு",
     "asteroid_hunter": "சிறுகோள் வேட்டை",
     "exoplanet_hunter": "புறக்கோள் வேட்டை",
-    "stellar_detective": "நட்சத்திர துப்பறியும்",
+    "stellar_detective": "நட்சத்திர ஆய்வு",
     "physics_lab": "வானியற்பியல் ஆய்வகம்",
     "system_builder": "நட்சத்திர அமைப்பு உருவாக்கி",
-    "cosmic_comedy": "காஸ்மிக் காமெடி"
+    "cosmic_comedy": "விண்வெளி நகைச்சுவை"
   },
   "physics_lab": {
     "title": "Astrophysics Lab",
@@ -1452,7 +1452,7 @@
     },
     "next_level_progress": "{{remaining}} more to reach {{level}}",
     "max_level_reached": "You've reached the top level — Scientist!",
-    "streak_label": "தினசரி தொடர்",
+    "streak_label": "தொடர்ச்சி",
     "badges_heading": "Achievements",
     "badges": {
       "first_steps": {
@@ -1547,7 +1547,7 @@
     "sign_in": "உள்நுழை",
     "sign_out": "வெளியேறு",
     "guest_warning": "You're browsing as a guest — progress won't be saved across devices.",
-    "save_progress_heading": "உங்கள் முன்னேற்றத்தைச் சேமிக்கவா?",
+    "save_progress_heading": "முன்னேற்றத்தைச் சேமிக்கவா?",
     "save_progress_subtitle": "Sign in once with Google, and your Astronomy Passport follows you — phone, tablet, laptop, wherever you open Astralis.",
     "skip_button": "Skip for now",
     "skip_caption": "Your progress won't be saved across devices.",
@@ -1571,7 +1571,7 @@
       "You nailed it!"
     ],
     "correct": "சரி!",
-    "wrong": "இல்லை — மீண்டும் முயற்சி",
+    "wrong": "இல்லை — மீண்டும் முயற்சிக்கவும்",
     "try_again": "மீண்டும் முயற்சி",
     "continue": "தொடர்"
   },
@@ -1808,7 +1808,7 @@
     }
   },
   "onboarding": {
-    "link_label": "புதிதா? Astralis எப்படி வேலை செய்கிறது என்று அறிய",
+    "link_label": "புதியவரா? Astralis எப்படி வேலை செய்கிறது என்று பாருங்கள்",
     "title": "Astralis எப்படி வேலை செய்கிறது",
     "what_is_astronomy_heading": "What is astronomy?",
     "what_is_astronomy_text": "Astronomy is the study of everything beyond Earth — stars, planets, galaxies, and the physics that governs them. You don't need to know any of it yet. Every module here teaches you by doing, not by reading walls of text.",
@@ -1818,7 +1818,7 @@
     "how_challenges_work_text": "Most activities end in a short quiz. Passing it marks that topic complete in your Astronomy Passport and counts toward your level. If you get a question wrong, you'll see why — then you can try again immediately.",
     "passport_heading": "Your Passport",
     "passport_text": "Every challenge you complete is tracked. Sign in with Google (optional) to keep your progress synced across every device — or skip it and just play, with progress saved to this device only.",
-    "close_button": "புரிந்தது — ஆராயலாம்"
+    "close_button": "புரிந்தது — தொடங்குவோம்"
   },
   "level_up": {
     "title": "Level Up!",
@@ -1890,42 +1890,42 @@
     "next_button": "அடுத்து",
     "back_button": "பின்செல்",
     "skip_button": "பயிற்சியைத் தவிர்",
-    "ready_button": "நான் தயார் — முகப்புக்கு அழைத்துச் செல்",
+    "ready_button": "தயார் — முகப்புக்குச் செல்",
     "welcome_title": "Astralis-க்கு வரவேற்கிறோம்",
-    "welcome_body": "Astralis முழுமையான ஆரம்பநிலையாளர்களுக்கான இலவச வானியல் ஆப்.\n\nஅறிவியல் பின்னணி தேவையில்லை. எல்லாம் எளிய செயல்பாடுகள் மற்றும் குறுகிய வினாடி வினாக்களால் கற்பிக்கப்படுகிறது.",
-    "navigate_title": "ஆப்பில் எப்படி நகருவது",
-    "navigate_body": "ஒவ்வொரு பக்கத்தின் மேலும் மெனு இருக்கும்.\n\n• மொபைலில்: “Navigate the app here 👉” பொத்தான் அல்லது ☰.\n• கணினியில்: Home, Passport போன்றவை மேலே தெரியும்.",
-    "navigate_hint": "குறிப்பு: மெனு எப்போதும் மேலே. எங்கிருந்தும் Home திரும்பலாம்.",
-    "modules_title": "கற்றல் தொகுதிகள்",
-    "modules_body": "முகப்பில் கிரகங்கள் போல அமைந்த வண்ண அட்டைகள்.\n\nஒவ்வொன்றும் வேறு செயல்பாடு. விருப்பமான அட்டையைத் தட்டித் தொடங்குங்கள்.",
-    "modules_hint": "இந்த அட்டைகள் Astralis-ன் இதயம். சுவாரஸ்யமானதிலிருந்து தொடங்குங்கள்.",
+    "welcome_body": "Astralis முழுமையான தொடக்கநிலையாளர்களுக்கான இலவச வானியல் செயலி.\n\nஅறிவியல் பின்னணி தேவையில்லை. எளிய செயல்பாடுகள் மற்றும் சிறிய வினாடி வினாக்கள் மூலம் கற்றுத்தரப்படுகிறது.",
+    "navigate_title": "செயலியில் எப்படி செல்வது",
+    "navigate_body": "ஒவ்வொரு பக்கத்தின் மேற்புறத்திலும் மெனு இருக்கும்.\n\n• மொபைலில்: “இங்கு செல்லுங்கள் 👉” அல்லது ☰ பொத்தான்.\n• கணினியில்: முகப்பு, பாஸ்போர்ட் போன்றவை மேலே தெரியும்.",
+    "navigate_hint": "குறிப்பு: மெனு எப்போதும் மேலே இருக்கும். எங்கிருந்தும் முகப்புக்குத் திரும்பலாம்.",
+    "modules_title": "கற்றல் பகுதிகள்",
+    "modules_body": "முகப்பில் கிரகங்கள் போல அமைந்த வண்ண அட்டைகள் தெரியும்.\n\nஒவ்வொன்றும் வெவ்வேறு செயல்பாடு. விருப்பமானதைத் தட்டித் தொடங்குங்கள்.",
+    "modules_hint": "இந்த அட்டைகளே Astralis-ன் முக்கிய பகுதி. ஆர்வமூட்டும் ஒன்றிலிருந்து தொடங்குங்கள்.",
     "passport_title": "உங்கள் வானியல் பாஸ்போர்ட்",
-    "passport_body": "ஒவ்வொரு சவாலும் பாஸ்போர்ட்டில் சேமிக்கப்படும்.\n\nமேல் மெனுவிலிருந்து “My Passport” திறந்து முன்னேற்றம், நிலை, ஸ்ட்ரீக் பாருங்கள்.",
-    "extra_title": "மேலும் ஆராயலாம்",
-    "extra_body": "அகராதி, தொகுப்பு, டிரிவியா பிளிட்ஸ் — எல்லாம் விருப்பமானவை. உங்கள் வேகத்தில் செல்லுங்கள்.",
+    "passport_body": "நீங்கள் முடிக்கும் ஒவ்வொரு சவாலும் பாஸ்போர்ட்டில் சேமிக்கப்படும்.\n\nமேல் மெனுவிலிருந்து “என் பாஸ்போர்ட்” திறந்து முன்னேற்றத்தைப் பாருங்கள்.",
+    "extra_title": "மேலும் பார்க்கலாம்",
+    "extra_body": "சொற்களஞ்சியம், தொகுப்பு, விரைவு வினாடி வினா — அனைத்தும் விருப்பமானவை. உங்கள் வேகத்தில் செல்லுங்கள்.",
     "language_title": "மொழியை மாற்றுவது",
-    "language_body": "மேலே உள்ள சிறிய மொழி தேர்வியைத் தட்டி உங்கள் மொழியை மாற்றலாம்.",
+    "language_body": "மேலே உள்ள சிறிய மொழித் தேர்வியைத் தட்டி, விரும்பும் மொழியைத் தேர்ந்தெடுக்கவும்.",
     "ready_title": "நீங்கள் தயாராக இருக்கிறீர்கள்!",
     "ready_body": "தொடங்க இவ்வளவு போதும்.\n\nகீழே உள்ள பெரிய பொத்தானைத் தட்டி முகப்புக்குச் செல்லுங்கள்.",
-    "welcome_visual": "உங்கள் இலவச வானியல் வகுப்பறை",
+    "welcome_visual": "உங்கள் இலவச வானியல் வகுப்பு",
     "navigate_visual_label": "இது மெனு",
-    "navigate_mobile_hint": "மொபைலில் இந்த பெரிய பொத்தான் மெனுவைத் திறக்கும்",
+    "navigate_mobile_hint": "மொபைலில் இந்தப் பெரிய பொத்தான் மெனுவைத் திறக்கும்",
     "modules_visual_label": "தொடங்க எந்த ஒளிரும் அட்டையையும் தட்டவும்",
     "passport_visual_label": "உங்கள் முன்னேற்றம்",
     "language_visual_label": "இங்கே மொழியை மாற்றுங்கள்",
-    "ready_visual": "எல்லாம் உங்களுக்குத் தயார்"
+    "ready_visual": "எல்லாம் தயார்"
   },
   "cosmic_comedy": {
-    "title": "காஸ்மிக் காமெடி",
-    "subtitle": "உண்மையில் சிரிக்க வைக்கும் நகைச்சுவைகளால் உண்மையான வானியல் கற்றுக்கொள்ளுங்கள்.",
+    "title": "விண்வெளி நகைச்சுவை",
+    "subtitle": "சிரிக்க வைக்கும் நகைச்சுவைகளுடன் உண்மையான வானியல் கற்றுக்கொள்ளுங்கள்.",
     "progress": "{{done}} / {{total}} நகைச்சுவைகள் கற்றவை",
-    "reveal_button": "பஞ்ச்லைன் காட்டு 😄",
-    "science_button": "நான் என்ன கற்றுக்கொண்டேன்?",
+    "reveal_button": "பதிலைக் காட்டு 😄",
+    "science_button": "இதிலிருந்து என்ன கற்றேன்?",
     "science_label": "உண்மையான அறிவியல்",
     "learned": "கற்றது",
-    "prev": "முந்தைய",
+    "prev": "முந்தையது",
     "next": "அடுத்த நகைச்சுவை",
-    "hint": "பச்சை புள்ளிகள் = நீங்கள் கற்றவை. தாவ எந்தப் புள்ளியையும் தட்டவும்.",
+    "hint": "பச்சை புள்ளி = கற்றவை. தாவ எந்தப் புள்ளியையும் தட்டவும்.",
     "jokes": {
       "black_hole_party": {
         "topic": "Black holes",

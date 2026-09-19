@@ -1,25 +1,25 @@
 {
   "app": {
     "name": "Astralis",
-    "tagline": "ജ്യോതിശാസ്ത്രം, നിങ്ങളുടെ അന്വേഷണത്തിന്."
+    "tagline": "ജ്യോതിശാസ്ത്രം — നിങ്ങളുടെ അന്വേഷണത്തിന്."
   },
   "language_picker": {
-    "title": "നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുക്കുക",
-    "subtitle": "ഇത് എപ്പോൾ വേണമെങ്കിലും മാറ്റാം."
+    "title": "ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "subtitle": "പിന്നീട് എപ്പോൾ വേണമെങ്കിലും മാറ്റാം."
   },
   "nav": {
     "home": "ഹോം",
     "passport": "എന്റെ പാസ്പോർട്ട്",
-    "glossary": "നിഘണ്ടു",
+    "glossary": "പദാവലി",
     "collection": "ശേഖരം",
-    "trivia": "ട്രിവിയ ബ്ലിറ്റ്സ്",
-    "menu_label": "ആപ്പ് ഇവിടെ നാവിഗേറ്റ് ചെയ്യുക 👉"
+    "trivia": "ദ്രുത ചോദ്യങ്ങൾ",
+    "menu_label": "ഇവിടേക്ക് പോകുക 👉"
   },
   "home": {
-    "heading": "പ്രപഞ്ചം, ഒരു ചോദ്യം വീതം.",
-    "subheading": "ജാർഗൺ ഇല്ല. അനുമാനങ്ങളില്ല. യഥാർത്ഥ ജ്യോതിശാസ്ത്രം, ചെയ്ത് പഠിക്കുക.",
+    "heading": "പ്രപഞ്ചം — ഒരു ചോദ്യം വീതം.",
+    "subheading": "കഠിനമായ വാക്കുകളില്ല. ഊഹങ്ങളില്ല. യഥാർത്ഥ ജ്യോതിശാസ്ത്രം ചെയ്ത് പഠിക്കുക.",
     "start_button": "അന്വേഷണം തുടങ്ങുക",
-    "modules_heading": "എവിടെ തുടങ്ങണമെന്ന് തിരഞ്ഞെടുക്കുക",
+    "modules_heading": "എവിടെ നിന്ന് തുടങ്ങണം?",
     "fact_heading": "ഇന്നത്തെ ജ്യോതിശാസ്ത്ര വസ്തുത",
     "facts": [
       "A day on Venus is longer than its year — Venus takes about 243 Earth days to rotate once, but only about 225 days to orbit the Sun.",
@@ -38,36 +38,36 @@
       "In space, two pieces of the same untreated metal can bond permanently on contact — a real phenomenon called cold welding.",
       "The asteroid belt's total mass is less than that of Earth's Moon, despite containing millions of individual objects."
     ],
-    "daily_challenge_heading": "ദൈനംദിന വെല്ലുവിളി",
-    "map_instruction": "ഒരു മൊഡ്യൂൾ തുറക്കാൻ ഒരു ഗോളം ടാപ്പ് ചെയ്യുക",
+    "daily_challenge_heading": "ഇന്നത്തെ വെല്ലുവിളി",
+    "map_instruction": "ഒരു ഭാഗം തുറക്കാൻ വൃത്തം ടാപ്പ് ചെയ്യുക",
     "welcome_back": "വീണ്ടും സ്വാഗതം, {{level}}",
     "welcome_back_subtitle": "നിങ്ങൾ നിർത്തിയിടത്തു നിന്ന് തുടരുക.",
     "shooting_star_caught": "🌠 Shooting star caught!",
     "install_title": "Astralis ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക",
-    "install_subtitle": "യഥാർത്ഥ ആപ്പ് പോലെ തുറക്കുക — Play Store വേണ്ട.",
+    "install_subtitle": "യഥാർത്ഥ ആപ്പ് പോലെ തുറക്കും — Play Store വേണ്ട.",
     "install_button": "ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക",
-    "install_dismiss": "ഇപ്പോൾ വേണ്ട",
+    "install_dismiss": "പിന്നീട്",
     "install_ios_steps_title": "On iPhone / iPad:",
-    "install_ios_step1": "Safari-യുടെ അടിയിൽ Share ബട്ടൺ ടാപ്പ് ചെയ്യുക",
-    "install_ios_step2": "താഴേക്ക് സ്ക്രോൾ ചെയ്ത് “Add to Home Screen” ടാപ്പ് ചെയ്യുക",
+    "install_ios_step1": "Safari-യുടെ അടിയിലുള്ള Share ബട്ടൺ ടാപ്പ് ചെയ്യുക",
+    "install_ios_step2": "താഴേക്ക് പോയി “Add to Home Screen” തിരഞ്ഞെടുക്കുക",
     "install_ios_step3": "“Add” ടാപ്പ് ചെയ്യുക — ഐക്കൺ ഹോമിൽ വരും",
     "install_installing": "ഇൻസ്റ്റാൾ ചെയ്യുന്നു…",
     "install_already": "Astralis നിങ്ങളുടെ ഹോം സ്ക്രീനിലുണ്ട്",
     "install_generic_title": "ഹോം സ്ക്രീനിലേക്ക് എങ്ങനെ ചേർക്കാം:",
-    "install_generic_text": "ബ്രൗസർ മെനു (⋮ അല്ലെങ്കിൽ ⋯) തുറന്ന് “Add to Home screen” അല്ലെങ്കിൽ “Install app” തിരഞ്ഞെടുക്കുക.",
-    "install_ios_simple": "iPhone-ൽ 3 വേഗത്തിലുള്ള ടാപ്പുകൾ:",
-    "install_android_simple": "നിങ്ങളുടെ ബ്രൗസറിന് ഒരു അധിക ടാപ്പ് വേണം:",
-    "install_chrome_tip": "ടിപ്പ്: വേഗത്തിലുള്ള ഇൻസ്റ്റാളിന് Chrome-ൽ തുറക്കുക."
+    "install_generic_text": "ബ്രൗസർ മെനു തുറന്ന് “Add to Home screen” അല്ലെങ്കിൽ “Install app” തിരഞ്ഞെടുക്കുക.",
+    "install_ios_simple": "iPhone-ൽ മൂന്ന് ലളിത ഘട്ടങ്ങൾ:",
+    "install_android_simple": "നിങ്ങളുടെ ബ്രൗസറിൽ ഒരു അധിക ഘട്ടം:",
+    "install_chrome_tip": "ടിപ്പ്: വേഗത്തിൽ ഇൻസ്റ്റാൾ ചെയ്യാൻ Chrome-ൽ തുറക്കുക."
   },
   "modules": {
-    "universe_explorer": "യൂണിവേഴ്സ് എക്സ്പ്ലോറർ",
-    "sky_explorer": "സ്കൈ എക്സ്പ്ലോറർ",
-    "asteroid_hunter": "ആസ്റ്ററോയിഡ് ഹണ്ടർ",
-    "exoplanet_hunter": "എക്സോപ്ലാനറ്റ് ഹണ്ടർ",
-    "stellar_detective": "സ്റ്റെല്ലാർ ഡിറ്റക്ടീവ്",
-    "physics_lab": "ആസ്ട്രോഫിസിക്സ് ലാബ്",
-    "system_builder": "സ്റ്റാർ സിസ്റ്റം ബിൽഡർ",
-    "cosmic_comedy": "കോസ്മിക് കോമഡി"
+    "universe_explorer": "പ്രപഞ്ച അന്വേഷണം",
+    "sky_explorer": "ആകാശ അന്വേഷണം",
+    "asteroid_hunter": "ഛിന്നഗ്രഹ വേട്ട",
+    "exoplanet_hunter": "ബാഹ്യഗ്രഹ വേട്ട",
+    "stellar_detective": "നക്ഷത്ര പരിശോധന",
+    "physics_lab": "ജ്യോതിർഭൗതിക ലാബ്",
+    "system_builder": "നക്ഷത്ര സംവിധാന നിർമ്മാതാവ്",
+    "cosmic_comedy": "ബഹിരാകാശ തമാശ"
   },
   "physics_lab": {
     "title": "Astrophysics Lab",
@@ -1452,7 +1452,7 @@
     },
     "next_level_progress": "{{remaining}} more to reach {{level}}",
     "max_level_reached": "You've reached the top level — Scientist!",
-    "streak_label": "ദൈനംദിന സ്ട്രീക്ക്",
+    "streak_label": "തുടർച്ച",
     "badges_heading": "Achievements",
     "badges": {
       "first_steps": {
@@ -1547,7 +1547,7 @@
     "sign_in": "സൈൻ ഇൻ",
     "sign_out": "സൈൻ ഔട്ട്",
     "guest_warning": "You're browsing as a guest — progress won't be saved across devices.",
-    "save_progress_heading": "നിങ്ങളുടെ പുരോഗതി സേവ് ചെയ്യണോ?",
+    "save_progress_heading": "പുരോഗതി സേവ് ചെയ്യണോ?",
     "save_progress_subtitle": "Sign in once with Google, and your Astronomy Passport follows you — phone, tablet, laptop, wherever you open Astralis.",
     "skip_button": "Skip for now",
     "skip_caption": "Your progress won't be saved across devices.",
@@ -1818,7 +1818,7 @@
     "how_challenges_work_text": "Most activities end in a short quiz. Passing it marks that topic complete in your Astronomy Passport and counts toward your level. If you get a question wrong, you'll see why — then you can try again immediately.",
     "passport_heading": "Your Passport",
     "passport_text": "Every challenge you complete is tracked. Sign in with Google (optional) to keep your progress synced across every device — or skip it and just play, with progress saved to this device only.",
-    "close_button": "മനസ്സിലായി — അന്വേഷിക്കാം"
+    "close_button": "മനസ്സിലായി — തുടങ്ങാം"
   },
   "level_up": {
     "title": "Level Up!",
@@ -1890,21 +1890,21 @@
     "next_button": "അടുത്തത്",
     "back_button": "പിന്നോട്ട്",
     "skip_button": "ട്യൂട്ടോറിയൽ ഒഴിവാക്കുക",
-    "ready_button": "ഞാൻ തയ്യാറാണ് — ഹോമിലേക്ക് കൊണ്ടുപോകൂ",
+    "ready_button": "തയ്യാർ — ഹോമിലേക്ക് പോകുക",
     "welcome_title": "Astralis-ലേക്ക് സ്വാഗതം",
-    "welcome_body": "Astralis പൂർണ്ണമായും തുടക്കക്കാർക്കുള്ള സൗജന്യ ജ്യോതിശാസ്ത്ര ആപ്പ്.\n\nസയൻസ് പശ്ചാത്തലം വേണ്ട. എല്ലാം ലളിതമായ പ്രവർത്തനങ്ങളിലൂടെയും ചെറിയ ക്വിസുകളിലൂടെയും പഠിപ്പിക്കുന്നു.",
+    "welcome_body": "Astralis പൂർണ്ണമായും തുടക്കക്കാർക്കുള്ള സൗജന്യ ജ്യോതിശാസ്ത്ര ആപ്പാണ്.\n\nസയൻസ് പശ്ചാത്തലം വേണ്ട. ലളിതമായ പ്രവർത്തനങ്ങളിലൂടെയും ചെറിയ ക്വിസുകളിലൂടെയും പഠിപ്പിക്കുന്നു.",
     "navigate_title": "ആപ്പിൽ എങ്ങനെ നീങ്ങാം",
-    "navigate_body": "ഓരോ പേജിന്റെയും മുകളിൽ മെനു ഉണ്ട്.\n\n• ഫോണിൽ: “Navigate the app here 👉” അല്ലെങ്കിൽ ☰.\n• കമ്പ്യൂട്ടറിൽ: Home, Passport തുടങ്ങിയവ മുകളിൽ കാണാം.",
-    "navigate_hint": "ടിപ്പ്: മെനു എപ്പോഴും മുകളിൽ. എവിടെ നിന്നും Home-ലേക്ക് മടങ്ങാം.",
-    "modules_title": "പഠന മൊഡ്യൂളുകൾ",
+    "navigate_body": "ഓരോ പേജിന്റെയും മുകളിൽ മെനു ഉണ്ട്.\n\n• ഫോണിൽ: “ഇവിടേക്ക് പോകുക 👉” അല്ലെങ്കിൽ ☰.\n• കമ്പ്യൂട്ടറിൽ: ഹോം, പാസ്പോർട്ട് തുടങ്ങിയവ മുകളിൽ കാണാം.",
+    "navigate_hint": "ടിപ്പ്: മെനു എപ്പോഴും മുകളിൽ. എവിടെ നിന്നും ഹോമിലേക്ക് മടങ്ങാം.",
+    "modules_title": "പഠന ഭാഗങ്ങൾ",
     "modules_body": "ഹോമിൽ ഗ്രഹങ്ങളെപ്പോലെ ക്രമീകരിച്ച നിറമുള്ള കാർഡുകൾ.\n\nഓരോന്നും വ്യത്യസ്ത പ്രവർത്തനം. ഇഷ്ടമുള്ളത് ടാപ്പ് ചെയ്ത് തുടങ്ങുക.",
     "modules_hint": "ഈ കാർഡുകളാണ് Astralis-ന്റെ ഹൃദയം. രസകരമായതിൽ നിന്ന് തുടങ്ങുക.",
     "passport_title": "നിങ്ങളുടെ ജ്യോതിശാസ്ത്ര പാസ്പോർട്ട്",
-    "passport_body": "ഓരോ വെല്ലുവിളിയും പാസ്പോർട്ടിൽ സേവ് ചെയ്യപ്പെടും.\n\nമുകളിലെ മെനുവിൽ നിന്ന് “My Passport” തുറന്ന് പുരോഗതി കാണുക.",
-    "extra_title": "കൂടുതൽ അന്വേഷിക്കാം",
-    "extra_body": "നിഘണ്ടു, ശേഖരം, ട്രിവിയ — എല്ലാം ഐച്ഛികം. നിങ്ങളുടെ വേഗത്തിൽ പോകൂ.",
+    "passport_body": "നിങ്ങൾ പൂർത്തിയാക്കുന്ന ഓരോ വെല്ലുവിളിയും പാസ്പോർട്ടിൽ സേവ് ചെയ്യപ്പെടും.\n\nമുകളിലെ മെനുവിൽ നിന്ന് “എന്റെ പാസ്പോർട്ട്” തുറന്ന് പുരോഗതി കാണുക.",
+    "extra_title": "കൂടുതൽ കാണാം",
+    "extra_body": "പദാവലി, ശേഖരം, ദ്രുത ചോദ്യങ്ങൾ — എല്ലാം ഐച്ഛികം. നിങ്ങളുടെ വേഗത്തിൽ പോകൂ.",
     "language_title": "ഭാഷ മാറ്റൽ",
-    "language_body": "മുകളിലുള്ള ചെറിയ ഭാഷാ സെലക്ടർ ടാപ്പ് ചെയ്ത് ഭാഷ മാറ്റാം.",
+    "language_body": "മുകളിലുള്ള ചെറിയ ഭാഷാ തിരഞ്ഞെടുപ്പ് ടാപ്പ് ചെയ്ത് ആവശ്യമുള്ള ഭാഷ തിരഞ്ഞെടുക്കുക.",
     "ready_title": "നിങ്ങൾ തയ്യാറാണ്!",
     "ready_body": "തുടങ്ങാൻ ഇത്രയും മതി.\n\nതാഴെയുള്ള വലിയ ബട്ടൺ ടാപ്പ് ചെയ്ത് ഹോമിലേക്ക് പോകൂ.",
     "welcome_visual": "നിങ്ങളുടെ സൗജന്യ ജ്യോതിശാസ്ത്ര ക്ലാസ്",
@@ -1913,19 +1913,19 @@
     "modules_visual_label": "തുടങ്ങാൻ ഏതെങ്കിലും തിളങ്ങുന്ന കാർഡ് ടാപ്പ് ചെയ്യുക",
     "passport_visual_label": "നിങ്ങളുടെ പുരോഗതി",
     "language_visual_label": "ഇവിടെ ഭാഷ മാറ്റുക",
-    "ready_visual": "എല്ലാം നിങ്ങൾക്കായി തയ്യാർ"
+    "ready_visual": "എല്ലാം തയ്യാർ"
   },
   "cosmic_comedy": {
-    "title": "കോസ്മിക് കോമഡി",
+    "title": "ബഹിരാകാശ തമാശ",
     "subtitle": "ശരിക്കും ചിരിപ്പിക്കുന്ന തമാശകളിലൂടെ യഥാർത്ഥ ജ്യോതിശാസ്ത്രം പഠിക്കുക.",
     "progress": "{{done}} / {{total}} തമാശകൾ പഠിച്ചു",
-    "reveal_button": "പഞ്ച്‌ലൈൻ കാണിക്കുക 😄",
+    "reveal_button": "ഉത്തരം കാണിക്കുക 😄",
     "science_button": "ഞാൻ എന്ത് പഠിച്ചു?",
     "science_label": "യഥാർത്ഥ സയൻസ്",
     "learned": "പഠിച്ചു",
     "prev": "മുമ്പത്തേത്",
     "next": "അടുത്ത തമാശ",
-    "hint": "പച്ച ഡോട്ടുകൾ = പഠിച്ചവ. ചാടാൻ ഏതെങ്കിലും ഡോട്ട് ടാപ്പ് ചെയ്യുക.",
+    "hint": "പച്ച ഡോട്ട് = പഠിച്ചവ. ചാടാൻ ഏതെങ്കിലും ഡോട്ട് ടാപ്പ് ചെയ്യുക.",
     "jokes": {
       "black_hole_party": {
         "topic": "Black holes",
