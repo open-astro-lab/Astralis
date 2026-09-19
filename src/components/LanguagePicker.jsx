@@ -11,8 +11,8 @@ export default function LanguagePicker({ onChosen }) {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-md w-full text-center">
+    <div className="min-h-screen flex items-center justify-center px-6 py-10">
+      <div className="max-w-lg w-full text-center">
         <div className="font-display text-3xl text-text mb-1">Astralis</div>
         <h1 className="font-display text-xl text-nebulaSoft mt-6">
           {t("language_picker.title")}
@@ -20,12 +20,12 @@ export default function LanguagePicker({ onChosen }) {
         <p className="text-muted text-sm mt-2 mb-8">
           {t("language_picker.subtitle")}
         </p>
-        <div className="grid gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {LANGUAGES.map((lang) => (
             <button
               key={lang.code}
               onClick={() => choose(lang.code)}
-              className="w-full py-3.5 rounded-xl border border-white/10 bg-panel hover:border-nebula hover:shadow-glow transition font-medium"
+              className="w-full py-3.5 px-4 rounded-xl border border-white/10 bg-panel hover:border-nebula hover:shadow-glow transition font-medium text-text"
             >
               {lang.label}
             </button>
